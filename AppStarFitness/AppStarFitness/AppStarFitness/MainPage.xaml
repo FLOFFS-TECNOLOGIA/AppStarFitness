@@ -7,8 +7,10 @@
         <ContentPage Title="Menu">
             <StackLayout BackgroundColor="White">
                 <Label Text="" />
-                <Label Text="ACADEMIA STAR FITNESS" FontSize="20" HorizontalTextAlignment="Center" />
                 <Image x:Name="logo" />
+
+                <Button x:Name="botao_logout" Text="Sair da conta" Clicked="botao_logout_Clicked" />
+                
             </StackLayout>
         </ContentPage>
     </MasterDetailPage.Master>

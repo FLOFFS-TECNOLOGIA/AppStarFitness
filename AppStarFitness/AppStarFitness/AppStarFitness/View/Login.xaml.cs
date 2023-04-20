@@ -23,7 +23,7 @@ namespace AppStarFitness.View
             string cpf_digitado = usuario.Text;
             string senha_digitada = senha.Text;
 
-            string cpf_cadastrado = "83239889862";
+            string cpf_cadastrado = "123";
             string senha_cadastrada = "ribamar";
             
             if (cpf_digitado == cpf_cadastrado && senha_digitada == senha_cadastrada)

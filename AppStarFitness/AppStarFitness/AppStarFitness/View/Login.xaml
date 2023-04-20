@@ -4,13 +4,11 @@
              x:Class="AppStarFitness.View.Login"
              BackgroundColor="White">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="ACADEMIA" HorizontalTextAlignment="Center" FontSize="40" TextColor="Black" FontAttributes="Bold" Margin="0, 40, 0, 0"/>
-            <Label Text="STAR FITNESS" HorizontalTextAlignment="Center" FontSize="40" TextColor="Black" FontAttributes="Bold"/>
+        <StackLayout VerticalOptions="Center">
+            
+            <Image x:Name="logo" HeightRequest="200" Margin="0, 0, 0, 50"/>
 
-            <Image x:Name="logo"/>
-
-            <Frame BackgroundColor="Transparent" BorderColor="Black" Margin="20, 20, 20, 0" >
+            <Frame BackgroundColor="Transparent" BorderColor="Black" Margin="20, 20, 20, 0" CornerRadius="15" >
                 <Grid RowDefinitions="*, *, *, *, *, *, *">
                     <Label Text="LOGIN" FontSize="30" Grid.Row="0" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="Black"/>
 
@@ -20,8 +18,8 @@
                     <Label Text="Senha" FontSize="25" Grid.Row="3" TextColor="Black"/>
                     <Entry x:Name="senha" Placeholder="Digite sua senha" Grid.Row="4" IsPassword="True"  PlaceholderColor="Gray" TextColor="Black" />
 
-                    <Button x:Name="btn_entrar" Clicked="btn_entrar_Clicked" Text="Enviar" Grid.Row="5" Style="{StaticResource BotaoTelaLogin}" BackgroundColor="#008000"/>
-                    <Button x:Name="btn_esqueci" Clicked="btn_esqueci_Clicked" Text="Esqueci minha senha" Grid.Row="6" Style="{StaticResource BotaoTelaLogin}" BackgroundColor="#4682B4"/>
+                    <Button x:Name="btn_entrar" Clicked="btn_entrar_Clicked" Text="Enviar" Grid.Row="5" Style="{StaticResource BotaoTelaLogin}" BackgroundColor="#3ca65a"/>
+                    <Button x:Name="btn_esqueci" Clicked="btn_esqueci_Clicked" Text="Esqueci minha senha" Grid.Row="6" Style="{StaticResource BotaoTelaLogin}" BackgroundColor="#3e61b1"/>
                 </Grid>
             </Frame>
         </StackLayout>
