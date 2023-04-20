@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppStarFitness.View.EsqueciSenha"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+            <Image x:Name="logo" />
+
+            <Frame BackgroundColor="White" BorderColor="Black" Margin="20, 20, 20, 0" CornerRadius="15">
+                <Grid RowDefinitions="*, *, *, *">
+
+                    <Label Text="ESQUECI A SENHA" FontSize="30" Grid.Row="0" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="Black"/>
+
+                    <Label Text="Email ou Telefone" FontSize="20" Grid.Row="1" TextColor="Black" />
+                    <Entry x:Name="email_cpf" Grid.Row="2" 
+                           Placeholder="Digite um email ou telefone válido" PlaceholderColor="Gray" 
+                           TextColor="Black" ClearButtonVisibility="WhileEditing" />
+
+                    <Button x:Name="btn_enviar" Text="Enviar" Grid.Row="3" 
+                            Style="{StaticResource BotaoTelaLogin}" BackgroundColor="#3ca65a"
+                            Clicked="btn_enviar_Clicked"/>
+
+                    <Button x:Name="btn_voltalogin" Text="Voltar para Login" Grid.Row="4" 
+                            Style="{StaticResource BotaoTelaLogin}" BackgroundColor="#3e61b1"
+                            Clicked="btn_voltalogin_Clicked"/>
+
+                </Grid>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

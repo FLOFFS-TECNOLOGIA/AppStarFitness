@@ -11,7 +11,8 @@
         "dependencies": {
           "NETStandard.Library": "2.0.3",
           "Xamarin.Essentials": "1.7.0",
-          "Xamarin.Forms": "5.0.0.2196"
+          "Xamarin.Forms": "5.0.0.2196",
+          "Xamarin.Forms.MaskedEntry": "1.1.0"
         },
         "runtime": {
           "AppStarFitness.dll": {}
@@ -57,6 +58,17 @@
             "fileVersion": "5.0.0.786"
           }
         }
+      },
+      "Xamarin.Forms.MaskedEntry/1.1.0": {
+        "dependencies": {
+          "Xamarin.Forms": "5.0.0.2196"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.MaskedEntry.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.0.0"
+          }
+        }
       }
     }
   },
@@ -100,6 +112,13 @@
       "sha512": "sha512-zSXDiZukojtEBmZKUUG1yYBwlB9tI8JLPkc6n+Sm1PAX01QyzErWE9AaFJgP7usyoGHn92l4HnQF7A+/MPI6VA==",
       "path": "xamarin.forms/5.0.0.2196",
       "hashPath": "xamarin.forms.5.0.0.2196.nupkg.sha512"
+    },
+    "Xamarin.Forms.MaskedEntry/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aIhXOJPyLckN4/iDOOxRK09lrKKd8mlBsis+tN1V5iQe3/Y4DMl3hnc4VX5NJcW6q3NAbULFPnXjGP6Xt/bWAg==",
+      "path": "xamarin.forms.maskedentry/1.1.0",
+      "hashPath": "xamarin.forms.maskedentry.1.1.0.nupkg.sha512"
     }
   }
 }

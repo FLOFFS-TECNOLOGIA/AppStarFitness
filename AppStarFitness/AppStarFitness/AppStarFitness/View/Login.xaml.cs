@@ -23,8 +23,8 @@ namespace AppStarFitness.View
             string cpf_digitado = usuario.Text;
             string senha_digitada = senha.Text;
 
-            string cpf_cadastrado = "123";
-            string senha_cadastrada = "ribamar";
+            string cpf_cadastrado = "123.456.789-10";
+            string senha_cadastrada = "teste";
             
             if (cpf_digitado == cpf_cadastrado && senha_digitada == senha_cadastrada)
             {
@@ -39,7 +39,7 @@ namespace AppStarFitness.View
 
         private void btn_esqueci_Clicked(object sender, EventArgs e)
         {
-
+            App.Current.MainPage = new NavigationPage(new View.EsqueciSenha());
         }
     }
 }

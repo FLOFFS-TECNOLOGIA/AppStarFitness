@@ -4,7 +4,39 @@
              x:Class="AppStarFitness.View.AreaDoUsuario">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Area do Usuario" />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Image x:Name="foto_perfil" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" />
+
+                <Label Text="Bindar Nome Sobrenome" FontSize="30" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" HorizontalOptions="Center"/>
+
+                <Label Text="Altura:" FontSize="20" Grid.Column="0" Grid.Row="2" HorizontalOptions="Center"/>
+                <Label Text="Bindar Altura" FontSize="20" Grid.Column="1" Grid.Row="2" HorizontalOptions="Start"/>
+
+                <Label Text="Peso:" FontSize="20" Grid.Column="0" Grid.Row="3" HorizontalOptions="Center"/>
+                <Label Text="Bindar Peso" FontSize="20" Grid.Column="1" Grid.Row="3" HorizontalOptions="Start"/>
+
+                <Picker x:Name="pck_ficha" Title="Selecionar ficha" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" />
+                <Picker x:Name="pck_dieta" Title="Selecionar dieta" Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" />
+                <Picker x:Name="pck_info" Title="Selecionar informações" Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" />
+
+                <Button x:Name="btn_evolucao" Text="Ver evolução" Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="2" />
+            </Grid>
         </StackLayout>
     </ContentPage.Content> 
 </ContentPage>

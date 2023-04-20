@@ -15,6 +15,8 @@ namespace AppStarFitness.View
         public AreaDoUsuario()
         {
             InitializeComponent();
+
+            foto_perfil.Source = ImageSource.FromResource("AppStarFitness.View.default.jpg");
         }
     }
 }
