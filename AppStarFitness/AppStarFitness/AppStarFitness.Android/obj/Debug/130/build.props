@@ -25,11 +25,19 @@ androidgeneratejnimarshalmethods=false
 os=windows_nt
 androidincludedebugsymbols=true
 androidpackagenamingpolicy=lowercasecrc64
+<<<<<<< HEAD
 _nugetassetstimestamp=638176117091748393
+=======
+_nugetassetstimestamp=638176110490982076
+>>>>>>> a217621235e09aed45375c0834f46ef8366b389e
 typemapkind=strings-asm
 androidsupportedabis=arm64-v8a
 armeabi-v7a
 x86
 x86_64
 androidmanifestplaceholders=
+<<<<<<< HEAD
 projectfullpath=c:\users\pichau\desktop\appstarfitness\appstarfitness\appstarfitness\appstarfitness.android\appstarfitness.android.csproj
+=======
+projectfullpath=c:\users\faniz\source\repos\appstarfitness\appstarfitness\appstarfitness\appstarfitness.android\appstarfitness.android.csproj
+>>>>>>> a217621235e09aed45375c0834f46ef8366b389e

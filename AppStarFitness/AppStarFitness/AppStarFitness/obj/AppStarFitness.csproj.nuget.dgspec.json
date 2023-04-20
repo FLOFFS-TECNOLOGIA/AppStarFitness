@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\PICHAU\\Desktop\\AppStarFitness\\AppStarFitness\\AppStarFitness\\AppStarFitness\\AppStarFitness.csproj": {}
   },
   "projects": {
@@ -12,12 +13,29 @@
         "projectPath": "C:\\Users\\PICHAU\\Desktop\\AppStarFitness\\AppStarFitness\\AppStarFitness\\AppStarFitness\\AppStarFitness.csproj",
         "packagesPath": "C:\\Users\\PICHAU\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\PICHAU\\Desktop\\AppStarFitness\\AppStarFitness\\AppStarFitness\\AppStarFitness\\obj\\",
+=======
+    "C:\\Users\\faniz\\Source\\Repos\\AppStarFitness\\AppStarFitness\\AppStarFitness\\AppStarFitness\\AppStarFitness.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\faniz\\Source\\Repos\\AppStarFitness\\AppStarFitness\\AppStarFitness\\AppStarFitness\\AppStarFitness.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\faniz\\Source\\Repos\\AppStarFitness\\AppStarFitness\\AppStarFitness\\AppStarFitness\\AppStarFitness.csproj",
+        "projectName": "AppStarFitness",
+        "projectPath": "C:\\Users\\faniz\\Source\\Repos\\AppStarFitness\\AppStarFitness\\AppStarFitness\\AppStarFitness\\AppStarFitness.csproj",
+        "packagesPath": "C:\\Users\\faniz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\faniz\\Source\\Repos\\AppStarFitness\\AppStarFitness\\AppStarFitness\\AppStarFitness\\obj\\",
+>>>>>>> a217621235e09aed45375c0834f46ef8366b389e
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\PICHAU\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\faniz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> a217621235e09aed45375c0834f46ef8366b389e
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
