@@ -1,14 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "IOTIQ5CBKLijB/NTSE4xYwJ6/G/P5g2Bn5JQYDLp+S8l+kA/7ds62twKoayOyE1Aq902Ykphxd2YrA6e/1Pu7Q==",
+  "dgSpecHash": "AAv3kRLBbeoo5fn8uvAIdNEuA5vJoSvx/ywNvgtzPpk6qKJhkKt4JDlf39A88rOBVQ3DcEpOnOb0AfVsMjVUrA==",
   "success": true,
-  "projectFilePath": "D:\\GaMa\\AppStarFitness\\AppStarFitness\\AppStarFitness\\AppStarFitness\\AppStarFitness.csproj",
+  "projectFilePath": "C:\\Users\\faniz\\Source\\Repos\\AppStarFitness\\AppStarFitness\\AppStarFitness\\AppStarFitness\\AppStarFitness.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\Usuario\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
-    "C:\\Users\\Usuario\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
-    "C:\\Users\\Usuario\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
-    "C:\\Users\\Usuario\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+    "C:\\Users\\faniz\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\faniz\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\faniz\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\faniz\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\faniz\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512",
+    "C:\\Users\\faniz\\.nuget\\packages\\xamarin.forms.maskedentry\\1.1.0\\xamarin.forms.maskedentry.1.1.0.nupkg.sha512"
   ],
   "logs": []
 }

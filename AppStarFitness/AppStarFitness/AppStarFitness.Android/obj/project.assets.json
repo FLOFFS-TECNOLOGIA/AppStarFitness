@@ -1719,6 +1719,18 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.MaskedEntry/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "5.0.0.2125"
+        },
+        "compile": {
+          "lib/netstandard2.0/Xamarin.Forms.MaskedEntry.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.MaskedEntry.dll": {}
+        }
+      },
       "Xamarin.Google.Android.Material/1.4.0.2": {
         "type": "package",
         "dependencies": {
@@ -1781,7 +1793,8 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Xamarin.Essentials": "1.7.0",
-          "Xamarin.Forms": "5.0.0.2196"
+          "Xamarin.Forms": "5.0.0.2196",
+          "Xamarin.Forms.MaskedEntry": "1.1.0"
         },
         "compile": {
           "bin/placeholder/AppStarFitness.dll": {}
@@ -3353,6 +3366,18 @@
         "xamarin.forms.nuspec"
       ]
     },
+    "Xamarin.Forms.MaskedEntry/1.1.0": {
+      "sha512": "aIhXOJPyLckN4/iDOOxRK09lrKKd8mlBsis+tN1V5iQe3/Y4DMl3hnc4VX5NJcW6q3NAbULFPnXjGP6Xt/bWAg==",
+      "type": "package",
+      "path": "xamarin.forms.maskedentry/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Xamarin.Forms.MaskedEntry.dll",
+        "xamarin.forms.maskedentry.1.1.0.nupkg.sha512",
+        "xamarin.forms.maskedentry.nuspec"
+      ]
+    },
     "Xamarin.Google.Android.Material/1.4.0.2": {
       "sha512": "2dH8pSYjlVmZk8E64E6/hZzsoTcubsH1DHLMYpnsXnteqVuFU42uG5pIuJZIOcLxgKX/QjLdMzth6/w+Oje8sQ==",
       "type": "package",
@@ -3408,24 +3433,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Usuario\\.nuget\\packages\\": {},
+    "C:\\Users\\faniz\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GaMa\\AppStarFitness\\AppStarFitness\\AppStarFitness\\AppStarFitness.Android\\AppStarFitness.Android.csproj",
+      "projectUniqueName": "C:\\Users\\faniz\\Source\\Repos\\AppStarFitness\\AppStarFitness\\AppStarFitness\\AppStarFitness.Android\\AppStarFitness.Android.csproj",
       "projectName": "AppStarFitness.Android",
-      "projectPath": "D:\\GaMa\\AppStarFitness\\AppStarFitness\\AppStarFitness\\AppStarFitness.Android\\AppStarFitness.Android.csproj",
-      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "D:\\GaMa\\AppStarFitness\\AppStarFitness\\AppStarFitness\\AppStarFitness.Android\\obj\\",
+      "projectPath": "C:\\Users\\faniz\\Source\\Repos\\AppStarFitness\\AppStarFitness\\AppStarFitness\\AppStarFitness.Android\\AppStarFitness.Android.csproj",
+      "packagesPath": "C:\\Users\\faniz\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\faniz\\Source\\Repos\\AppStarFitness\\AppStarFitness\\AppStarFitness\\AppStarFitness.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\faniz\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3439,8 +3464,8 @@
       "frameworks": {
         "monoandroid13.0": {
           "projectReferences": {
-            "D:\\GaMa\\AppStarFitness\\AppStarFitness\\AppStarFitness\\AppStarFitness\\AppStarFitness.csproj": {
-              "projectPath": "D:\\GaMa\\AppStarFitness\\AppStarFitness\\AppStarFitness\\AppStarFitness\\AppStarFitness.csproj"
+            "C:\\Users\\faniz\\Source\\Repos\\AppStarFitness\\AppStarFitness\\AppStarFitness\\AppStarFitness\\AppStarFitness.csproj": {
+              "projectPath": "C:\\Users\\faniz\\Source\\Repos\\AppStarFitness\\AppStarFitness\\AppStarFitness\\AppStarFitness\\AppStarFitness.csproj"
             }
           }
         }

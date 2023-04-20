@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:control="clr-namespace:Xamarin.Forms.MaskedEntry;assembly=Xamarin.Forms.MaskedEntry"
              x:Class="AppStarFitness.View.Login"
              BackgroundColor="White">
     <ContentPage.Content>
@@ -13,10 +14,14 @@
                     <Label Text="LOGIN" FontSize="30" Grid.Row="0" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="Black"/>
 
                     <Label Text="CPF" FontSize="25" Grid.Row="1" TextColor="Black"/>
-                    <Entry x:Name="usuario" Placeholder="Digite seu CPF" Grid.Row="2" PlaceholderColor="Gray" TextColor="Black"/>
+                    <control:MaskedEntry x:Name="usuario" Placeholder="Digite seu CPF" Mask="XXX.XXX.XXX-XX" Keyboard="Numeric"
+                                         Grid.Row="2" PlaceholderColor="Gray" TextColor="Black"
+                                         ClearButtonVisibility="WhileEditing" ></control:MaskedEntry>
 
                     <Label Text="Senha" FontSize="25" Grid.Row="3" TextColor="Black"/>
-                    <Entry x:Name="senha" Placeholder="Digite sua senha" Grid.Row="4" IsPassword="True"  PlaceholderColor="Gray" TextColor="Black" />
+                    <Entry x:Name="senha" Placeholder="Digite sua senha" Grid.Row="4" IsPassword="True"  
+                           PlaceholderColor="Gray" TextColor="Black"
+                           ClearButtonVisibility="WhileEditing"/>
 
                     <Button x:Name="btn_entrar" Clicked="btn_entrar_Clicked" Text="Enviar" Grid.Row="5" Style="{StaticResource BotaoTelaLogin}" BackgroundColor="#3ca65a"/>
                     <Button x:Name="btn_esqueci" Clicked="btn_esqueci_Clicked" Text="Esqueci minha senha" Grid.Row="6" Style="{StaticResource BotaoTelaLogin}" BackgroundColor="#3e61b1"/>
