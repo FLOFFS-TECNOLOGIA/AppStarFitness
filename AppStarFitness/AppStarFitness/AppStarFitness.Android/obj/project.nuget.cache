@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aDzLOoHXdcMhzbxD0IejlDgN0WHi89tD2FHChskPfC3fHGwJLPWyniu1ofgC2MfhEodR/cfaDFihEzQTpSq3XQ==",
+  "dgSpecHash": "6CMY2rzpUAoq/H5Xoqt4n7wFTH6i5OCpmsTGk5Kh1GqMkPy9o4cs9A66Z3ndEFdLnycucPhjnboWJMuA3Zg5mw==",
   "success": true,
-  "projectFilePath": "D:\\AppStarFitness\\AppStarFitness\\AppStarFitness.Android\\AppStarFitness.Android.csproj",
+  "projectFilePath": "D:\\GaMa\\AppStarFitness\\AppStarFitness\\AppStarFitness\\AppStarFitness.Android\\AppStarFitness.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Usuario\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\xamarin.androidx.activity\\1.2.4.1\\xamarin.androidx.activity.1.2.4.1.nupkg.sha512",

@@ -15,13 +15,13 @@
                     <Label Text="LOGIN" FontSize="30" Grid.Row="0" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="Black"/>
 
                     <Label Text="CPF" FontSize="25" Grid.Row="1" TextColor="Black"/>
-                    <Entry x:Name="usuario" Placeholder="Digite seu CPF" Grid.Row="2" PlaceholderColor="Gray"/>
+                    <Entry x:Name="usuario" Placeholder="Digite seu CPF" Grid.Row="2" PlaceholderColor="Gray" TextColor="Black"/>
 
                     <Label Text="Senha" FontSize="25" Grid.Row="3" TextColor="Black"/>
-                    <Entry x:Name="senha" Placeholder="Digite sua senha" Grid.Row="4" IsPassword="True" PlaceholderColor="Gray" />
+                    <Entry x:Name="senha" Placeholder="Digite sua senha" Grid.Row="4" IsPassword="True"  PlaceholderColor="Gray" TextColor="Black" />
 
-                    <Button x:Name="btn_entrar" Clicked="btn_entrar_Clicked" Text="Enviar" Grid.Row="5" BorderWidth="100"  TextColor="Black"/>
-                    <Button x:Name="btn_esqueci" Clicked="btn_esqueci_Clicked" Text="Esqueci minha senha" Grid.Row="6" BorderWidth="100" TextColor="Black"/>
+                    <Button x:Name="btn_entrar" Clicked="btn_entrar_Clicked" Text="Enviar" Grid.Row="5" Style="{StaticResource BotaoTelaLogin}" BackgroundColor="#008000"/>
+                    <Button x:Name="btn_esqueci" Clicked="btn_esqueci_Clicked" Text="Esqueci minha senha" Grid.Row="6" Style="{StaticResource BotaoTelaLogin}" BackgroundColor="#4682B4"/>
                 </Grid>
             </Frame>
         </StackLayout>

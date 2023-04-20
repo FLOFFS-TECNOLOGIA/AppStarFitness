@@ -547,11 +547,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\AppStarFitness\\AppStarFitness\\AppStarFitness\\AppStarFitness.csproj",
+      "projectUniqueName": "D:\\GaMa\\AppStarFitness\\AppStarFitness\\AppStarFitness\\AppStarFitness\\AppStarFitness.csproj",
       "projectName": "AppStarFitness",
-      "projectPath": "D:\\AppStarFitness\\AppStarFitness\\AppStarFitness\\AppStarFitness.csproj",
+      "projectPath": "D:\\GaMa\\AppStarFitness\\AppStarFitness\\AppStarFitness\\AppStarFitness\\AppStarFitness.csproj",
       "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "D:\\AppStarFitness\\AppStarFitness\\AppStarFitness\\obj\\",
+      "outputPath": "D:\\GaMa\\AppStarFitness\\AppStarFitness\\AppStarFitness\\AppStarFitness\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

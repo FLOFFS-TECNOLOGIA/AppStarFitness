@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DaWlgAEMIpW+HdoJBRczL7fyIyIyUWGezmV5dUsxqUlTw/2kUiYdVFj6HgiDDA1Tf/RLu9xEiZK8Om6hrSw4Yw==",
+  "dgSpecHash": "IOTIQ5CBKLijB/NTSE4xYwJ6/G/P5g2Bn5JQYDLp+S8l+kA/7ds62twKoayOyE1Aq902Ykphxd2YrA6e/1Pu7Q==",
   "success": true,
-  "projectFilePath": "D:\\AppStarFitness\\AppStarFitness\\AppStarFitness\\AppStarFitness.csproj",
+  "projectFilePath": "D:\\GaMa\\AppStarFitness\\AppStarFitness\\AppStarFitness\\AppStarFitness\\AppStarFitness.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
