@@ -9,8 +9,27 @@
                 <Label Text="" />
                 <Image x:Name="logo" />
 
-                <Button x:Name="botao_logout" Text="Sair da conta" Clicked="botao_logout_Clicked" TextColor="Red" FontAttributes="Bold" BackgroundColor="Transparent" CornerRadius="15" BorderWidth="2" BorderColor="Red" Margin="20, 0, 20, 0"/>
+                <Button x:Name="btn_inicio" Text="Início" Clicked="btn_inicio_Clicked" TextColor="White" FontAttributes="Bold" BackgroundColor="#3e61b1" 
+                        CornerRadius="15" BorderWidth="2" Margin="20, 0, 20, 0" />
+
+                <Frame BorderColor="#DCDCDC" Margin="10" Padding="1"/>
+
+                <Label Text="Horário de funcionamento:" TextColor="Black" HorizontalTextAlignment="Center" />
+                <Label Text="Seg à Sex - 06h às 11h - 15h às 21h" TextColor="Black" HorizontalTextAlignment="Center" />
+                <Label Text="Sáb - 06h às 11h" TextColor="Black" HorizontalTextAlignment="Center" />
+
+                <Label Text="" />
                 
+                <Label Text="Anúncios" TextColor="Black" HorizontalTextAlignment="Center" />
+
+                <Image x:Name="imagem_anuncio"/>
+                <Label Text="" />
+                <Label Text="" />
+                <Label Text="" />
+
+                <Button x:Name="btn_logout" Text="Sair da conta" Clicked="btn_logout_Clicked" TextColor="Red" FontAttributes="Bold" 
+                        BackgroundColor="Transparent" CornerRadius="15" BorderWidth="2" BorderColor="Red" Margin="20, 0, 20, 0" />
+
             </StackLayout>
         </ContentPage>
     </MasterDetailPage.Master>

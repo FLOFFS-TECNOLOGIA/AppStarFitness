@@ -15,7 +15,7 @@ namespace AppStarFitness.View
         public Login()
         {
             InitializeComponent();
-            logo.Source = ImageSource.FromResource("AppStarFitness.View.logo.png");
+            logo.Source = ImageSource.FromResource("AppStarFitness.Imagens.logo.png");
         }
 
         private void btn_entrar_Clicked(object sender, EventArgs e)

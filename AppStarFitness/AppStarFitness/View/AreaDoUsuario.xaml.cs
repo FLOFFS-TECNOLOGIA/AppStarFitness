@@ -16,7 +16,7 @@ namespace AppStarFitness.View
         {
             InitializeComponent();
 
-            foto_perfil.Source = ImageSource.FromResource("AppStarFitness.View.default.jpg");
+            foto_perfil.Source = ImageSource.FromResource("AppStarFitness.Imagens.default.jpg");
         }
     }
 }

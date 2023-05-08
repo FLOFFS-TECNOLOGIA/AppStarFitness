@@ -11,12 +11,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="View\NovaPasta\**" />
+    <EmbeddedResource Remove="View\NovaPasta\**" />
+    <None Remove="View\NovaPasta\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Assets\Fontes\REBOG-BlackPersonalUse.otf" />
     <None Remove="Assets\Fontes\REBOG-BoldPersonalUse.otf" />
     <None Remove="Assets\Fontes\REBOG-PersonalUse.otf" />
     <None Remove="Assets\Fontes\REBOG-ThinPersonalUse.otf" />
-    <None Remove="View\default.jpg" />
-    <None Remove="View\logo.png" />
+    <None Remove="Imagens\default.jpg" />
+    <None Remove="Imagens\home.png" />
+    <None Remove="Imagens\logo.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -32,10 +39,13 @@
     <EmbeddedResource Include="Assets\Fontes\REBOG-ThinPersonalUse.otf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\default.jpg">
+    <EmbeddedResource Include="Imagens\default.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\logo.png">
+    <EmbeddedResource Include="Imagens\home.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imagens\logo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
