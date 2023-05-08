@@ -20,12 +20,14 @@ namespace AppStarFitness.View
 
         private void btn_entrar_Clicked(object sender, EventArgs e)
         {
-            string cpf_digitado = usuario.Text;
+            string[] cpf_pontuado = usuario.Text.Split('.', '-');
+            string cpf_digitado = cpf_pontuado[0] + cpf_pontuado[1] + cpf_pontuado[2] + cpf_pontuado[3];
             string senha_digitada = senha.Text;
 
-            string cpf_cadastrado = "123.456.789-10";
+            // CPF CADASTRADO NO BANCO
+            string cpf_cadastrado = "12345678910";
             string senha_cadastrada = "teste";
-            
+
             if (cpf_digitado == cpf_cadastrado && senha_digitada == senha_cadastrada)
             {
                 App.Current.Properties.Add("usuario_logado", cpf_digitado);

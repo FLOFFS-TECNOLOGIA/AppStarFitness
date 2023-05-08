@@ -11,11 +11,27 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\Fontes\REBOG-BlackPersonalUse.otf" />
+    <None Remove="Assets\Fontes\REBOG-BoldPersonalUse.otf" />
+    <None Remove="Assets\Fontes\REBOG-PersonalUse.otf" />
+    <None Remove="Assets\Fontes\REBOG-ThinPersonalUse.otf" />
     <None Remove="View\default.jpg" />
     <None Remove="View\logo.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Assets\Fontes\REBOG-BlackPersonalUse.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\Fontes\REBOG-BoldPersonalUse.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\Fontes\REBOG-PersonalUse.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\Fontes\REBOG-ThinPersonalUse.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\default.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
