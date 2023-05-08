@@ -57,7 +57,6 @@ namespace AppStarFitness.DataService
             return json_response;
         }
 
-
         private static string DecodeServerError(System.Net.HttpStatusCode status_code)
         {
             string msg_erro;
