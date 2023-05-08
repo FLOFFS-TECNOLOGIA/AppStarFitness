@@ -9,7 +9,7 @@
                 <Label Text="" />
                 <Image x:Name="logo" />
 
-                <Button x:Name="botao_logout" Text="Sair da conta" Clicked="botao_logout_Clicked" CornerRadius="15" BackgroundColor="#B22222"/>
+                <Button x:Name="botao_logout" Text="Sair da conta" Clicked="botao_logout_Clicked" TextColor="Red" FontAttributes="Bold" BackgroundColor="Transparent"/>
                 
             </StackLayout>
         </ContentPage>
