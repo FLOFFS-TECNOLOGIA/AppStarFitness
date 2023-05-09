@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace AppStarFitness.DataService
 {
@@ -14,6 +15,10 @@ namespace AppStarFitness.DataService
         {
             var json_a_enviar = JsonConvert.SerializeObject(a);
             string json = await DataService.PostDataToService(json_a_enviar, "/aluno/autenticar");
+
+            if (json == "false")
+                return null;
+
             Aluno aluno = JsonConvert.DeserializeObject<Aluno>(json);
 
             return aluno;
