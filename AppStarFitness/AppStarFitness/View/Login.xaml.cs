@@ -29,7 +29,7 @@ namespace AppStarFitness.View
                 string cpf_digitado = cpf_pontuado[0] + cpf_pontuado[1] + cpf_pontuado[2] + cpf_pontuado[3];
                 string senha_digitada = senha.Text;
 
-
+                // Codificando a senha digitada para SHA1 e comparando-a com a senha cadastrada em sha1 no banco para autenticação
                 string senha_sha1;
                 using (var sha1 = new SHA1Managed())
                 {
@@ -46,7 +46,11 @@ namespace AppStarFitness.View
                 if (a != null)
                 {
                     App.Current.Properties.Add("usuario_logado", cpf_digitado);
-                    App.Current.MainPage = new NavigationPage(new MainPage());
+                    App.Current.MainPage = new NavigationPage(new MainPage()
+                    {
+                        BindingContext = a
+                    });
+
                 }
                 else
                 {

@@ -23,6 +23,5 @@ namespace AppStarFitness.DataService
 
             return aluno;
         }
-
     }
 }

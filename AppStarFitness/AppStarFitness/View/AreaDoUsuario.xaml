@@ -3,40 +3,67 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppStarFitness.View.AreaDoUsuario">
     <ContentPage.Content>
-        <StackLayout>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
+        <StackLayout Padding="10">
+            <Image x:Name="foto_perfil" HeightRequest="100"/>
 
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
+            <Label Text="{Binding nome}" FontSize="30" HorizontalOptions="Center" Margin="20"/>
 
-                <Image x:Name="foto_perfil" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" />
+            <Frame BackgroundColor="Transparent" Margin="0, -30, 0, 0">
+                <StackLayout>
+                    <Label HorizontalTextAlignment="Center" FontSize="25">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Altura: " />
+                                <Span Text="{Binding altura_cm}" />
+                                <Span Text=" cm" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
 
-                <Label Text="Bindar Nome Sobrenome" FontSize="30" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" HorizontalOptions="Center"/>
+                    <Label HorizontalTextAlignment="Center" FontSize="25">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Peso: " />
+                                <Span Text="{Binding peso_kg}" />
+                                <Span Text=" Kg" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+            </Frame>
 
-                <Label Text="Altura:" FontSize="20" Grid.Column="0" Grid.Row="2" HorizontalOptions="Center"/>
-                <Label Text="Bindar Altura" FontSize="20" Grid.Column="1" Grid.Row="2" HorizontalOptions="Start"/>
+            <Picker x:Name="pck_ficha" Title="Selecionar ficha" Margin="10"/>
+            <Picker x:Name="pck_dieta" Title="Selecionar dieta" Margin="10" />
+            <Picker x:Name="pck_info" Title="Selecionar informações" Margin="10, 10, 10, 10" />
 
-                <Label Text="Peso:" FontSize="20" Grid.Column="0" Grid.Row="3" HorizontalOptions="Center"/>
-                <Label Text="Bindar Peso" FontSize="20" Grid.Column="1" Grid.Row="3" HorizontalOptions="Start"/>
+            <Button x:Name="btn_evolucao" Text="Ver evolução"/>
 
-                <Picker x:Name="pck_ficha" Title="Selecionar ficha" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" />
-                <Picker x:Name="pck_dieta" Title="Selecionar dieta" Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" />
-                <Picker x:Name="pck_info" Title="Selecionar informações" Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" />
+            <Frame>
+                <StackLayout>
+                    <Label Text="MENSALIDADE" FontSize="15" HorizontalTextAlignment="Center"/>
+                    <Label HorizontalTextAlignment="Center" FontSize="15">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Plano: " />
+                                <Span Text="{Binding peso_kg}" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
 
-                <Button x:Name="btn_evolucao" Text="Ver evolução" Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="2" />
-            </Grid>
+                    <Label HorizontalTextAlignment="Center" FontSize="15">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Status: " />
+                                <Span Text="{Binding peso_kg}" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                    <Label Text="Vencimento:" FontSize="15" HorizontalTextAlignment="Center" />
+                    <Label Text="{Binding peso_kg}" FontSize="15" HorizontalTextAlignment="Center" />
+                </StackLayout>
+            </Frame>
+            
         </StackLayout>
     </ContentPage.Content> 
 </ContentPage>
