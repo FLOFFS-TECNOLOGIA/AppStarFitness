@@ -5,7 +5,7 @@
     <Application.Resources>
         <ResourceDictionary>
             <Style x:Key="BotaoTelaLogin" TargetType="Button">
-                <Setter Property="CornerRadius" Value="50" />
+                <Setter Property="CornerRadius" Value="15" />
                 <Setter Property="BorderWidth" Value="100" />
                 <Setter Property="TextColor" Value="White" />
                 <Setter Property="FontAttributes" Value="Bold" />

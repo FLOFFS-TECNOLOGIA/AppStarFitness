@@ -1,17 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppStarFitness.View.AreaDoUsuario">
+             x:Class="AppStarFitness.View.AreaDoUsuario"
+             BackgroundColor="White">
     <ContentPage.Content>
         <StackLayout Padding="10">
-            <Image x:Name="foto_perfil" HeightRequest="100"/>
+            <ImageButton x:Name="btnimg_fotoperfil" HorizontalOptions="Center" Clicked="btnimg_fotoperfil_Clicked" CornerRadius="100"/>
 
-            <Label Text="{Binding nome}" FontSize="30" HorizontalOptions="Center" Margin="20"/>
+            <Label x:Name="lbl_nome" FontSize="30" TextColor="#4F4F4F" HorizontalOptions="Center" Margin="5"/>
 
-            <Frame BackgroundColor="Transparent" Margin="0, -30, 0, 0">
+            <Frame BackgroundColor="Transparent" Margin="0, -30, 0, -25">
                 <StackLayout>
-                    <Label HorizontalTextAlignment="Center" FontSize="25">
-                        <Label.FormattedText>
+                    <Label HorizontalTextAlignment="Center" TextColor="#4F4F4F" FontSize="25">
+                        <Label.FormattedText >
                             <FormattedString>
                                 <Span Text="Altura: " />
                                 <Span Text="{Binding altura_cm}" />
@@ -20,7 +21,7 @@
                         </Label.FormattedText>
                     </Label>
 
-                    <Label HorizontalTextAlignment="Center" FontSize="25">
+                    <Label HorizontalTextAlignment="Center" TextColor="#4F4F4F" FontSize="25">
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Text="Peso: " />
@@ -32,35 +33,44 @@
                 </StackLayout>
             </Frame>
 
-            <Picker x:Name="pck_ficha" Title="Selecionar ficha" Margin="10"/>
-            <Picker x:Name="pck_dieta" Title="Selecionar dieta" Margin="10" />
-            <Picker x:Name="pck_info" Title="Selecionar informações" Margin="10, 10, 10, 10" />
+            <Picker x:Name="pck_ficha" Title="Selecionar ficha" SelectedIndexChanged="pck_ficha_SelectedIndexChanged" Margin="10, 10, 10, 5"/>
+            <Picker x:Name="pck_dieta" Title="Selecionar dieta" SelectedIndexChanged="pck_dieta_SelectedIndexChanged" Margin="10, 10, 10, 5" />
+            <Picker x:Name="pck_info" Title="Selecionar informações" SelectedIndexChanged="pck_info_SelectedIndexChanged" Margin="10, 10, 10, 5" />
 
-            <Button x:Name="btn_evolucao" Text="Ver evolução"/>
+            <Button x:Name="btn_evolucao" Text="Ver evolução" TextColor="White" CornerRadius="15" BackgroundColor="#3ca65a"/>
 
-            <Frame>
+            <Frame BorderColor="#D3D3D3" Margin="5">
                 <StackLayout>
-                    <Label Text="MENSALIDADE" FontSize="15" HorizontalTextAlignment="Center"/>
-                    <Label HorizontalTextAlignment="Center" FontSize="15">
+                    <Label Text="MENSALIDADE" FontSize="20" FontFamily="fonte_negrito" TextColor="Black" HorizontalTextAlignment="Center"/>
+
+                    <Frame BorderColor="#A9A9A9" Margin="2" Padding="1" Opacity="0.5"/>
+
+                    <Label HorizontalTextAlignment="Center" FontSize="20">
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Text="Plano: " />
-                                <Span Text="{Binding peso_kg}" />
+                                <Span Text="Plano: " TextColor="Black" />
+                                <Span Text="{Binding peso_kg}" TextColor="#3e61b1" />
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
 
-                    <Label HorizontalTextAlignment="Center" FontSize="15">
+                    <Label HorizontalTextAlignment="Center" FontSize="20">
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Text="Status: " />
-                                <Span Text="{Binding peso_kg}" />
+                                <Span Text="Status: " TextColor="Black"/>
+                                <Span x:Name="status" Text="{Binding peso_kg}" />
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
 
-                    <Label Text="Vencimento:" FontSize="15" HorizontalTextAlignment="Center" />
-                    <Label Text="{Binding peso_kg}" FontSize="15" HorizontalTextAlignment="Center" />
+                    <Label HorizontalTextAlignment="Center" FontSize="20">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Vencimento: " TextColor="Black"/>
+                                <Span x:Name="data_vencimento" Text="{Binding peso_kg}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
                 </StackLayout>
             </Frame>
             

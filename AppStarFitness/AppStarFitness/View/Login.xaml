@@ -7,7 +7,9 @@
     <ContentPage.Content>
         <StackLayout VerticalOptions="Center">
             
-            <Image x:Name="logo" HeightRequest="200" Margin="0, 0, 0, 50"/>
+            <Image x:Name="logo" HeightRequest="200"/>
+
+            <ActivityIndicator x:Name="carregando" IsRunning="False" />
 
             <Frame BackgroundColor="Transparent" BorderColor="#D3D3D3" Margin="20, 20, 20, 0" CornerRadius="15" Padding="10" >
                 <Grid RowDefinitions="*, *, *, *, *, *, *">

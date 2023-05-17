@@ -18,7 +18,7 @@
                 <Label Text="Seg à Sex - 06h às 11h - 15h às 21h" TextColor="#808080" FontSize="20" HorizontalTextAlignment="Center" />
                 <Label Text="Sáb - 06h às 11h" TextColor="#808080" FontSize="20" HorizontalTextAlignment="Center" />
 
-                <Label Text="" />
+                <Frame BorderColor="#DCDCDC" Margin="10" Padding="1"/>
 
                 <Label Text="Anúncios" TextColor="#808080" FontSize="20" HorizontalTextAlignment="Center" />
 
