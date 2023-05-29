@@ -10,6 +10,15 @@
                 <Setter Property="TextColor" Value="White" />
                 <Setter Property="FontAttributes" Value="Bold" />
             </Style>
+
+            <Style x:Key="BotaoVerPicker" TargetType="Button">
+                <Setter Property="CornerRadius" Value="15" />
+                <Setter Property="BorderWidth" Value="1" />
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="BorderColor" Value="#3ca65a"/>
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="End" />
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

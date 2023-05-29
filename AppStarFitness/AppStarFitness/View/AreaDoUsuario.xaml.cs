@@ -38,17 +38,53 @@ namespace AppStarFitness.View
 
         private void pck_ficha_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Picker disparador = sender as Picker;
+            try
+            {
+                Picker disparador = sender as Picker;
+            }
+            catch(Exception err) 
+            {
+                DisplayAlert("Ops", err.Message, "OK");
+            }
         }
 
         private void pck_dieta_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Picker disparador = sender as Picker;
+            try
+            {
+                Picker disparador = sender as Picker;
+            }
+            catch (Exception err)
+            {
+                DisplayAlert("Ops", err.Message, "OK");
+            }
         }
 
         private void pck_info_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Picker disparador = sender as Picker;
+            try
+            {
+                Picker disparador = sender as Picker;
+            }
+            catch (Exception err)
+            {
+                DisplayAlert("Ops", err.Message, "OK");
+            }
+        }
+
+        private void btn_escolher_ficha_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_escolher_dieta_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_escolher_info_Clicked(object sender, EventArgs e)
+        {
+
         }
     }
 }
