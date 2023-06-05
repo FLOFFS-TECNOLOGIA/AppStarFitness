@@ -64,7 +64,7 @@ namespace AppStarFitness.View
             } 
             catch (Exception err)
             {
-                await DisplayAlert("Ops", err.Message, "OK");
+                await DisplayAlert("Erro", err.Message, "OK");
             }
             finally
             {

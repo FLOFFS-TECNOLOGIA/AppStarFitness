@@ -11,7 +11,7 @@
 
             <Frame BackgroundColor="Transparent" Margin="0, -30, 0, -25">
                 <StackLayout>
-                    <Label HorizontalTextAlignment="Center" TextColor="#4F4F4F" FontSize="25">
+                    <Label HorizontalTextAlignment="Center" TextColor="#4F4F4F" FontSize="20">
                         <Label.FormattedText >
                             <FormattedString>
                                 <Span Text="Altura: " />
@@ -21,7 +21,7 @@
                         </Label.FormattedText>
                     </Label>
 
-                    <Label HorizontalTextAlignment="Center" TextColor="#4F4F4F" FontSize="25">
+                    <Label HorizontalTextAlignment="Center" TextColor="#4F4F4F" FontSize="20">
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Text="Peso: " />
@@ -33,23 +33,11 @@
                 </StackLayout>
             </Frame>
 
-            <Grid ColumnDefinitions="*, *" RowDefinitions="*, *, *" Margin="10" >
-                <Picker x:Name="pck_ficha" Title="Selecionar ficha" SelectedIndexChanged="pck_ficha_SelectedIndexChanged" Grid.Row="0"  Grid.Column="0" Margin="0, 0, -80, 0" />
-                <Button x:Name="btn_escolher_ficha" Clicked="btn_escolher_ficha_Clicked" Text="Ver ficha" Grid.Row="0" Grid.Column="1" Style="{StaticResource BotaoVerPicker}" />
+            <Button x:Name="btn_ficha" Clicked="btn_ficha_Clicked" Text="Fichas de treino" Style="{StaticResource BotaoTelaAreaUsuario}" Margin="5, 20, 5, 5"/>
+            <Button x:Name="bnt_dieta" Clicked="bnt_dieta_Clicked" Text="Dietas" Style="{StaticResource BotaoTelaAreaUsuario}" />
+            <Button x:Name="btn_informacoes" Clicked="btn_informacoes_Clicked" Text="Informações" Style="{StaticResource BotaoTelaAreaUsuario}"/>
 
-                <Picker x:Name="pck_dieta" Title="Selecionar dieta" SelectedIndexChanged="pck_dieta_SelectedIndexChanged" Grid.Row="1" Grid.Column="0" Margin="0, 0, -80, 0"/>
-                <Button x:Name="btn_escolher_dieta" Clicked="btn_escolher_dieta_Clicked" Text="Ver dieta" Grid.Row="1" Grid.Column="1" Style="{StaticResource BotaoVerPicker}"/>
-
-                <Picker x:Name="pck_info" Title="Selecionar informações" SelectedIndexChanged="pck_info_SelectedIndexChanged" Grid.Row="2" Grid.Column="0" Margin="0, 0, -80, 0">
-                    <Picker.Items>
-                        <x:String>Medidas Atuais</x:String>
-                        <x:String>Cálculos Corporais</x:String>
-                    </Picker.Items>
-                </Picker>
-                <Button x:Name="btn_escolher_info" Clicked="btn_escolher_info_Clicked" Text="Ver info's" Grid.Row="2" Grid.Column="1" Style="{StaticResource BotaoVerPicker}"/>
-            </Grid>
-            
-            <Button x:Name="btn_evolucao" Text="Ver evolução" TextColor="White" CornerRadius="15" BackgroundColor="#3ca65a"/>
+            <Button x:Name="btn_evolucao" Clicked="btn_evolucao_Clicked" Text="Ver evolução" TextColor="White" CornerRadius="15" BackgroundColor="#3ca65a"/>
 
             <Frame BorderColor="#D3D3D3" Margin="5">
                 <StackLayout>

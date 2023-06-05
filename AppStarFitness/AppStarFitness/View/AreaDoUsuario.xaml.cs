@@ -20,7 +20,6 @@ namespace AppStarFitness.View
         public AreaDoUsuario()
         {
             InitializeComponent();
-
             btnimg_fotoperfil.Source = ImageSource.FromResource("AppStarFitness.Imagens.default.jpg");
         }
 
@@ -34,55 +33,25 @@ namespace AppStarFitness.View
 
         private void btnimg_fotoperfil_Clicked(object sender, EventArgs e)
         {
+            // AGUARDANDO FINALIZAÇÃO DA API
         }
 
-        private void pck_ficha_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                Picker disparador = sender as Picker;
-            }
-            catch(Exception err) 
-            {
-                DisplayAlert("Ops", err.Message, "OK");
-            }
-        }
-
-        private void pck_dieta_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                Picker disparador = sender as Picker;
-            }
-            catch (Exception err)
-            {
-                DisplayAlert("Ops", err.Message, "OK");
-            }
-        }
-
-        private void pck_info_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                Picker disparador = sender as Picker;
-            }
-            catch (Exception err)
-            {
-                DisplayAlert("Ops", err.Message, "OK");
-            }
-        }
-
-        private void btn_escolher_ficha_Clicked(object sender, EventArgs e)
+        private void btn_ficha_Clicked(object sender, EventArgs e)
         {
 
         }
 
-        private void btn_escolher_dieta_Clicked(object sender, EventArgs e)
+        private void bnt_dieta_Clicked(object sender, EventArgs e)
         {
 
         }
 
-        private void btn_escolher_info_Clicked(object sender, EventArgs e)
+        private void btn_informacoes_Clicked(object sender, EventArgs e)
+        {
+            App.Current.MainPage = new NavigationPage(new MainPageInformacoes());
+        }
+
+        private void btn_evolucao_Clicked(object sender, EventArgs e)
         {
 
         }
