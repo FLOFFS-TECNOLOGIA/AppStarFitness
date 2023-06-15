@@ -33,10 +33,5 @@ namespace AppStarFitness
                 App.Current.MainPage = new Login();
             }
         }
-
-        private void btn_inicio_Clicked(object sender, EventArgs e)
-        {
-            App.Current.MainPage = new MainPage();
-        }
     }
 }

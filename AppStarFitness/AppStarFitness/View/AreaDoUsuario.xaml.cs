@@ -20,6 +20,7 @@ namespace AppStarFitness.View
         public AreaDoUsuario()
         {
             InitializeComponent();
+
             btnimg_fotoperfil.Source = ImageSource.FromResource("AppStarFitness.Imagens.default.jpg");
         }
 
@@ -48,7 +49,7 @@ namespace AppStarFitness.View
 
         private void btn_informacoes_Clicked(object sender, EventArgs e)
         {
-            App.Current.MainPage = new NavigationPage(new MainPageInformacoes());
+            Navigation.PushAsync(new MainPageInformacoes());
         }
 
         private void btn_evolucao_Clicked(object sender, EventArgs e)

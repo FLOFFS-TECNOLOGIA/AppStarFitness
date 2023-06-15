@@ -8,6 +8,8 @@ namespace AppStarFitness
 {
     public partial class App : Application
     {
+        public static Model.Aluno DadosAluno { get; set; }
+
         public App()
         {
             Device.SetFlags(new string[] { "AppTheme_Experimental" });
@@ -18,11 +20,11 @@ namespace AppStarFitness
 
             if (Properties.ContainsKey("usuario_logado"))
             {
-                MainPage = new MainPage();
+                MainPage = new NavigationPage(new MainPage());
             }
             else
             {
-                MainPage = new View.Login();
+                MainPage = new NavigationPage(new View.Login());
             }
         }
 

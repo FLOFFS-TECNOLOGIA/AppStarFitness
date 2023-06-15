@@ -9,9 +9,6 @@
                 <Label Text="" />
                 <Image x:Name="logo" />
 
-                <Button x:Name="btn_inicio" Text="Início" Clicked="btn_inicio_Clicked" TextColor="White" FontAttributes="Bold" BackgroundColor="#3e61b1" 
-                        CornerRadius="15" BorderWidth="2" Margin="20, 0, 20, 0" />
-
                 <Frame BorderColor="#DCDCDC" Margin="10" Padding="1"/>
 
                 <Label Text="Horário de funcionamento:" TextColor="#808080" FontSize="20" HorizontalTextAlignment="Center" />

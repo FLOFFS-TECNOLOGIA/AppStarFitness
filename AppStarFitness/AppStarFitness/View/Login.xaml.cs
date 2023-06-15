@@ -18,6 +18,7 @@ namespace AppStarFitness.View
         public Login()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
             logo.Source = ImageSource.FromResource("AppStarFitness.Imagens.logo.png");
 
             carregando.Color = Color.Blue;
@@ -75,7 +76,7 @@ namespace AppStarFitness.View
 
         private void btn_esqueci_Clicked(object sender, EventArgs e)
         {
-            App.Current.MainPage = new NavigationPage(new View.EsqueciSenha());
+            Navigation.PushAsync(new EsqueciSenha());
         }
     }
 }

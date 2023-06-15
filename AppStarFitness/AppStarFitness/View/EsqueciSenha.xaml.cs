@@ -22,10 +22,5 @@ namespace AppStarFitness.View
         {
 
         }
-
-        private void btn_voltalogin_Clicked(object sender, EventArgs e)
-        {
-            App.Current.MainPage = new NavigationPage(new Login());
-        }
     }
 }

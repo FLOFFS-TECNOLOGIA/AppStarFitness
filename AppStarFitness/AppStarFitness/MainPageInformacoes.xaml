@@ -1,18 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:View="clr-namespace:AppStarFitness.View"
              x:Class="AppStarFitness.MainPageInformacoes">
+    <ContentPage Title="Teste 1">
+        <Label Text="teste1"/>
+    </ContentPage>
 
-    <TabBar>
-        <Tab Title="Medidas Atuais" Icon="" Route="">
-            <ShellContent>
-            </ShellContent>
-        </Tab>
-
-        <Tab Title="Cálculos Corporais" Icon="" Route="">
-            <ShellContent>
-            </ShellContent>
-        </Tab>
-    </TabBar>
-</Shell>
+    <ContentPage Title="Teste 2">
+        <Label Text="teste2"/>
+    </ContentPage>
+    
+</TabbedPage>

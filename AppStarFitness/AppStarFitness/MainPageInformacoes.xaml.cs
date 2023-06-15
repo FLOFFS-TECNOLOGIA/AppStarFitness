@@ -10,7 +10,7 @@ using Xamarin.Forms.Xaml;
 namespace AppStarFitness
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class MainPageInformacoes : Shell
+	public partial class MainPageInformacoes : TabbedPage
 	{
 		public MainPageInformacoes ()
 		{

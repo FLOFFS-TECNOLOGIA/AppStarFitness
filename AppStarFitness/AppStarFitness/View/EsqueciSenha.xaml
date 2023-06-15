@@ -21,10 +21,6 @@
                             Style="{StaticResource BotaoTelaLogin}" BackgroundColor="#3ca65a"
                             Clicked="btn_enviar_Clicked"/>
 
-                    <Button x:Name="btn_voltalogin" Text="Voltar para Login" Grid.Row="4" 
-                            Style="{StaticResource BotaoTelaLogin}" BackgroundColor="#3e61b1"
-                            Clicked="btn_voltalogin_Clicked"/>
-
                 </Grid>
             </Frame>
         </StackLayout>
