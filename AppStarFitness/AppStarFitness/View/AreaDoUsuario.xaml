@@ -4,76 +4,16 @@
              x:Class="AppStarFitness.View.AreaDoUsuario"
              BackgroundColor="White">
     <ContentPage.Content>
-        <StackLayout Padding="10">
+        <StackLayout Padding="10" VerticalOptions="Center">
             <ImageButton x:Name="btnimg_fotoperfil" HorizontalOptions="Center" Clicked="btnimg_fotoperfil_Clicked" CornerRadius="100"/>
 
-            <Label x:Name="lbl_nome" FontSize="30" TextColor="#4F4F4F" HorizontalOptions="Center" Margin="5"/>
-
-            <Frame BackgroundColor="Transparent" Margin="0, -30, 0, -25">
-                <StackLayout>
-                    <Label HorizontalTextAlignment="Center" TextColor="#4F4F4F" FontSize="20">
-                        <Label.FormattedText >
-                            <FormattedString>
-                                <Span Text="Altura: " />
-                                <Span Text="{Binding altura_cm}" />
-                                <Span Text=" cm" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-
-                    <Label HorizontalTextAlignment="Center" TextColor="#4F4F4F" FontSize="20">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="Peso: " />
-                                <Span Text="{Binding peso_kg}" />
-                                <Span Text=" Kg" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                </StackLayout>
-            </Frame>
+            <Label x:Name="lbl_nome" FontSize="30" TextColor="#4F4F4F" HorizontalOptions="Center"/>
 
             <Button x:Name="btn_ficha" Clicked="btn_ficha_Clicked" Text="Fichas de treino" Style="{StaticResource BotaoTelaAreaUsuario}" Margin="5, 20, 5, 5"/>
             <Button x:Name="bnt_dieta" Clicked="bnt_dieta_Clicked" Text="Dietas" Style="{StaticResource BotaoTelaAreaUsuario}" />
             <Button x:Name="btn_informacoes" Clicked="btn_informacoes_Clicked" Text="Informações" Style="{StaticResource BotaoTelaAreaUsuario}"/>
 
             <Button x:Name="btn_evolucao" Clicked="btn_evolucao_Clicked" Text="Ver evolução" TextColor="White" CornerRadius="15" BackgroundColor="#3ca65a"/>
-
-            <Frame BorderColor="#D3D3D3" Margin="5">
-                <StackLayout>
-                    <Label Text="MENSALIDADE" FontSize="20" FontFamily="fonte_negrito" TextColor="Black" HorizontalTextAlignment="Center"/>
-
-                    <Frame BorderColor="#A9A9A9" Margin="2" Padding="1" Opacity="0.5"/>
-
-                    <Label HorizontalTextAlignment="Center" FontSize="20">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="Plano: " TextColor="Black" />
-                                <Span Text="{Binding peso_kg}" TextColor="#3e61b1" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-
-                    <Label HorizontalTextAlignment="Center" FontSize="20">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="Status: " TextColor="Black"/>
-                                <Span x:Name="status" Text="{Binding peso_kg}" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-
-                    <Label HorizontalTextAlignment="Center" FontSize="20">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="Vencimento: " TextColor="Black"/>
-                                <Span x:Name="data_vencimento" Text="{Binding peso_kg}"/>
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                </StackLayout>
-            </Frame>
-            
         </StackLayout>
     </ContentPage.Content> 
 </ContentPage>

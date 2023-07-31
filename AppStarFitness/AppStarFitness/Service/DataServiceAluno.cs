@@ -14,6 +14,13 @@ namespace AppStarFitness.DataService
         public static async Task<Aluno> AutenticarAluno(Aluno a)
         {
             var json_a_enviar = JsonConvert.SerializeObject(a);
+
+            Console.WriteLine("=============================================================================");
+            Console.WriteLine(" ");
+            Console.WriteLine(json_a_enviar);
+            Console.WriteLine(" ");
+            Console.WriteLine("=============================================================================");
+
             string json = await DataService.PostDataToService(json_a_enviar, "/aluno/autenticar");
 
             if (json == "false")

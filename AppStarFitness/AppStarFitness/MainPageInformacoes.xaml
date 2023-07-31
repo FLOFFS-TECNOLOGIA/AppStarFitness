@@ -3,12 +3,88 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:View="clr-namespace:AppStarFitness.View"
              x:Class="AppStarFitness.MainPageInformacoes">
-    <ContentPage Title="Teste 1">
-        <Label Text="teste1"/>
+    
+    <!-- #################### PÁGINA DE INFORMAÇÕES CORPORAIS ########################### -->
+    
+    <ContentPage Title="Informações Corporais">
+        <Frame BackgroundColor="Transparent">
+            <StackLayout>
+                <Label HorizontalTextAlignment="Center" TextColor="#4F4F4F" FontSize="30">
+                    <Label.FormattedText >
+                        <FormattedString>
+                            <Span Text="Altura: " />
+                            <Span x:Name="txt_altura" Text="{Binding altura_cm}" />
+                            <Span Text=" cm" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label HorizontalTextAlignment="Center" TextColor="#4F4F4F" FontSize="30">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Peso: " />
+                            <Span x:Name="txt_peso" Text="{Binding peso_kg}" />
+                            <Span Text=" Kg" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label HorizontalTextAlignment="Center" TextColor="#4F4F4F" FontSize="30">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="IMC: " />
+                            <Span x:Name="txt_imc" Text="" />
+                            <Span Text="" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+        </Frame>
     </ContentPage>
 
-    <ContentPage Title="Teste 2">
-        <Label Text="teste2"/>
+    <!-- #################### PÁGINA DE MENSALIDADE ########################### -->
+ 
+    <ContentPage Title="Mensalidade">
+        <StackLayout>
+            <Label Text="MENSALIDADE" FontSize="35" FontFamily="fonte_negrito" TextColor="Black" HorizontalTextAlignment="Center" Margin="10"/>
+
+            <Frame BorderColor="#A9A9A9" Margin="20, 0, 20, 0" Padding="1" Opacity="0.5" /> 
+
+            <Frame VerticalOptions="Center" BackgroundColor="Transparent">
+                <StackLayout>
+                    <Label HorizontalTextAlignment="Center" FontSize="25" Margin="5">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Plano: " TextColor="#4F4F4F" />
+                                <Span x:Name="plano" Text="{Binding peso_kg}" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                    <Label HorizontalTextAlignment="Center" FontSize="25" Margin="5">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Status: " TextColor="#4F4F4F"/>
+                                <Span x:Name="status" Text="{Binding peso_kg}" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                    <Label HorizontalTextAlignment="Center" FontSize="25" Margin="5">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Vencimento: " TextColor="#4F4F4F"/>
+                                <Span x:Name="data_vencimento" Text="{Binding peso_kg}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+            </Frame>
+
+            <Frame BorderColor="#A9A9A9" Margin="20, 0, 20, 0" Padding="1" Opacity="0.5" />
+
+            <Image x:Name="logo" Scale="2" Margin="0, 120, 0, 0" Opacity="0.7"/>
+        </StackLayout>
     </ContentPage>
     
 </TabbedPage>

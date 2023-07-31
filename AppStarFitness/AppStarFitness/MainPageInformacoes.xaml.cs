@@ -15,6 +15,22 @@ namespace AppStarFitness
 		public MainPageInformacoes ()
 		{
 			InitializeComponent ();
-		}
-	}
+
+            logo.Source = ImageSource.FromResource("AppStarFitness.Imagens.logo.png");
+			
+        }
+
+        protected override void OnAppearing()
+        {
+            // ==================== Cálculo IMC ==========================
+            double peso = double.Parse(txt_peso.Text);
+            double altura = double.Parse(txt_altura.Text);
+
+            altura = altura / 100;
+
+            double imc = peso / (altura * altura);
+
+            txt_imc.Text = imc.ToString();
+        }
+    }
 }

@@ -18,8 +18,10 @@ namespace AppStarFitness.Model
         public string peso_kg { get; set; }
         public string foto { get; set; }
         public string observacao { get; set; }
+        public int id_matricula { get; set; }
         public int id_endereco { get; set; }
-        public int id_registrado_por { get; set; }
+        public string numero_residencial { get; set; }
+        public int id_operador { get; set; }
         public int ativo { get; set; }
     }
 }
