@@ -9,35 +9,87 @@
     <ContentPage Title="Informações Corporais">
         <Frame BackgroundColor="Transparent">
             <StackLayout>
-                <Label HorizontalTextAlignment="Center" TextColor="#4F4F4F" FontSize="30">
+                <Label HorizontalTextAlignment="Center" TextColor="#4F4F4F" FontSize="20">
+                    <Label.FormattedText >
+                        <FormattedString>
+                            <Span Text="Idade: " />
+                            <Span x:Name="txt_idade" Text="" />
+                            <Span Text=" anos" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                
+                <Label HorizontalTextAlignment="Center" TextColor="#4F4F4F" FontSize="20">
                     <Label.FormattedText >
                         <FormattedString>
                             <Span Text="Altura: " />
-                            <Span x:Name="txt_altura" Text="{Binding altura_cm}" />
+                            <Span Text="{Binding altura_cm}" />
                             <Span Text=" cm" />
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
 
-                <Label HorizontalTextAlignment="Center" TextColor="#4F4F4F" FontSize="30">
+                <Label HorizontalTextAlignment="Center" TextColor="#4F4F4F" FontSize="20">
                     <Label.FormattedText>
                         <FormattedString>
                             <Span Text="Peso: " />
-                            <Span x:Name="txt_peso" Text="{Binding peso_kg}" />
-                            <Span Text=" Kg" />
+                            <Span Text="{Binding peso_kg}" />
+                            <Span Text=" kg" />
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
 
-                <Label HorizontalTextAlignment="Center" TextColor="#4F4F4F" FontSize="30">
+                <Label HorizontalTextAlignment="Center" TextColor="#4F4F4F" FontSize="20">
                     <Label.FormattedText>
                         <FormattedString>
                             <Span Text="IMC: " />
                             <Span x:Name="txt_imc" Text="" />
-                            <Span Text="" />
+                            <Span x:Name="txt_classificacao_imc" Text="" />
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
+
+                <Label HorizontalTextAlignment="Center" Text="Taxa de Metabolismo Basal:" TextColor="#4F4F4F" FontSize="20" />
+
+                <Label HorizontalTextAlignment="Center" TextColor="#4F4F4F" FontSize="17">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span x:Name="txt_tmb" Text="" />
+                            <Span Text=" calorias gastas (sem exercícios)" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label HorizontalTextAlignment="Center" TextColor="#4F4F4F" FontSize="20">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Percentual de gordura: " />
+                            <Span x:Name="txt_gordura" Text="" />
+                            <Span Text=" %" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label HorizontalTextAlignment="Center" TextColor="#4F4F4F" FontSize="20">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Massa magra: " />
+                            <Span x:Name="txt_massa_magra" Text="" />
+                            <Span Text=" kg" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label HorizontalTextAlignment="Center" TextColor="#4F4F4F" FontSize="20">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Massa gorda: " />
+                            <Span x:Name="txt_massa_gorda" Text="" />
+                            <Span Text=" kg" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
             </StackLayout>
         </Frame>
     </ContentPage>
@@ -46,7 +98,7 @@
  
     <ContentPage Title="Mensalidade">
         <StackLayout>
-            <Label Text="MENSALIDADE" FontSize="35" FontFamily="fonte_negrito" TextColor="Black" HorizontalTextAlignment="Center" Margin="10"/>
+            <Label Text="MENSALIDADE" FontSize="35" FontFamily="fonte_negrito" TextColor="Black" HorizontalTextAlignment="Center" Margin="10, 30, 10, 10"/>
 
             <Frame BorderColor="#A9A9A9" Margin="20, 0, 20, 0" Padding="1" Opacity="0.5" /> 
 
