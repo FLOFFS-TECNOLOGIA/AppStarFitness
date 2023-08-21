@@ -19,7 +19,9 @@ namespace AppStarFitness
 		{
 			InitializeComponent ();
 
-            logo.Source = ImageSource.FromResource("AppStarFitness.Imagens.logo.png");
+            logo_1.Source = ImageSource.FromResource("AppStarFitness.Imagens.logo.png");
+            logo_2.Source = ImageSource.FromResource("AppStarFitness.Imagens.logo.png");
+            logo_3.Source = ImageSource.FromResource("AppStarFitness.Imagens.logo.png");
 			
         }
 

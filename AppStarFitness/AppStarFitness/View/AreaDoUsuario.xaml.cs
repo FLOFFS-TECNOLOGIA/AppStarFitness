@@ -44,7 +44,7 @@ namespace AppStarFitness.View
 
         private void bnt_dieta_Clicked(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new MainPageDietas());
         }
 
         private void btn_informacoes_Clicked(object sender, EventArgs e)
