@@ -4,9 +4,16 @@
              x:Class="AppStarFitness.App">
     <Application.Resources>
         <ResourceDictionary>
-            <Style x:Key="BotaoTelaLogin" TargetType="Button">
+            
+            <Style x:Key="ButtonLogin" TargetType="Button">
+            <Setter Property="CornerRadius" Value="15" />
+            <Setter Property="BorderWidth" Value="100" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+
+            <Style x:Key="ButtonEsqueciSenha" TargetType="Button">
                 <Setter Property="CornerRadius" Value="15" />
-                <Setter Property="BorderWidth" Value="100" />
                 <Setter Property="TextColor" Value="White" />
                 <Setter Property="FontAttributes" Value="Bold" />
             </Style>
@@ -18,6 +25,12 @@
                 <Setter Property="BackgroundColor" Value="Transparent"/>
                 <Setter Property="BorderColor" Value="#3e61b1" />
                 <Setter Property="Margin" Value="5"/>
+            </Style>
+
+            <Color x:Key="Primary">#ff7a01</Color>
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="BarTextColor" Value="White" />
             </Style>
         </ResourceDictionary>
     </Application.Resources>
