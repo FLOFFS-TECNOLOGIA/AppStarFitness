@@ -24,7 +24,7 @@ namespace AppStarFitness.View
             carregando.Color = Color.Blue;
         }
 
-        private async void btn_entrar_Clicked(object sender, EventArgs e)
+        private async void btn_login_Clicked(object sender, EventArgs e)
         {
             try
             {
