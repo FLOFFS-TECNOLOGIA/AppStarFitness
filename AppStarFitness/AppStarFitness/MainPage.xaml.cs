@@ -20,7 +20,6 @@ namespace AppStarFitness
             NavigationPage.SetHasNavigationBar(this, false);
 
             logo.Source = ImageSource.FromResource("AppStarFitness.Imagens.logo.png");
-
         }
 
         private async void btn_logout_Clicked(object sender, EventArgs e)
@@ -30,6 +29,7 @@ namespace AppStarFitness
             if (confirmar)
             {
                 App.Current.Properties.Remove("usuario_logado");
+                App.Current.Properties.Remove("usuario_senha");
                 App.Current.MainPage = new Login();
             }
         }

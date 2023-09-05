@@ -17,20 +17,36 @@ namespace AppStarFitness.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AreaDoUsuario : ContentPage
     {
-        public AreaDoUsuario()
+        public  AreaDoUsuario()
         {
             InitializeComponent();
 
             btnimg_fotoperfil.Source = ImageSource.FromResource("AppStarFitness.Imagens.default.jpg");
         }
 
-        protected override void OnBindingContextChanged()
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+
+            string cpf_aluno = (string)Application.Current.Properties["usuario_logado"];
+            string senha_aluno = (string)Application.Current.Properties["usuario_senha"];
+
+            Aluno a = await DataServiceAluno.AutenticarAluno(new Aluno
+            {
+                cpf = cpf_aluno,
+                senha = senha_aluno
+            });
+
+            lbl_nome.Text = a.nome.Split(' ')[0];
+        }
+
+        /*protected override void OnBindingContextChanged()
         {
             base.OnBindingContextChanged();
             Aluno a = BindingContext as Aluno;
 
             lbl_nome.Text = a.nome.Split(' ')[0];
-        }
+        }*/
 
         private void btnimg_fotoperfil_Clicked(object sender, EventArgs e)
         {
@@ -41,6 +57,7 @@ namespace AppStarFitness.View
         {
 
         }
+
 
         private void bnt_dieta_Clicked(object sender, EventArgs e)
         {

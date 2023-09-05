@@ -8,7 +8,7 @@
     
     <ContentPage Title="Informações Corporais">
         <StackLayout>
-            <Label Text="INFORMAÇÕES CORPORAIS" FontSize="35" FontAttributes="Bold" TextColor="Black" HorizontalTextAlignment="Center" Margin="10, 30, 10, 10"/>
+            <Label Text="INFORMAÇÕES CORPORAIS" FontSize="35" TextColor="Black" HorizontalTextAlignment="Center" Margin="10, 30, 10, 10"/>
 
             <Frame BorderColor="#A9A9A9" Margin="20, 0, 20, 0" Padding="1" Opacity="0.5" />
 
@@ -18,7 +18,7 @@
                         <Label.FormattedText >
                             <FormattedString>
                                 <Span Text="Idade: " />
-                                <Span x:Name="txt_idade" Text="" />
+                                <Span x:Name="lbl_idade" Text="" />
                                 <Span Text=" anos" />
                             </FormattedString>
                         </Label.FormattedText>
@@ -28,7 +28,7 @@
                         <Label.FormattedText >
                             <FormattedString>
                                 <Span Text="Altura: " />
-                                <Span Text="{Binding altura_cm}" />
+                                <Span x:Name="lbl_altura" Text="{Binding altura_cm}" />
                                 <Span Text=" cm" />
                             </FormattedString>
                         </Label.FormattedText>
@@ -38,7 +38,7 @@
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Text="Peso: " />
-                                <Span Text="{Binding peso_kg}" />
+                                <Span x:Name="lbl_peso" Text="{Binding peso_kg}" />
                                 <Span Text=" kg" />
                             </FormattedString>
                         </Label.FormattedText>
@@ -48,8 +48,8 @@
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Text="IMC: " />
-                                <Span x:Name="txt_imc" Text="" />
-                                <Span x:Name="txt_classificacao_imc" Text="" />
+                                <Span x:Name="lbl_imc" Text="" />
+                                <Span x:Name="lbl_classificacao_imc" Text="" />
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
@@ -59,7 +59,7 @@
                     <Label HorizontalTextAlignment="Center" TextColor="#4F4F4F" FontSize="17">
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span x:Name="txt_tmb" Text="" />
+                                <Span x:Name="lbl_tmb" Text="" />
                                 <Span Text=" calorias gastas (sem exercícios)" />
                             </FormattedString>
                         </Label.FormattedText>
@@ -69,7 +69,7 @@
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Text="Percentual de gordura: " />
-                                <Span x:Name="txt_gordura" Text="" />
+                                <Span x:Name="lbl_gordura" Text="" />
                                 <Span Text=" %" />
                             </FormattedString>
                         </Label.FormattedText>
@@ -79,7 +79,7 @@
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Text="Massa magra: " />
-                                <Span x:Name="txt_massa_magra" Text="" />
+                                <Span x:Name="lbl_massa_magra" Text="" />
                                 <Span Text=" kg" />
                             </FormattedString>
                         </Label.FormattedText>
@@ -107,7 +107,7 @@
 
     <ContentPage Title="Medidas Atuais">
         <StackLayout>
-            <Label Text="MEDIDAS ATUAIS" FontAttributes="Bold" FontSize="35" TextColor="Black" HorizontalTextAlignment="Center" Margin="10, 30, 10, 10"/>
+            <Label Text="MEDIDAS ATUAIS" FontSize="35" TextColor="Black" HorizontalTextAlignment="Center" Margin="10, 30, 10, 10"/>
 
             <Frame BorderColor="#A9A9A9" Margin="20, 0, 20, 0" Padding="1" Opacity="0.5" />
 
@@ -213,7 +213,7 @@
  
     <ContentPage Title="Mensalidade">
         <StackLayout>
-            <Label Text="MENSALIDADE" FontSize="35" FontAttributes="Bold" TextColor="Black" HorizontalTextAlignment="Center" Margin="10, 30, 10, 10"/>
+            <Label Text="MENSALIDADE" FontSize="35" TextColor="Black" HorizontalTextAlignment="Center" Margin="10, 30, 10, 10"/>
 
             <Frame BorderColor="#A9A9A9" Margin="20, 0, 20, 0" Padding="1" Opacity="0.5" /> 
 

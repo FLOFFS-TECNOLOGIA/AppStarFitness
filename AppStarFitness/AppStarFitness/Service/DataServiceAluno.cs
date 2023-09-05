@@ -30,5 +30,14 @@ namespace AppStarFitness.DataService
 
             return aluno;
         }
+
+        /*public static async Task<Aluno> BuscarDados(string cpf)
+        {
+            string json = await DataService.GetDataFromService("/aluno/dados?cpf=" + cpf);
+
+            Aluno aluno_dados = JsonConvert.DeserializeObject<Aluno>(json);
+
+            return aluno_dados;
+        }*/
     }
 }

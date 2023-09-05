@@ -10,11 +10,21 @@ using Xamarin.Forms.Xaml;
 namespace AppStarFitness
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MainPageDietas : ContentPage
+    public partial class MainPageDietas : TabbedPage
     {
         public MainPageDietas()
         {
             InitializeComponent();
+        }
+
+        private void pck_dieta_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_dieta_Clicked(object sender, EventArgs e)
+        {
+
         }
     }
 }

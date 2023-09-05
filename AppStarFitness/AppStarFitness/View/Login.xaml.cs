@@ -50,8 +50,11 @@ namespace AppStarFitness.View
 
                 if (a != null)
                 {
-                    App.Current.Properties.Add("usuario_logado", cpf_digitado);
-                    App.Current.MainPage = new NavigationPage(new MainPage()
+                    Application.Current.Properties.Add("usuario_logado", cpf_digitado);
+                    Application.Current.Properties.Add("usuario_senha", senha_sha1);
+                    await Application.Current.SavePropertiesAsync();
+
+                    Application.Current.MainPage = new NavigationPage(new MainPage()
                     {
                         BindingContext = a
                     });
@@ -76,7 +79,7 @@ namespace AppStarFitness.View
 
         private void btn_esqueci_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new EsqueciSenha());
+            Navigation.PushAsync(new NavigationPage(new EsqueciSenha()));
         }
     }
 }
