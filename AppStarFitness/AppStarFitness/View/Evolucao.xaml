@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppStarFitness.View.Evolucao">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Evolução" FontSize="45" Margin="40" HorizontalTextAlignment="Center"/>
+
+            <Button x:Name="btn_add_evolucao" Text="+" FontSize="40" TextColor="#3ca65a" BorderColor="#3ca65a" BorderWidth="3" 
+                    CornerRadius="100" BackgroundColor="Transparent" HorizontalOptions="Center" WidthRequest="70" Clicked="btn_add_evolucao_Clicked"/>
+
+            <Grid ColumnDefinitions="*, *" Margin="20, 50, 20, 20">
+                <Picker x:Name="pck_data" SelectedIndexChanged="pck_data_SelectedIndexChanged" Title="Selecionar data" Grid.Column="0"/>
+                <Button x:Name="btn_abrir" Text="abrir" Clicked="btn_abrir_Clicked" Grid.Column="1" BackgroundColor="Transparent" FontSize="20"/>
+            </Grid>
+
+            <Frame BorderColor="#A9A9A9" Margin="20, 0, 20, 0" Padding="1" Opacity="0.5" />
+            
+            <Button x:Name="btn_comparar" Text="Comparar sua evolução" Clicked="btn_comparar_Clicked" Margin="20, 20, 20, 30" Padding="20" 
+                    CornerRadius="15"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

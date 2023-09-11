@@ -79,7 +79,7 @@ namespace AppStarFitness.View
 
         private void btn_esqueci_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new NavigationPage(new EsqueciSenha()));
+            Navigation.PushAsync(new EsqueciSenha());
         }
     }
 }

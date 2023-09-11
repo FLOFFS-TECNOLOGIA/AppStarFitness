@@ -27,7 +27,7 @@
                 <Setter Property="Margin" Value="5"/>
             </Style>
 
-            <Color x:Key="Primary">#ff7a01</Color>
+            <Color x:Key="Primary">#3e61b1</Color>
             <Style TargetType="NavigationPage">
                 <Setter Property="BarBackgroundColor" Value="{StaticResource Primary}" />
                 <Setter Property="BarTextColor" Value="White" />

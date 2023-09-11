@@ -40,14 +40,6 @@ namespace AppStarFitness.View
             lbl_nome.Text = a.nome.Split(' ')[0];
         }
 
-        /*protected override void OnBindingContextChanged()
-        {
-            base.OnBindingContextChanged();
-            Aluno a = BindingContext as Aluno;
-
-            lbl_nome.Text = a.nome.Split(' ')[0];
-        }*/
-
         private void btnimg_fotoperfil_Clicked(object sender, EventArgs e)
         {
             // AGUARDANDO FINALIZAÇÃO DA API
@@ -71,7 +63,7 @@ namespace AppStarFitness.View
 
         private void btn_evolucao_Clicked(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new Evolucao());
         }
     }
 }

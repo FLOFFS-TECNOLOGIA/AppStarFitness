@@ -8,7 +8,7 @@
     
     <ContentPage Title="Informações Corporais">
         <StackLayout>
-            <Label Text="INFORMAÇÕES CORPORAIS" FontSize="35" TextColor="Black" HorizontalTextAlignment="Center" Margin="10, 30, 10, 10"/>
+            <Label Text="INFORMAÇÕES CORPORAIS" FontSize="35" HorizontalTextAlignment="Center" Margin="10, 30, 10, 10"/>
 
             <Frame BorderColor="#A9A9A9" Margin="20, 0, 20, 0" Padding="1" Opacity="0.5" />
 
@@ -107,7 +107,7 @@
 
     <ContentPage Title="Medidas Atuais">
         <StackLayout>
-            <Label Text="MEDIDAS ATUAIS" FontSize="35" TextColor="Black" HorizontalTextAlignment="Center" Margin="10, 30, 10, 10"/>
+            <Label Text="MEDIDAS ATUAIS" FontSize="35" HorizontalTextAlignment="Center" Margin="10, 30, 10, 10"/>
 
             <Frame BorderColor="#A9A9A9" Margin="20, 0, 20, 0" Padding="1" Opacity="0.5" />
 
@@ -213,7 +213,7 @@
  
     <ContentPage Title="Mensalidade">
         <StackLayout>
-            <Label Text="MENSALIDADE" FontSize="35" TextColor="Black" HorizontalTextAlignment="Center" Margin="10, 30, 10, 10"/>
+            <Label Text="MENSALIDADE" FontSize="35" HorizontalTextAlignment="Center" Margin="10, 30, 10, 10"/>
 
             <Frame BorderColor="#A9A9A9" Margin="20, 0, 20, 0" Padding="1" Opacity="0.5" /> 
 

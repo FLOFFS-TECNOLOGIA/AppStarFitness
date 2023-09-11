@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppStarFitness.View.CompararEvolucao">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="SUA EVOLUÇÃO" FontSize="35" HorizontalTextAlignment="Center" Margin="25, 25, 25, 15"/>
+
+            <Label Text="Selecione duas datas para fazer a comparação e ver o quanto você evoluiu nesse determinado período." 
+                   FontSize="15" HorizontalTextAlignment="Center"/>
+
+            <Frame BackgroundColor="Transparent" CornerRadius="15" Margin="10, 0, 10, 10" BorderColor="#3ca65a">
+                <Grid ColumnDefinitions="*, *" RowDefinitions="*, *">
+                    <Picker x:Name="pck_data1" SelectedIndexChanged="pck_data1_SelectedIndexChanged" Title="Selecionar data" 
+                            HorizontalTextAlignment="Center" Grid.Column="0" Grid.Row="0"/>
+                    <Picker x:Name="pck_data2" SelectedIndexChanged="pck_data2_SelectedIndexChanged" Title="Selecionar data" 
+                            HorizontalTextAlignment="Center" Grid.Column="0" Grid.Row="1"/>
+                    <Button x:Name="btn_comparar" Text="Comparar" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Clicked="btn_comparar_Clicked"
+                            BackgroundColor="Transparent"/>
+                </Grid>
+            </Frame>
+
+            <Frame BackgroundColor="#3ca65a" CornerRadius="15" BorderColor="Green" Margin="10, 0, 10, 10">
+                <Grid ColumnDefinitions="*, *">
+                    
+                </Grid>
+            </Frame>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
