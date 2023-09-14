@@ -18,9 +18,7 @@ namespace AppStarFitness
 	{
 		public MainPageInformacoes ()
 		{
-			InitializeComponent ();
-
-            //NavigationPage.SetHasNavigationBar(this, false);
+			InitializeComponent();
 
             logo_1.Source = ImageSource.FromResource("AppStarFitness.Imagens.logo.png");
             logo_2.Source = ImageSource.FromResource("AppStarFitness.Imagens.logo.png");

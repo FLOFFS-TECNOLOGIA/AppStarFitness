@@ -32,6 +32,16 @@ namespace AppStarFitness.View
 
         }
 
+        private void pck_data1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pck_data2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void btn_comparar_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new CompararEvolucao());
