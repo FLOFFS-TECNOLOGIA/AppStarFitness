@@ -47,7 +47,7 @@ namespace AppStarFitness.View
 
         private void btn_ficha_Clicked(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new MainPageTreino());
         }
 
 
