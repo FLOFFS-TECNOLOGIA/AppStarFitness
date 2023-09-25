@@ -25,7 +25,7 @@
                 <Label Text="" />
 
                 <Button x:Name="btn_logout" Text="Sair da conta" Clicked="btn_logout_Clicked" TextColor="Red" FontAttributes="Bold" 
-                        BackgroundColor="Transparent" CornerRadius="15" BorderWidth="2" BorderColor="Red" Margin="20, 0, 20, 0" />
+                        BackgroundColor="Transparent" CornerRadius="15" BorderWidth="2" BorderColor="Red" Margin="20"  VerticalOptions="EndAndExpand"/>
 
             </StackLayout>
         </ContentPage>

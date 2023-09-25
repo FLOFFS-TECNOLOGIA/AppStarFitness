@@ -10,14 +10,27 @@
                     CornerRadius="100" BackgroundColor="Transparent" HorizontalOptions="Center" WidthRequest="70" Clicked="btn_add_evolucao_Clicked"/>
 
             <Grid ColumnDefinitions="*, *" Margin="20, 50, 20, 20">
-                <Picker x:Name="pck_data" SelectedIndexChanged="pck_data_SelectedIndexChanged" Title="Selecionar data" Grid.Column="0"/>
-                <Button x:Name="btn_abrir" Text="abrir" Clicked="btn_abrir_Clicked" Grid.Column="1" BackgroundColor="Transparent" FontSize="20"/>
+                <Picker x:Name="pck_data" SelectedIndexChanged="pck_data_SelectedIndexChanged" Title="Selecionar data" Grid.Column="0" HorizontalTextAlignment="Center"/>
+                <Button x:Name="btn_abrir" Text="abrir" Clicked="btn_abrir_Clicked" Grid.Column="1" BackgroundColor="Transparent" FontSize="20"
+                        BorderColor="Gray" BorderWidth="1" CornerRadius="10"/>
             </Grid>
 
-            <Frame BorderColor="#A9A9A9" Margin="20, 0, 20, 0" Padding="1" Opacity="0.5" />
-            
-            <Button x:Name="btn_comparar" Text="Comparar sua evolução" Clicked="btn_comparar_Clicked" Margin="20, 20, 20, 30" Padding="20" 
-                    CornerRadius="15"/>
+            <Frame BorderColor="Black" Margin="20" Padding="0.8"/>
+
+            <Label Text="Selecione duas datas para fazer a comparação e ver o quanto você evoluiu nesse determinado período." 
+                   FontSize="15" HorizontalTextAlignment="Center" Margin="10" FontAttributes="Italic"/>
+
+            <Frame BackgroundColor="Transparent" CornerRadius="15" Margin="20, 0, 20, 10" BorderColor="Gray">
+                <StackLayout>
+                    <Picker x:Name="pck_data1" SelectedIndexChanged="pck_data1_SelectedIndexChanged" Title="Selecionar data" 
+                            HorizontalTextAlignment="Center"/>
+                    <Picker x:Name="pck_data2" SelectedIndexChanged="pck_data2_SelectedIndexChanged" Title="Selecionar data" 
+                            HorizontalTextAlignment="Center" />
+                </StackLayout>
+            </Frame>
+
+            <Button x:Name="btn_comparar" Text="Ver evolução" Clicked="btn_comparar_Clicked" Margin="20" Padding="20" CornerRadius="15" 
+                    BackgroundColor="#3ca65a" TextColor="White"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
