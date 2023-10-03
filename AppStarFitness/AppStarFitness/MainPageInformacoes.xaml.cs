@@ -39,18 +39,18 @@ namespace AppStarFitness
             string cpf_aluno = (string)Application.Current.Properties["usuario_logado"];
             string senha_aluno = (string)Application.Current.Properties["usuario_senha"];
 
-            Aluno a = await DataServiceAluno.AutenticarAluno(new Aluno
+            /*Pessoa p = await DataServicePessoa.AutenticarAluno(new Pessoa
             {
-                cpf = cpf_aluno,
-                senha = senha_aluno
+                document = cpf_aluno,
+                password = senha_aluno
             });
 
-            lbl_altura.Text = a.altura_cm;
-            lbl_peso.Text = a.peso_kg;
+            lbl_altura.Text = p.altura_cm;
+            lbl_peso.Text = p.peso_kg;
 
 
-            double peso = Convert.ToDouble(a.peso_kg);
-            double altura = Convert.ToDouble(a.altura_cm);
+            double peso = Convert.ToDouble(p.peso_kg);
+            double altura = Convert.ToDouble(p.altura_cm);
 
             // ==================== Cálculo IMC ==========================
             double imc = peso / ((altura/100) * (altura/100));
@@ -84,7 +84,7 @@ namespace AppStarFitness
             }
 
             // ==================== Cálculo Idade ==========================
-            string sexo = a.sexo;
+            string sexo = p.sexo;
 
             DateTime data_nasc = Convert.ToDateTime(a.data_nascimento);
             TimeSpan diferenca = DateTime.Now - data_nasc;
@@ -104,7 +104,7 @@ namespace AppStarFitness
             {
                 double tmb = 447.593 + (9.247 * peso) + (3.098 * altura) - (4.330 - idade);
                 lbl_tmb.Text = tmb.ToString();
-            }
+            }*/
 
         }
     }

@@ -26,18 +26,25 @@ namespace AppStarFitness.View
 
         protected override async void OnAppearing()
         {
-            base.OnAppearing();
-
-            string cpf_aluno = (string)Application.Current.Properties["usuario_logado"];
-            string senha_aluno = (string)Application.Current.Properties["usuario_senha"];
-
-            Aluno a = await DataServiceAluno.AutenticarAluno(new Aluno
+            try
             {
-                cpf = cpf_aluno,
-                senha = senha_aluno
-            });
+                base.OnAppearing();
 
-            lbl_nome.Text = a.nome.Split(' ')[0];
+                string cpf_aluno = (string)Application.Current.Properties["usuario_logado"];
+                string senha_aluno = (string)Application.Current.Properties["usuario_senha"];
+
+                Pessoa p = await DataServicePessoa.AutenticarAluno(new Pessoa
+                {
+                    document = cpf_aluno,
+                    password = senha_aluno
+                });
+
+                lbl_nome.Text = p.name.Split(' ')[0];
+            }
+            catch(Exception err) 
+            {
+                await DisplayAlert("Erro", err.Message, "OK");
+            }
         }
 
         private void btnimg_fotoperfil_Clicked(object sender, EventArgs e)

@@ -9,7 +9,7 @@ namespace AppStarFitness.DataService
 {
     public class DataService
     {
-        private static readonly string servidor = "http://10.0.2.2:8000";
+        private static readonly string servidor = "http://10.0.2.2:8000/api";
 
         protected static async Task<string> GetDataFromService(string rota)
         {
@@ -43,9 +43,11 @@ namespace AppStarFitness.DataService
 
             using (HttpClient client = new HttpClient())
             {
+                // -----------
                 HttpResponseMessage response = await client.PostAsync(
                     uri,
                     new StringContent(json_object, Encoding.UTF8, "application/json")
+                    
                 );
 
                 if (response.IsSuccessStatusCode)

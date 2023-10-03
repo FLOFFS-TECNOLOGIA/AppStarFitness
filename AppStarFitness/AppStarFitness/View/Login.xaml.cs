@@ -35,28 +35,34 @@ namespace AppStarFitness.View
                 string senha_digitada = senha.Text;
 
                 // Codificando a senha digitada para SHA1 e comparando-a com a senha cadastrada em sha1 no banco para autenticação
-                string senha_sha1;
+                /*string senha_sha1;
                 using (var sha1 = new SHA1Managed())
                 {
                     senha_sha1 = BitConverter.ToString(sha1.ComputeHash(Encoding.UTF8.GetBytes(senha_digitada)));
                     senha_sha1 = string.Join("", senha_sha1.ToLower().Split('-'));
-                }
+                }*/
 
-                Aluno a = await DataServiceAluno.AutenticarAluno(new Aluno
+                Pessoa p = await DataServicePessoa.AutenticarAluno(new Pessoa
                 {
-                    cpf = cpf_digitado,
-                    senha = senha_sha1
+                    document = cpf_digitado,
+                    password = senha_digitada
                 });
 
-                if (a != null)
+                Console.WriteLine("================================");
+                Console.WriteLine("TESTE");
+                Console.WriteLine(p.name);
+                Console.WriteLine("================================");
+
+
+                if (p != null)
                 {
                     Application.Current.Properties.Add("usuario_logado", cpf_digitado);
-                    Application.Current.Properties.Add("usuario_senha", senha_sha1);
+                    Application.Current.Properties.Add("usuario_senha", senha_digitada);
                     await Application.Current.SavePropertiesAsync();
 
                     Application.Current.MainPage = new NavigationPage(new MainPage()
                     {
-                        BindingContext = a
+                        BindingContext = p
                     });
 
                 }
