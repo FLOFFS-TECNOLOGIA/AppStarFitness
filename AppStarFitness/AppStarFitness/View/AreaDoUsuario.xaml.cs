@@ -49,7 +49,7 @@ namespace AppStarFitness.View
 
         private void btnimg_fotoperfil_Clicked(object sender, EventArgs e)
         {
-            // AGUARDANDO FINALIZAÇÃO DA API
+           
         }
 
         private void btn_ficha_Clicked(object sender, EventArgs e)

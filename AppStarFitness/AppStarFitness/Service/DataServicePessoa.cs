@@ -2,9 +2,13 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Net;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
 using Xamarin.Forms;
+using static Xamarin.Essentials.Permissions;
 
 namespace AppStarFitness.DataService
 {
@@ -32,13 +36,47 @@ namespace AppStarFitness.DataService
             if (json == "false")
                 return null;
 
-            dynamic aluno = JsonConvert.DeserializeObject(json);
+            // ===============================================================================================
 
-            Console.WriteLine(aluno["gym_member"]["email"]);
+            dynamic usuario = JsonConvert.DeserializeObject(json);
 
-            //Pessoa pessoa = JsonConvert.DeserializeObject<Pessoa>(aluno.gym_member);
+            Console.WriteLine("=============================================================================");
+            Console.WriteLine("TESTE DADOS");
+            Console.WriteLine(usuario["user"]["gymMember"]["height_cm"]);
+            Console.WriteLine(" ");
+            Console.WriteLine("=============================================================================");
 
-            return new Pessoa();
+            /*new Pessoa()
+            {
+                id = usuario["user"]["id"],
+                name = usuario["user"]["name"],
+                email = usuario["user"]["email"],
+                document = usuario["user"]["document"],
+                phone = usuario["user"]["phone"],
+                birthday = usuario["user"]["birthday"],
+                gender = usuario["user"]["gender"],
+                photo_url = usuario["user"]["photo_url"],
+                id_address = usuario["user"]["id_address"],
+                gymMember = usuario["user"]["gymMember"]
+            };
+
+            new Aluno()
+            {
+                id = usuario["user"]["gymMember"]["id"],
+                id_person = usuario["user"]["gymMember"]["id_person"],
+                id_type_enrollment = usuario["user"]["gymMember"]["id_person"],
+                height_cm = usuario["user"]["gymMember"]["height_cm"],
+                weight_kg = usuario["user"]["gymMember"]["weight_kg"],
+                observation = usuario["user"]["gymMember"]["observation"],
+                created_at = usuario["user"]["gymMember"]["created_at"],
+                updated_at = usuario["user"]["gymMember"]["updated_at"],
+            };*/
+
+            //JsonConvert.DeserializeObject<Pessoa>(usuario["user"]);
+            //JsonConvert.DeserializeObject<Aluno>(usuario["user"]["gymMember"]);
+
+            //return new Pessoa();
+            return usuario;
         }
     }
 }

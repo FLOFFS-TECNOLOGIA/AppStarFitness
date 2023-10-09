@@ -16,5 +16,6 @@ namespace AppStarFitness.Model
         public string gender { get; set; }
         public string photo_url { get; set; }
         public string id_address {  get; set; }
+        public string gymMember {  get; set; }
     }
 }
