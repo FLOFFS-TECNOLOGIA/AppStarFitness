@@ -7,7 +7,7 @@
         <StackLayout Padding="10" VerticalOptions="Center">
             <ImageButton x:Name="btnimg_fotoperfil" HorizontalOptions="Center" Clicked="btnimg_fotoperfil_Clicked" CornerRadius="100"/>
 
-            <Label x:Name="lbl_nome" Text="{Binding nome}" FontSize="30" TextColor="#4F4F4F" HorizontalOptions="Center"/>
+            <Label x:Name="lbl_nome" Text="" FontSize="30" TextColor="#4F4F4F" HorizontalOptions="Center"/>
 
             <Button x:Name="btn_ficha" Clicked="btn_ficha_Clicked" Text="Fichas de treino" Style="{StaticResource BotaoTelaAreaUsuario}" Margin="5, 20, 5, 5"/>
             <Button x:Name="bnt_dieta" Clicked="bnt_dieta_Clicked" Text="Dietas" Style="{StaticResource BotaoTelaAreaUsuario}" />

@@ -28,29 +28,20 @@ namespace AppStarFitness
 
         protected override async void OnAppearing()
         {
-
-
-            /*Aluno a = BindingContext as Aluno;
-
-            Console.WriteLine("=======================");
-            Console.WriteLine(a);
-            Console.WriteLine("=======================");*/
-
             string cpf_aluno = (string)Application.Current.Properties["usuario_logado"];
             string senha_aluno = (string)Application.Current.Properties["usuario_senha"];
 
-            /*Pessoa p = await DataServicePessoa.AutenticarAluno(new Pessoa
+            Pessoa p = await DataServicePessoa.AutenticarPessoa(new Pessoa
             {
                 document = cpf_aluno,
                 password = senha_aluno
             });
 
-            lbl_altura.Text = p.altura_cm;
-            lbl_peso.Text = p.peso_kg;
+            lbl_altura.Text = p.gymMember.height_cm;
+            lbl_peso.Text = p.gymMember.weight_kg;
 
-
-            double peso = Convert.ToDouble(p.peso_kg);
-            double altura = Convert.ToDouble(p.altura_cm);
+            double peso = Convert.ToDouble(p.gymMember.weight_kg);
+            double altura = Convert.ToDouble(p.gymMember.height_cm);
 
             // ==================== Cálculo IMC ==========================
             double imc = peso / ((altura/100) * (altura/100));
@@ -84,11 +75,12 @@ namespace AppStarFitness
             }
 
             // ==================== Cálculo Idade ==========================
-            string sexo = p.sexo;
+            string sexo = p.gender;
 
-            DateTime data_nasc = Convert.ToDateTime(a.data_nascimento);
+            DateTime data_nasc = Convert.ToDateTime(p.birthday);
             TimeSpan diferenca = DateTime.Now - data_nasc;
 
+            // CONFERIR EM CASO DE ANO BISSEXTO 
             double idade = diferenca.TotalDays / 365;
             idade = Math.Floor(idade);
 
@@ -104,8 +96,16 @@ namespace AppStarFitness
             {
                 double tmb = 447.593 + (9.247 * peso) + (3.098 * altura) - (4.330 - idade);
                 lbl_tmb.Text = tmb.ToString();
-            }*/
+            }
 
+            // ============================================================
+
+            string id_aluno = p.gymMember.id.ToString();
+
+            /*Aluno a = await DataServiceAluno.MedidasAluno(new Aluno
+            {
+                id = id_aluno
+            });*/
         }
     }
 }

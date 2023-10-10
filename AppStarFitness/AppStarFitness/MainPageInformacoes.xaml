@@ -28,7 +28,7 @@
                         <Label.FormattedText >
                             <FormattedString>
                                 <Span Text="Altura: " />
-                                <Span x:Name="lbl_altura" Text="{Binding altura_cm}" />
+                                <Span x:Name="lbl_altura" Text="{Binding height_cm}" />
                                 <Span Text=" cm" />
                             </FormattedString>
                         </Label.FormattedText>
@@ -38,7 +38,7 @@
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Text="Peso: " />
-                                <Span x:Name="lbl_peso" Text="{Binding peso_kg}" />
+                                <Span x:Name="lbl_peso" Text="{Binding weight_kg}" />
                                 <Span Text=" kg" />
                             </FormattedString>
                         </Label.FormattedText>

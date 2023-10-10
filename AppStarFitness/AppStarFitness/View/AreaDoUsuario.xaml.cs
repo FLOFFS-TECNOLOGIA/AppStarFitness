@@ -33,7 +33,7 @@ namespace AppStarFitness.View
                 string cpf_aluno = (string)Application.Current.Properties["usuario_logado"];
                 string senha_aluno = (string)Application.Current.Properties["usuario_senha"];
 
-                Pessoa p = await DataServicePessoa.AutenticarAluno(new Pessoa
+                Pessoa p = await DataServicePessoa.AutenticarPessoa(new Pessoa
                 {
                     document = cpf_aluno,
                     password = senha_aluno
