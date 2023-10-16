@@ -127,7 +127,7 @@ namespace AppStarFitness
 
         private void btn_salvar_Clicked(object sender, EventArgs e)
         {
-
+            // ---
             btn_editar.IsEnabled = true;
             btn_salvar.IsEnabled = false;
 

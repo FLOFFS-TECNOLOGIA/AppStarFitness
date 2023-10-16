@@ -4,9 +4,7 @@
              x:Class="AppStarFitness.View.Treino">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="teste" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
