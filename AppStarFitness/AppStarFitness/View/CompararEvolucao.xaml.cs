@@ -15,6 +15,7 @@ namespace AppStarFitness.View
 		public CompararEvolucao ()
 		{
 			InitializeComponent ();
-		}
+
+        }
     }
 }

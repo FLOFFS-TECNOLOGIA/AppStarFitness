@@ -9,12 +9,12 @@ using Xamarin.Forms.Xaml;
 
 namespace AppStarFitness.View
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Treino : ContentPage
-    {
-        public Treino()
-        {
-            InitializeComponent();
-        }
-    }
+	[XamlCompilation(XamlCompilationOptions.Compile)]
+	public partial class TreinoDoDia : ContentPage
+	{
+		public TreinoDoDia ()
+		{
+			InitializeComponent ();
+		}
+	}
 }

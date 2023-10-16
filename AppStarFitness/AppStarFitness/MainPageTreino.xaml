@@ -5,6 +5,8 @@
     
     <ContentPage Title="Treino Atual">
         <StackLayout>
+            <Label x:Name="lbl_nome_treino" Text="NOME DO TREINO ATUAL (ex: 'treino com enfase em braço') " FontSize="20"/>
+
             <Frame BorderColor="#3ca65a" CornerRadius="15" Margin="20">
                 <Grid ColumnDefinitions="*, *">
                     <Picker x:Name="pck_dia" SelectedIndexChanged="pck_dia_SelectedIndexChanged" Title="Selecionar dia" Grid.Column="0"/>

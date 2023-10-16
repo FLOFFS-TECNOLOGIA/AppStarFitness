@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppStarFitness.View.OutroTreino">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="lbl_outro_treino" Text="OUTRO TREINO SELECIONADO"/>
+
+            <Grid ColumnDefinitions="*, *" RowDefinitions="*, *, *, *, *, *, *">
+                <Label Text="Segunda" Grid.Row="0" Grid.Column="0"/>
+                <Button x:Name="btn_segunda" Clicked="btn_segunda_Clicked"  Grid.Row="0" Grid.Column="1"/>
+
+                <Label Text="Terça" Grid.Row="1" Grid.Column="0"/>
+                <Button x:Name="btn_terca" Clicked="btn_terca_Clicked" Grid.Row="1" Grid.Column="1"/>
+
+                <Label Text="Quarta" Grid.Row="2" Grid.Column="0"/>
+                <Button x:Name="btn_quarta" Clicked="btn_quarta_Clicked" Grid.Row="2" Grid.Column="1"/>
+
+                <Label Text="Quinta" Grid.Row="3" Grid.Column="0"/>
+                <Button x:Name="btn_quinta" Clicked="btn_quinta_Clicked" Grid.Row="3" Grid.Column="1"/>
+
+                <Label Text="Sexta" Grid.Row="4" Grid.Column="0"/>
+                <Button x:Name="btn_sexta" Clicked="btn_sexta_Clicked"  Grid.Row="4" Grid.Column="1"/>
+
+                <Label Text="Sábado" Grid.Row="5" Grid.Column="0"/>
+                <Button x:Name="btn_sabado" Clicked="btn_sabado_Clicked" Grid.Row="5" Grid.Column="1"/>
+
+                <Label Text="Domingo" Grid.Row="6" Grid.Column="0"/>
+                <Button x:Name="btn_domingo" Clicked="btn_domingo_Clicked" Grid.Row="6" Grid.Column="1"/>
+
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

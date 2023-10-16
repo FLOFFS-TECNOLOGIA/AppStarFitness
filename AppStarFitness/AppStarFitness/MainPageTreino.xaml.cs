@@ -24,7 +24,7 @@ namespace AppStarFitness
         }
         private void btn_abrir1_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Treino());
+            Navigation.PushAsync(new TreinoDoDia());
         }
 
         private void pck_treino_SelectedIndexChanged(object sender, EventArgs e)
@@ -34,7 +34,7 @@ namespace AppStarFitness
 
         private void btn_abrir2_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Treino());
+            Navigation.PushAsync(new OutroTreino());
         }
     }
 }

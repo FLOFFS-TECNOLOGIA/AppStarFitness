@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppStarFitness.View.Treino">
+             x:Class="AppStarFitness.View.TreinoDoDia">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="teste" />
+            <Label x:Name="lbl_treino_dia" Text="TREINO DO DIA (Ex: Segunda - Peito)" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

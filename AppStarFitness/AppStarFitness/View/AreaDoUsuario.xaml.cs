@@ -21,7 +21,7 @@ namespace AppStarFitness.View
         {
             InitializeComponent();
 
-            btnimg_fotoperfil.Source = ImageSource.FromResource("AppStarFitness.Imagens.default.jpg");
+            //btnimg_fotoperfil.Source = ImageSource.FromResource("AppStarFitness.Imagens.default.jpg");
         }
 
         protected override async void OnAppearing()
@@ -40,6 +40,7 @@ namespace AppStarFitness.View
                 });
 
                 lbl_nome.Text = p.name.Split(' ')[0];
+                btnimg_fotoperfil.Source = p.photo_url;
             }
             catch(Exception err) 
             {
