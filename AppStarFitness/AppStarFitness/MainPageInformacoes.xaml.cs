@@ -21,9 +21,8 @@ namespace AppStarFitness
 			InitializeComponent();
 
             logo_1.Source = ImageSource.FromResource("AppStarFitness.Imagens.logo.png");
-            logo_2.Source = ImageSource.FromResource("AppStarFitness.Imagens.logo.png");
+            //logo_2.Source = ImageSource.FromResource("AppStarFitness.Imagens.logo.png");
             logo_3.Source = ImageSource.FromResource("AppStarFitness.Imagens.logo.png");
-			
         }
 
         protected override async void OnAppearing()
@@ -106,6 +105,43 @@ namespace AppStarFitness
             {
                 id = id_aluno
             });*/
+        }
+
+        private void btn_editar_Clicked(object sender, EventArgs e)
+        {
+            btn_salvar.IsEnabled = true;
+            btn_editar.IsEnabled = false;
+
+            txt_torax.IsEnabled = true;
+            txt_gluteo.IsEnabled = true;
+            txt_cintura.IsEnabled = true;
+            txt_braco_esquerdo.IsEnabled = true;
+            txt_braco_direito.IsEnabled = true;
+            txt_panturrilha_esquerda.IsEnabled = true;
+            txt_panturrilha_direita.IsEnabled = true;
+            txt_antebraco_esquerdo.IsEnabled = true;
+            txt_antebraco_direito.IsEnabled = true;
+            txt_quadriceps_esquerdo.IsEnabled = true;
+            txt_quadriceps_direito.IsEnabled = true;
+        }
+
+        private void btn_salvar_Clicked(object sender, EventArgs e)
+        {
+
+            btn_editar.IsEnabled = true;
+            btn_salvar.IsEnabled = false;
+
+            txt_torax.IsEnabled = false;
+            txt_gluteo.IsEnabled = false;
+            txt_cintura.IsEnabled = false;
+            txt_braco_esquerdo.IsEnabled = false;
+            txt_braco_direito.IsEnabled = false;
+            txt_panturrilha_esquerda.IsEnabled = false;
+            txt_panturrilha_direita.IsEnabled = false;
+            txt_antebraco_esquerdo.IsEnabled = false;
+            txt_antebraco_direito.IsEnabled = false;
+            txt_quadriceps_esquerdo.IsEnabled = false;
+            txt_quadriceps_direito.IsEnabled = false;
         }
     }
 }

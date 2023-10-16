@@ -107,105 +107,63 @@
 
     <ContentPage Title="Medidas Atuais">
         <StackLayout>
-            <Label Text="MEDIDAS ATUAIS" FontSize="35" HorizontalTextAlignment="Center" Margin="10, 30, 10, 10"/>
 
-            <Frame BorderColor="#A9A9A9" Margin="20, 0, 20, 0" Padding="1" Opacity="0.5" />
+            <Grid ColumnDefinitions="*, *">
+                <Button x:Name="btn_editar" Text="Editar" Clicked="btn_editar_Clicked" HorizontalOptions="StartAndExpand" Grid.Column="0" IsEnabled="False"/>
+                <Button x:Name="btn_salvar" Text="Salvar" Clicked="btn_salvar_Clicked" HorizontalOptions="EndAndExpand" Grid.Column="1"/>
+            </Grid>
+
+            <Label Text="MEDIDAS ATUAIS" FontSize="35" HorizontalTextAlignment="Center"/>
 
             <Frame VerticalOptions="Center" BackgroundColor="Transparent">
-                <StackLayout>
-                    <Label HorizontalTextAlignment="Center" FontSize="20" Margin="3">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="Tórax: " TextColor="#4F4F4F" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
 
-                    <Label HorizontalTextAlignment="Center" FontSize="20" Margin="3">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="Glúteo: " TextColor="#4F4F4F" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
+                <Grid ColumnDefinitions="*, *, *" RowDefinitions="*, *, *, *, *, *, *, *, *, *">
+                    <Label Text="Tórax: " HorizontalTextAlignment="Center" TextColor="#4F4F4F" FontSize="20" Grid.Row="0" Grid.Column="0" Margin="0, 0, 0, 0"/>
+                    <Entry x:Name="txt_torax" Grid.Row="0" Grid.Column="1" />
+                    <Label Text="cm" Grid.Row="0" Grid.Column="2" FontSize="20"/>
 
-                    <Label HorizontalTextAlignment="Center" FontSize="20" Margin="3">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="Cintura: " TextColor="#4F4F4F" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
+                    <Label Text="Glúteo: " TextColor="#4F4F4F" HorizontalTextAlignment="Center" FontSize="20"  Grid.Row="1" Grid.Column="0"/>
+                    <Entry x:Name="txt_gluteo" Grid.Row="1" Grid.Column="1"/>
+                    <Label Text="cm" Grid.Row="1" Grid.Column="2" FontSize="20"/>
 
-                    <Label HorizontalTextAlignment="Center" FontSize="20" Margin="3">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="Braço Esquerdo: " TextColor="#4F4F4F" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
+                    <Label Text="Cintura: " TextColor="#4F4F4F" HorizontalTextAlignment="Center" FontSize="20" Grid.Row="2" Grid.Column="0"/>
+                    <Entry x:Name="txt_cintura" Grid.Row="2" Grid.Column="1"/>
+                    <Label Text="cm" Grid.Row="2" Grid.Column="2" FontSize="20"/>
 
-                    <Label HorizontalTextAlignment="Center" FontSize="20" Margin="3">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="Braço Direito: " TextColor="#4F4F4F" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
+                    <Label Text="Braço Esquerdo: " TextColor="#4F4F4F" HorizontalTextAlignment="Center" FontSize="20" Grid.Row="3" Grid.Column="0"/>
+                    <Entry x:Name="txt_braco_esquerdo" Grid.Row="3" Grid.Column="1"/>
+                    <Label Text="cm" Grid.Row="3" Grid.Column="2" FontSize="20"/>
 
-                    <Label HorizontalTextAlignment="Center" FontSize="20" Margin="3">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="Panturrilha Esquerda: " TextColor="#4F4F4F" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
+                    <Label Text="Braço Direito: " TextColor="#4F4F4F" HorizontalTextAlignment="Center" FontSize="20" Grid.Row="4" Grid.Column="0"/>
+                    <Entry x:Name="txt_braco_direito" Grid.Row="4" Grid.Column="1"/>
+                    <Label Text="cm" Grid.Row="4" Grid.Column="2" FontSize="20"/>
 
-                    <Label HorizontalTextAlignment="Center" FontSize="20" Margin="3">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="Panturrilha Direita: " TextColor="#4F4F4F" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
+                    <Label Text="Panturrilha Esq: " TextColor="#4F4F4F" HorizontalTextAlignment="Center" FontSize="20"  Grid.Row="5" Grid.Column="0"/>
+                    <Entry x:Name="txt_panturrilha_esquerda" Grid.Row="5" Grid.Column="1"/>
+                    <Label Text="cm" Grid.Row="5" Grid.Column="2" FontSize="20"/>
 
-                    <Label HorizontalTextAlignment="Center" FontSize="20" Margin="3">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="Antebraço Esquerdo: " TextColor="#4F4F4F" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
+                    <Label Text="Panturrilha Dir: " TextColor="#4F4F4F" HorizontalTextAlignment="Center" FontSize="20" Grid.Row="6" Grid.Column="0"/>
+                    <Entry x:Name="txt_panturrilha_direita" Grid.Row="6" Grid.Column="1"/>
+                    <Label Text="cm" Grid.Row="6" Grid.Column="2" FontSize="20"/>
 
-                    <Label HorizontalTextAlignment="Center" FontSize="20" Margin="3">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="Antebraço Direito: " TextColor="#4F4F4F" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
+                    <Label Text="Antebraço Esq: " TextColor="#4F4F4F" HorizontalTextAlignment="Center" FontSize="20" Grid.Row="7" Grid.Column="0"/>
+                    <Entry x:Name="txt_antebraco_esquerdo" Grid.Row="7" Grid.Column="1"/>
+                    <Label Text="cm" Grid.Row="7" Grid.Column="2" FontSize="20"/>
 
-                    <Label HorizontalTextAlignment="Center" FontSize="20" Margin="3">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="Quadríceps Esquerdo: " TextColor="#4F4F4F" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
+                    <Label Text="Antebraço Dir: " TextColor="#4F4F4F" HorizontalTextAlignment="Center" FontSize="20" Grid.Row="8" Grid.Column="0"/>
+                    <Entry x:Name="txt_antebraco_direito" Grid.Row="8" Grid.Column="1"/>
+                    <Label Text="cm" Grid.Row="8" Grid.Column="2" FontSize="20"/>
 
-                    <Label HorizontalTextAlignment="Center" FontSize="20" Margin="5">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="Quadríceps Direito: " TextColor="#4F4F4F" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                </StackLayout>
+                    <Label Text="Quadríceps Esq: " TextColor="#4F4F4F" HorizontalTextAlignment="Center" FontSize="20" Grid.Row="9" Grid.Column="0"/>
+                    <Entry x:Name="txt_quadriceps_esquerdo" Grid.Row="9" Grid.Column="1"/>
+                    <Label Text="cm" Grid.Row="9" Grid.Column="2" FontSize="20"/>
+
+                    <Label Text="Quadríceps Dir: " TextColor="#4F4F4F" HorizontalTextAlignment="Center" FontSize="20" Grid.Row="10" Grid.Column="0"/>
+                    <Entry x:Name="txt_quadriceps_direito" Grid.Row="10" Grid.Column="1"/>
+                    <Label Text="cm" Grid.Row="10" Grid.Column="2" FontSize="20"/>
+
+                </Grid>
             </Frame>
-
-            <Frame BorderColor="#A9A9A9" Margin="20, 0, 20, 0" Padding="1" Opacity="0.5" />
-
-            <Image x:Name="logo_2" Scale="0.9" Margin="0" Opacity="0.7"/>
         </StackLayout>
     </ContentPage>
     
