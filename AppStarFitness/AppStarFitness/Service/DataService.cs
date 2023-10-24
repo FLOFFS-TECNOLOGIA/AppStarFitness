@@ -1,26 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
+using Xamarin.Forms;
 
 namespace AppStarFitness.DataService
 {
     public class DataService
     {
         private static readonly string servidor = "http://10.0.2.2:8000/api";
-
-        protected static async Task<string> GetDataFromService(string rota)
+        protected static async Task<string> GetDataFromService(string rota, string token)
         {
             string json_response;
             string uri = servidor + rota;
-
+            
             if (Connectivity.NetworkAccess != NetworkAccess.Internet)
                 throw new Exception("Por favor, conecte-se à Internet.");
 
             using (HttpClient client = new HttpClient())
             {
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token); 
                 HttpResponseMessage response = await client.GetAsync(uri);
 
                 if (response.IsSuccessStatusCode)

@@ -15,13 +15,13 @@ namespace AppStarFitness.DataService
     public class DataServicePessoa : DataService
     {
         // Envia dados preenchidos do aluno para autenticar ele pela nossa API | POST
-        public static async Task<Pessoa> AutenticarPessoa(Pessoa p)
+        public static async Task<Usuario> AutenticarPessoa(Pessoa p)
         {
             var json_a_enviar = JsonConvert.SerializeObject(p);
 
             Console.WriteLine("=============================================================================");
             Console.WriteLine(" ");
-            Console.WriteLine("JSON A ENVIAR");
+            Console.WriteLine("AUTENTICAR PESSOA - JSON A ENVIAR");
             Console.WriteLine(json_a_enviar);
             Console.WriteLine(" ");
             Console.WriteLine("=============================================================================");
@@ -30,7 +30,7 @@ namespace AppStarFitness.DataService
 
             Console.WriteLine("=============================================================================");
             Console.WriteLine(" ");
-            Console.WriteLine("JSON");
+            Console.WriteLine("AUTENTICAR PESSOA - JSON");
             Console.WriteLine(json);
             Console.WriteLine(" ");
             Console.WriteLine("=============================================================================");
@@ -38,21 +38,9 @@ namespace AppStarFitness.DataService
             if (json == "false")
                 return null;
 
-            // ===============================================================================================
-
             Usuario usuario = JsonConvert.DeserializeObject<Usuario>(json);
 
-
-            //dynamic usuario = JsonConvert.DeserializeObject(json);
-
-            Console.WriteLine("=============================================================================");
-            Console.WriteLine(" ");
-            Console.WriteLine("TESTE DADOS");
-            Console.WriteLine(JsonConvert.SerializeObject(usuario));
-            Console.WriteLine(" ");
-            Console.WriteLine("=============================================================================");
-
-            return usuario.user;
+            return usuario;
         }
     }
 }

@@ -27,84 +27,113 @@ namespace AppStarFitness
 
         protected override async void OnAppearing()
         {
-            string cpf_aluno = (string)Application.Current.Properties["usuario_logado"];
-            string senha_aluno = (string)Application.Current.Properties["usuario_senha"];
-
-            Pessoa p = await DataServicePessoa.AutenticarPessoa(new Pessoa
+            try
             {
-                document = cpf_aluno,
-                password = senha_aluno
-            });
+                string cpf_aluno = (string)Application.Current.Properties["usuario_logado"];
+                string senha_aluno = (string)Application.Current.Properties["usuario_senha"];
 
-            lbl_altura.Text = p.gymMember.height_cm;
-            lbl_peso.Text = p.gymMember.weight_kg;
+                Usuario u = await DataServicePessoa.AutenticarPessoa(new Pessoa
+                {
+                    document = cpf_aluno,
+                    password = senha_aluno
+                });
 
-            double peso = Convert.ToDouble(p.gymMember.weight_kg);
-            double altura = Convert.ToDouble(p.gymMember.height_cm);
+                Pessoa p = u.user;
 
-            // ==================== Cálculo IMC ==========================
-            double imc = peso / ((altura/100) * (altura/100));
-            imc = Math.Round(imc, 1);
+                lbl_altura.Text = p.gymMember.height_cm;
+                lbl_peso.Text = p.gymMember.weight_kg;
 
-            lbl_imc.Text = imc.ToString();
+                double peso = Convert.ToDouble(p.gymMember.weight_kg);
+                double altura = Convert.ToDouble(p.gymMember.height_cm);
 
-            if (imc <= 18.5)
-            {
-                lbl_classificacao_imc.Text = " / Abaixo do peso";
+                // ==================== Cálculo IMC ==========================
+                double imc = peso / ((altura / 100) * (altura / 100));
+                imc = Math.Round(imc, 1);
+
+                lbl_imc.Text = imc.ToString();
+
+                if (imc <= 18.5)
+                {
+                    lbl_classificacao_imc.Text = " / Abaixo do peso";
+                }
+                else if (imc >= 18.6 && imc <= 24.9)
+                {
+                    lbl_classificacao_imc.Text = " / Peso ideal";
+                }
+                else if (imc >= 25 && imc <= 29.9)
+                {
+                    lbl_classificacao_imc.Text = " / Acima do peso";
+                }
+                else if (imc >= 30 && imc <= 34.9)
+                {
+                    lbl_classificacao_imc.Text = " / Obesidade I";
+                }
+                else if (imc >= 35 && imc <= 39.9)
+                {
+                    lbl_classificacao_imc.Text = " / Obesidade II";
+                }
+                else
+                {
+                    lbl_classificacao_imc.Text = " / Obesidade III (mórbida)";
+                }
+
+                // ==================== Cálculo Idade ==========================
+                string sexo = p.gender;
+
+                DateTime data_nasc = Convert.ToDateTime(p.birthday);
+                TimeSpan diferenca = DateTime.Today - data_nasc;
+
+                // CONFERIR EM CASO DE ANO BISSEXTO 
+                double idade = diferenca.TotalDays / 365;
+                idade = Math.Floor(idade);
+
+                lbl_idade.Text = idade.ToString();
+
+                // ==================== Cálculo TMB ==========================
+                if (sexo == "M")
+                {
+                    double tmb = 88.362 + (13.397 * peso) + (4.779 * altura) - (5.677 * idade);
+                    lbl_tmb.Text = tmb.ToString();
+                }
+                else
+                {
+                    double tmb = 447.593 + (9.247 * peso) + (3.098 * altura) - (4.330 - idade);
+                    lbl_tmb.Text = tmb.ToString();
+                }
+
+                // ============================================================
+
+                Mensalidade mensalidade = await DataServiceAluno.MensalidadeAluno(u);
+
+                DateTime proximo_pagamento = Convert.ToDateTime(mensalidade.due_date);
+                TimeSpan diferenca_mensalidade = proximo_pagamento - DateTime.Today;
+
+                Console.WriteLine("=============================================================================");
+                Console.WriteLine(" ");
+                Console.WriteLine("DIFERENCA");
+                Console.WriteLine(diferenca_mensalidade);
+                Console.WriteLine(" ");
+                Console.WriteLine("=============================================================================");
+
+
+                lbl_ingressou.Text = mensalidade.invoice_date.ToString();
+                lbl_data_vencimento.Text = mensalidade.due_date.ToString();
+
+                if (DateTime.Now >= proximo_pagamento)
+                {
+                    lbl_status.Text = "Em Aberto";
+                    lbl_status.TextColor = Color.Green;
+                }
+                else
+                {
+                    lbl_status.Text = "Em atraso";
+                    lbl_status.TextColor = Color.Red;
+                }
             }
-            else if (imc >= 18.6 && imc <= 24.9)
+            catch (Exception ex) 
             {
-                lbl_classificacao_imc.Text = " / Peso ideal";
+                DisplayAlert(ex.Message, ex.StackTrace, "OK");
             }
-            else if (imc >= 25 && imc <= 29.9)
-            {
-                lbl_classificacao_imc.Text = " / Acima do peso";
-            }
-            else if (imc >= 30 && imc <= 34.9)
-            {
-                lbl_classificacao_imc.Text = " / Obesidade I";
-            }
-            else if (imc >= 35 && imc <= 39.9)
-            {
-                lbl_classificacao_imc.Text = " / Obesidade II";
-            }
-            else
-            {
-                lbl_classificacao_imc.Text = " / Obesidade III (mórbida)";
-            }
-
-            // ==================== Cálculo Idade ==========================
-            string sexo = p.gender;
-
-            DateTime data_nasc = Convert.ToDateTime(p.birthday);
-            TimeSpan diferenca = DateTime.Now - data_nasc;
-
-            // CONFERIR EM CASO DE ANO BISSEXTO 
-            double idade = diferenca.TotalDays / 365;
-            idade = Math.Floor(idade);
-
-            lbl_idade.Text = idade.ToString();
-
-            // ==================== Cálculo TMB ==========================
-            if (sexo == "M")
-            {
-                double tmb = 88.362 + (13.397 * peso) + (4.779 * altura) - (5.677 * idade);
-                lbl_tmb.Text = tmb.ToString();
-            }
-            else
-            {
-                double tmb = 447.593 + (9.247 * peso) + (3.098 * altura) - (4.330 - idade);
-                lbl_tmb.Text = tmb.ToString();
-            }
-
-            // ============================================================
-
-            string id_aluno = p.gymMember.id.ToString();
-
-            /*Aluno a = await DataServiceAluno.MedidasAluno(new Aluno
-            {
-                id = id_aluno
-            });*/
         }
 
         private void btn_editar_Clicked(object sender, EventArgs e)

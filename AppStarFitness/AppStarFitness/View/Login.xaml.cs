@@ -3,6 +3,7 @@ using AppStarFitness.Model;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -43,19 +44,13 @@ namespace AppStarFitness.View
                     senha_sha1 = string.Join("", senha_sha1.ToLower().Split('-'));
                 }*/
 
-                Pessoa p = await DataServicePessoa.AutenticarPessoa(new Pessoa
+                Usuario u = await DataServicePessoa.AutenticarPessoa(new Pessoa
                 {
                     document = cpf_digitado,
                     password = senha_digitada
                 });
 
-                Console.WriteLine("============================================");
-                Console.WriteLine(" ");
-                Console.WriteLine("TESTE/LOGIN");
-                Console.WriteLine(JsonConvert.SerializeObject(p));
-                Console.WriteLine("============================================");
-                Console.WriteLine(" ");
-
+                Pessoa p = u.user;
 
                 if (p != null)
                 {

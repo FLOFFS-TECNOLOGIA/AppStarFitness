@@ -20,6 +20,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="Model\Token.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Assets\Fontes\REBOG-BlackPersonalUse.otf" />
     <None Remove="Assets\Fontes\REBOG-BoldPersonalUse.otf" />
     <None Remove="Assets\Fontes\REBOG-PersonalUse.otf" />

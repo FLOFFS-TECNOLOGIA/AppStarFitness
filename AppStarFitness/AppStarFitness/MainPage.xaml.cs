@@ -30,6 +30,7 @@ namespace AppStarFitness
             {
                 App.Current.Properties.Remove("usuario_logado");
                 App.Current.Properties.Remove("usuario_senha");
+                App.Current.Properties.Remove("token");
                 App.Current.MainPage = new Login();
             }
         }

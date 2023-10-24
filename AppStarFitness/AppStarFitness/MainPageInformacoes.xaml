@@ -181,7 +181,16 @@
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Text="Plano: " TextColor="#4F4F4F" />
-                                <Span x:Name="plano" Text="" />
+                                <Span x:Name="lbl_plano" Text="" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                    <Label HorizontalTextAlignment="Center" FontSize="25" Margin="5">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Ingressou: " TextColor="#4F4F4F" />
+                                <Span x:Name="lbl_ingressou" Text="" />
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
@@ -190,7 +199,7 @@
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Text="Status: " TextColor="#4F4F4F"/>
-                                <Span x:Name="status" Text="" />
+                                <Span x:Name="lbl_status" Text="" />
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
@@ -199,7 +208,7 @@
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Text="Vencimento: " TextColor="#4F4F4F"/>
-                                <Span x:Name="data_vencimento" Text=""/>
+                                <Span x:Name="lbl_data_vencimento" Text=""/>
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
