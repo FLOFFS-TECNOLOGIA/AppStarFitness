@@ -19,32 +19,74 @@ namespace AppStarFitness.View
 
         private void btn_add_evolucao_Clicked(object sender, EventArgs e)
         {
-
+            /*try
+            {
+                
+            }
+            catch (Exception err)
+            {
+                DisplayAlert(err.Message, err.StackTrace, "OK");
+            }*/
         }
 
         private void pck_data_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            /*try
+            {
+                
+            }
+            catch (Exception err)
+            {
+                DisplayAlert(err.Message, err.StackTrace, "OK");
+            }*/
         }
 
         private void btn_abrir_Clicked(object sender, EventArgs e)
         {
-
+            /*try
+            {
+                
+            }
+            catch (Exception err)
+            {
+                DisplayAlert(err.Message, err.StackTrace, "OK");
+            }*/
         }
 
         private void pck_data1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            /*try
+            {
+                
+            }
+            catch (Exception err)
+            {
+                DisplayAlert(err.Message, err.StackTrace, "OK");
+            }*/
         }
 
         private void pck_data2_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            /*try
+            {
+                
+            }
+            catch (Exception err)
+            {
+                DisplayAlert(err.Message, err.StackTrace, "OK");
+            }*/
         }
 
         private void btn_comparar_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new CompararEvolucao());
+            try
+            {
+                Navigation.PushAsync(new CompararEvolucao());
+            }
+            catch (Exception err)
+            {
+                DisplayAlert(err.Message, err.StackTrace, "OK");
+            }
         }
     }
 }

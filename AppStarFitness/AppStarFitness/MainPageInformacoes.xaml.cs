@@ -3,6 +3,7 @@ using AppStarFitness.Model;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -103,23 +104,18 @@ namespace AppStarFitness
 
                 // ============================================================
 
+                // invoice_date -> data que o aluno ingressou na academia
+                // due_date -> data do vencimento
+                // payment_date -> data que o aluno pagou a mensalidade (valor pode ser nulo) 
+
                 Mensalidade mensalidade = await DataServiceAluno.MensalidadeAluno(u);
 
-                DateTime proximo_pagamento = Convert.ToDateTime(mensalidade.due_date);
-                TimeSpan diferenca_mensalidade = proximo_pagamento - DateTime.Today;
+                TimeSpan diferenca_mensalidade = mensalidade.due_date - DateTime.Today;
 
-                Console.WriteLine("=============================================================================");
-                Console.WriteLine(" ");
-                Console.WriteLine("DIFERENCA");
-                Console.WriteLine(diferenca_mensalidade);
-                Console.WriteLine(" ");
-                Console.WriteLine("=============================================================================");
+                lbl_ingressou.Text = mensalidade.invoice_date.ToString("dd/MM/yyyy", CultureInfo.CurrentCulture);
+                lbl_data_vencimento.Text = mensalidade.due_date.ToString("dd/MM/yyyy", CultureInfo.CurrentCulture);
 
-
-                lbl_ingressou.Text = mensalidade.invoice_date.ToString();
-                lbl_data_vencimento.Text = mensalidade.due_date.ToString();
-
-                if (DateTime.Now >= proximo_pagamento)
+                if (DateTime.Now >= mensalidade.due_date)
                 {
                     lbl_status.Text = "Em Aberto";
                     lbl_status.TextColor = Color.Green;
@@ -138,39 +134,52 @@ namespace AppStarFitness
 
         private void btn_editar_Clicked(object sender, EventArgs e)
         {
-            btn_salvar.IsEnabled = true;
-            btn_editar.IsEnabled = false;
+            try
+            {
+                btn_salvar.IsEnabled = true;
+                btn_editar.IsEnabled = false;
 
-            txt_torax.IsEnabled = true;
-            txt_gluteo.IsEnabled = true;
-            txt_cintura.IsEnabled = true;
-            txt_braco_esquerdo.IsEnabled = true;
-            txt_braco_direito.IsEnabled = true;
-            txt_panturrilha_esquerda.IsEnabled = true;
-            txt_panturrilha_direita.IsEnabled = true;
-            txt_antebraco_esquerdo.IsEnabled = true;
-            txt_antebraco_direito.IsEnabled = true;
-            txt_quadriceps_esquerdo.IsEnabled = true;
-            txt_quadriceps_direito.IsEnabled = true;
+                txt_torax.IsEnabled = true;
+                txt_gluteo.IsEnabled = true;
+                txt_cintura.IsEnabled = true;
+                txt_braco_esquerdo.IsEnabled = true;
+                txt_braco_direito.IsEnabled = true;
+                txt_panturrilha_esquerda.IsEnabled = true;
+                txt_panturrilha_direita.IsEnabled = true;
+                txt_antebraco_esquerdo.IsEnabled = true;
+                txt_antebraco_direito.IsEnabled = true;
+                txt_quadriceps_esquerdo.IsEnabled = true;
+                txt_quadriceps_direito.IsEnabled = true;
+            }
+            catch (Exception err)
+            {
+                DisplayAlert(err.Message, err.StackTrace, "OK");
+            }
         }
 
         private void btn_salvar_Clicked(object sender, EventArgs e)
         {
-            // ---
-            btn_editar.IsEnabled = true;
-            btn_salvar.IsEnabled = false;
+            try
+            {
+                btn_editar.IsEnabled = true;
+                btn_salvar.IsEnabled = false;
 
-            txt_torax.IsEnabled = false;
-            txt_gluteo.IsEnabled = false;
-            txt_cintura.IsEnabled = false;
-            txt_braco_esquerdo.IsEnabled = false;
-            txt_braco_direito.IsEnabled = false;
-            txt_panturrilha_esquerda.IsEnabled = false;
-            txt_panturrilha_direita.IsEnabled = false;
-            txt_antebraco_esquerdo.IsEnabled = false;
-            txt_antebraco_direito.IsEnabled = false;
-            txt_quadriceps_esquerdo.IsEnabled = false;
-            txt_quadriceps_direito.IsEnabled = false;
+                txt_torax.IsEnabled = false;
+                txt_gluteo.IsEnabled = false;
+                txt_cintura.IsEnabled = false;
+                txt_braco_esquerdo.IsEnabled = false;
+                txt_braco_direito.IsEnabled = false;
+                txt_panturrilha_esquerda.IsEnabled = false;
+                txt_panturrilha_direita.IsEnabled = false;
+                txt_antebraco_esquerdo.IsEnabled = false;
+                txt_antebraco_direito.IsEnabled = false;
+                txt_quadriceps_esquerdo.IsEnabled = false;
+                txt_quadriceps_direito.IsEnabled = false;
+            }
+            catch (Exception err)
+            {
+                DisplayAlert(err.Message, err.StackTrace, "OK");
+            }
         }
     }
 }

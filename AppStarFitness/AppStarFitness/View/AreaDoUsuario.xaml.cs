@@ -52,28 +52,63 @@ namespace AppStarFitness.View
 
         private void btnimg_fotoperfil_Clicked(object sender, EventArgs e)
         {
-           
+            /*try
+            {
+                
+            }
+            catch (Exception err)
+            {
+                DisplayAlert(err.Message, err.StackTrace, "OK");
+            }*/
         }
 
         private void btn_ficha_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new MainPageTreino());
+            try
+            {
+                Navigation.PushAsync(new MainPageTreino());
+            }
+            catch (Exception err)
+            {
+                DisplayAlert(err.Message, err.StackTrace, "OK");
+            }
         }
 
 
         private void bnt_dieta_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new MainPageDietas());
+            try
+            {
+                Navigation.PushAsync(new MainPageDietas());
+            }
+            catch (Exception err)
+            {
+                DisplayAlert(err.Message, err.StackTrace, "OK");
+            }
         }
 
         private void btn_informacoes_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new MainPageInformacoes());
+            try
+            {
+                Navigation.PushAsync(new MainPageInformacoes());
+            }
+            catch (Exception err)
+            {
+                DisplayAlert(err.Message, err.StackTrace, "OK");
+            }
         }
 
         private void btn_evolucao_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Evolucao());
+            try
+            {
+                Navigation.PushAsync(new Evolucao());
+            }
+            catch (Exception err)
+            {
+                DisplayAlert(err.Message, err.StackTrace, "OK");
+            }
         }
     }
 }

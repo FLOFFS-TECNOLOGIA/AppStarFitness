@@ -20,21 +20,49 @@ namespace AppStarFitness
 
         private void pck_dia_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            /*try
+            {
+    
+            }
+            catch (Exception err)
+            {
+                DisplayAlert(err.Message, err.StackTrace, "OK");
+            }*/
         }
         private void btn_abrir1_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new TreinoDoDia());
+            try
+            {
+                Navigation.PushAsync(new TreinoDoDia());
+            }
+            catch (Exception err)
+            {
+                DisplayAlert(err.Message, err.StackTrace, "OK");
+            }
         }
 
         private void pck_treino_SelectedIndexChanged(object sender, EventArgs e)
         {
+            /*try
+            {
 
+            }
+            catch (Exception err)
+            {
+                DisplayAlert(err.Message, err.StackTrace, "OK");
+            }*/
         }
 
         private void btn_abrir2_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new OutroTreino());
+            try
+            {
+                Navigation.PushAsync(new OutroTreino());
+            }
+            catch (Exception err)
+            {
+                DisplayAlert(err.Message, err.StackTrace, "OK");
+            }
         }
     }
 }

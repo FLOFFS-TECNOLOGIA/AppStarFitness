@@ -19,37 +19,86 @@ namespace AppStarFitness.View
 
         private void btn_segunda_Clicked(object sender, EventArgs e)
         {
-
+            /*try
+            {
+    
+            }
+            catch (Exception err)
+            {
+                DisplayAlert(err.Message, err.StackTrace, "OK");
+            }*/
         }
 
         private void btn_terca_Clicked(object sender, EventArgs e)
         {
-
+            /*try
+            {
+    
+            }
+            catch (Exception err)
+            {
+                DisplayAlert(err.Message, err.StackTrace, "OK");
+            }*/
         }
 
         private void btn_quarta_Clicked(object sender, EventArgs e)
         {
-
+            /*try
+            {
+    
+            }
+            catch (Exception err)
+            {
+                DisplayAlert(err.Message, err.StackTrace, "OK");
+            }*/
         }
 
         private void btn_quinta_Clicked(object sender, EventArgs e)
         {
-
+            /*try
+            {
+    
+            }
+            catch (Exception err)
+            {
+                DisplayAlert(err.Message, err.StackTrace, "OK");
+            }*/
         }
 
         private void btn_sexta_Clicked(object sender, EventArgs e)
         {
-
+            /*try
+            {
+    
+            }
+            catch (Exception err)
+            {
+                DisplayAlert(err.Message, err.StackTrace, "OK");
+            }*/
         }
 
         private void btn_sabado_Clicked(object sender, EventArgs e)
         {
-
+            /*try
+            {
+    
+            }
+            catch (Exception err)
+            {
+                DisplayAlert(err.Message, err.StackTrace, "OK");
+            }*/
         }
 
         private void btn_domingo_Clicked(object sender, EventArgs e)
         {
-
+            /*try
+            {
+    
+            }
+            catch (Exception err)
+            {
+                DisplayAlert(err.Message, err.StackTrace, "OK");
+            }*/
         }
     }
 }

@@ -19,12 +19,26 @@ namespace AppStarFitness
 
         private void pck_dieta_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            /*try
+            {
+    
+            }
+            catch (Exception err)
+            {
+                DisplayAlert(err.Message, err.StackTrace, "OK");
+            }*/
         }
 
         private void btn_dieta_Clicked(object sender, EventArgs e)
         {
-
+            /*try
+            {
+    
+            }
+            catch (Exception err)
+            {
+                DisplayAlert(err.Message, err.StackTrace, "OK");
+            }*/
         }
     }
 }

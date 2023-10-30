@@ -15,12 +15,31 @@ namespace AppStarFitness.View
         public EsqueciSenha()
         {
             InitializeComponent();
-            logo.Source = ImageSource.FromResource("AppStarFitness.View.logo.png");
+            logo.Source = ImageSource.FromResource("AppStarFitness.Imagens.logo.png");
         }
 
         private void btn_enviar_Clicked(object sender, EventArgs e)
         {
+            try
+            {
+                DisplayAlert("a", "a", "a");
+            }
+            catch (Exception err)
+            {
+                DisplayAlert(err.Message, err.StackTrace, "OK");
+            }
+        }
 
+        private void btn_voltar_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                Application.Current.MainPage = new NavigationPage(new Login());              
+            }
+            catch (Exception err)
+            {
+                DisplayAlert(err.Message, err.StackTrace, "OK");
+            }
         }
     }
 }
