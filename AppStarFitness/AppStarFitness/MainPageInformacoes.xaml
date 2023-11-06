@@ -161,7 +161,6 @@
                     <Label Text="Quadríceps Dir: " TextColor="#4F4F4F" HorizontalTextAlignment="Center" FontSize="20" Grid.Row="10" Grid.Column="0"/>
                     <Entry x:Name="txt_quadriceps_direito" Grid.Row="10" Grid.Column="1"/>
                     <Label Text="cm" Grid.Row="10" Grid.Column="2" FontSize="20"/>
-
                 </Grid>
             </Frame>
         </StackLayout>

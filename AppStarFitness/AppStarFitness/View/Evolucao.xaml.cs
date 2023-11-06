@@ -19,14 +19,14 @@ namespace AppStarFitness.View
 
         private void btn_add_evolucao_Clicked(object sender, EventArgs e)
         {
-            /*try
+            try
             {
-                
+                Navigation.PushAsync(new AdicionarEvolucao());
             }
             catch (Exception err)
             {
                 DisplayAlert(err.Message, err.StackTrace, "OK");
-            }*/
+            }
         }
 
         private void pck_data_SelectedIndexChanged(object sender, EventArgs e)

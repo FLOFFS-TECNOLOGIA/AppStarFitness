@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppStarFitness.View.AdicionarEvolucao">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid ColumnDefinitions="*, *, *" RowDefinitions="*, *, *, *, *, *, *, *, *, *">
+                <Label Text="Tórax: " HorizontalTextAlignment="Center" TextColor="#4F4F4F" FontSize="20" Grid.Row="0" Grid.Column="0" Margin="0, 0, 0, 0"/>
+                <Entry x:Name="txt_torax" Grid.Row="0" Grid.Column="1" />
+                <Label Text="cm" Grid.Row="0" Grid.Column="2" FontSize="20"/>
+
+                <Label Text="Glúteo: " TextColor="#4F4F4F" HorizontalTextAlignment="Center" FontSize="20"  Grid.Row="1" Grid.Column="0"/>
+                <Entry x:Name="txt_gluteo" Grid.Row="1" Grid.Column="1"/>
+                <Label Text="cm" Grid.Row="1" Grid.Column="2" FontSize="20"/>
+
+                <Label Text="Cintura: " TextColor="#4F4F4F" HorizontalTextAlignment="Center" FontSize="20" Grid.Row="2" Grid.Column="0"/>
+                <Entry x:Name="txt_cintura" Grid.Row="2" Grid.Column="1"/>
+                <Label Text="cm" Grid.Row="2" Grid.Column="2" FontSize="20"/>
+
+                <Label Text="Braço Esquerdo: " TextColor="#4F4F4F" HorizontalTextAlignment="Center" FontSize="20" Grid.Row="3" Grid.Column="0"/>
+                <Entry x:Name="txt_braco_esquerdo" Grid.Row="3" Grid.Column="1"/>
+                <Label Text="cm" Grid.Row="3" Grid.Column="2" FontSize="20"/>
+
+                <Label Text="Braço Direito: " TextColor="#4F4F4F" HorizontalTextAlignment="Center" FontSize="20" Grid.Row="4" Grid.Column="0"/>
+                <Entry x:Name="txt_braco_direito" Grid.Row="4" Grid.Column="1"/>
+                <Label Text="cm" Grid.Row="4" Grid.Column="2" FontSize="20"/>
+
+                <Label Text="Panturrilha Esq: " TextColor="#4F4F4F" HorizontalTextAlignment="Center" FontSize="20"  Grid.Row="5" Grid.Column="0"/>
+                <Entry x:Name="txt_panturrilha_esquerda" Grid.Row="5" Grid.Column="1"/>
+                <Label Text="cm" Grid.Row="5" Grid.Column="2" FontSize="20"/>
+
+                <Label Text="Panturrilha Dir: " TextColor="#4F4F4F" HorizontalTextAlignment="Center" FontSize="20" Grid.Row="6" Grid.Column="0"/>
+                <Entry x:Name="txt_panturrilha_direita" Grid.Row="6" Grid.Column="1"/>
+                <Label Text="cm" Grid.Row="6" Grid.Column="2" FontSize="20"/>
+
+                <Label Text="Antebraço Esq: " TextColor="#4F4F4F" HorizontalTextAlignment="Center" FontSize="20" Grid.Row="7" Grid.Column="0"/>
+                <Entry x:Name="txt_antebraco_esquerdo" Grid.Row="7" Grid.Column="1"/>
+                <Label Text="cm" Grid.Row="7" Grid.Column="2" FontSize="20"/>
+
+                <Label Text="Antebraço Dir: " TextColor="#4F4F4F" HorizontalTextAlignment="Center" FontSize="20" Grid.Row="8" Grid.Column="0"/>
+                <Entry x:Name="txt_antebraco_direito" Grid.Row="8" Grid.Column="1"/>
+                <Label Text="cm" Grid.Row="8" Grid.Column="2" FontSize="20"/>
+
+                <Label Text="Quadríceps Esq: " TextColor="#4F4F4F" HorizontalTextAlignment="Center" FontSize="20" Grid.Row="9" Grid.Column="0"/>
+                <Entry x:Name="txt_quadriceps_esquerdo" Grid.Row="9" Grid.Column="1"/>
+                <Label Text="cm" Grid.Row="9" Grid.Column="2" FontSize="20"/>
+
+                <Label Text="Quadríceps Dir: " TextColor="#4F4F4F" HorizontalTextAlignment="Center" FontSize="20" Grid.Row="10" Grid.Column="0"/>
+                <Entry x:Name="txt_quadriceps_direito" Grid.Row="10" Grid.Column="1"/>
+                <Label Text="cm" Grid.Row="10" Grid.Column="2" FontSize="20"/>
+            </Grid>
+
+            <Button x:Name="btn_salvar" Text="Salvar" Clicked="btn_salvar_Clicked" HorizontalOptions="EndAndExpand"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
