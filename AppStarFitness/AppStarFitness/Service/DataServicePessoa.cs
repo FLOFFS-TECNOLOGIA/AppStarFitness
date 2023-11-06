@@ -26,7 +26,7 @@ namespace AppStarFitness.DataService
             Console.WriteLine(" ");
             Console.WriteLine("=============================================================================");
 
-            string json = await DataService.PostDataToService(json_a_enviar, "/login/gym-member");
+            string json = await DataService.PostDataToService(json_a_enviar, "/login/gym-member", null);
 
             Console.WriteLine("=============================================================================");
             Console.WriteLine(" ");

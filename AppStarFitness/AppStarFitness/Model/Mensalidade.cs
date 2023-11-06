@@ -16,7 +16,7 @@ namespace AppStarFitness.Model
         public DateTime updated_at { get; set; }*/
     }
 
-    public class Root
+    public class Root_Mensalidade
     {
         public string success_message { get; set; }
         public Mensalidade data { get; set; }

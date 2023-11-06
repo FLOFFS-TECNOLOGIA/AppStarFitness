@@ -25,14 +25,61 @@ namespace AppStarFitness.DataService
             Console.WriteLine(" ");
             Console.WriteLine("=============================================================================");
 
-            Root root = JsonConvert.DeserializeObject<Root>(json);
+            Root_Mensalidade root = JsonConvert.DeserializeObject<Root_Mensalidade>(json);
 
             return root.data;
         }
 
-        /*public static async Task<Aluno> MedidasAluno(Aluno a)
+        public static async Task<EvolucaoAluno> NovaEvolucao(EvolucaoAluno e, Usuario usuario)
         {
-            
-        }*/
+            string token = usuario.token;
+
+            var json_a_enviar = JsonConvert.SerializeObject(e);
+
+            Console.WriteLine("=============================================================================");
+            Console.WriteLine(" ");
+            Console.WriteLine("NOVA EVOLUCAO - JSON A ENVIAR");
+            Console.WriteLine(json_a_enviar);
+            Console.WriteLine(" ");
+            Console.WriteLine("=============================================================================");
+
+            string json = await DataService.PostDataToService(json_a_enviar, "/evolution", token);
+
+            Console.WriteLine("=============================================================================");
+            Console.WriteLine(" ");
+            Console.WriteLine("NOVA EVOLUCAO - JSON");
+            Console.WriteLine(json);
+            Console.WriteLine(" ");
+            Console.WriteLine("=============================================================================");
+
+            Root_Evolucao root =  JsonConvert.DeserializeObject<Root_Evolucao>(json);
+
+            return root.data;
+        }
+
+        public static async Task<Medidas> MedidasAluno(Medidas m, Usuario usuario)
+        {
+            string token = usuario.token;
+
+            var json_a_enviar = JsonConvert.SerializeObject(m);
+
+            Console.WriteLine("=============================================================================");
+            Console.WriteLine(" ");
+            Console.WriteLine("MEDIDAS ALUNO - JSON A ENVIAR");
+            Console.WriteLine(json_a_enviar);
+            Console.WriteLine(" ");
+            Console.WriteLine("=============================================================================");
+
+            string json = await DataService.PostDataToService(json_a_enviar, "/measurement", token);
+
+            Console.WriteLine("=============================================================================");
+            Console.WriteLine(" ");
+            Console.WriteLine("MEDIDAS ALUNO - JSON");
+            Console.WriteLine(json);
+            Console.WriteLine(" ");
+            Console.WriteLine("=============================================================================");
+
+            return JsonConvert.DeserializeObject<Medidas>(json);
+        }
     }
 }

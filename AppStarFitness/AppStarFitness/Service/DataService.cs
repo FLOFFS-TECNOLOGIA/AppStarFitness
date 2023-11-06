@@ -34,7 +34,7 @@ namespace AppStarFitness.DataService
             return json_response;
         }
 
-        protected static async Task<string> PostDataToService(string json_object, string rota)
+        protected static async Task<string> PostDataToService(string json_object, string rota, string token)
         {
             string json_response;
 
@@ -45,7 +45,7 @@ namespace AppStarFitness.DataService
 
             using (HttpClient client = new HttpClient())
             {
-                // -----------
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
                 HttpResponseMessage response = await client.PostAsync(
                     uri,
                     new StringContent(json_object, Encoding.UTF8, "application/json")
