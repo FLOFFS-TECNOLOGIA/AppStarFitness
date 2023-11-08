@@ -66,7 +66,7 @@ namespace AppStarFitness.View
                 }
                 else
                 {
-                    DisplayAlert("Erro", "Dados incorretos!", "OK");
+                    await DisplayAlert("Erro", "Dados incorretos!", "OK");
                 }
 
             } 
