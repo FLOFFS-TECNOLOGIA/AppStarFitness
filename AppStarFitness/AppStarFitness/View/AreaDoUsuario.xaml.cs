@@ -1,6 +1,7 @@
 ﻿using AppStarFitness.DataService;
 using AppStarFitness.Model;
 using Newtonsoft.Json;
+using Plugin.Media;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -50,16 +51,25 @@ namespace AppStarFitness.View
             }
         }
 
-        private void btnimg_fotoperfil_Clicked(object sender, EventArgs e)
+        private async Task GetPhotoAsync()
         {
-            /*try
+            var media = CrossMedia.Current;
+
+            var file = await media.PickPhotoAsync();
+
+            btnimg_fotoperfil.Source = file.Path; // Retorna o caminho da imagem.
+        }
+
+        private async void btnimg_fotoperfil_Clicked(object sender, EventArgs e)
+        {
+            try
             {
-                
+                await GetPhotoAsync();
             }
             catch (Exception err)
             {
-                DisplayAlert(err.Message, err.StackTrace, "OK");
-            }*/
+                await DisplayAlert(err.Message, err.StackTrace, "OK");
+            }
         }
 
         private void btn_ficha_Clicked(object sender, EventArgs e)

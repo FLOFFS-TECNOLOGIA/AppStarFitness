@@ -112,11 +112,11 @@ namespace AppStarFitness.View
                     token = u.token
                 });
 
-                Navigation.PopAsync();
+                await Navigation.PopAsync();
             }
             catch (Exception ex)
             {
-                DisplayAlert(ex.Message, ex.StackTrace, "OK");
+                await DisplayAlert(ex.Message, ex.StackTrace, "OK");
             }
         }
     }
