@@ -100,12 +100,5 @@
       <Name>AppStarFitness</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-<<<<<<< HEAD
-    <AndroidResource Include="Resources\drawable\mainwallpaper.jpg" />
-=======
-    <AndroidResource Include="Resources\xml\file_paths.xml" />
->>>>>>> 758adff1aa8d645ded8277d542588c622c8d9bae
-  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
