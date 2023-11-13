@@ -9,7 +9,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -43,7 +43,7 @@ namespace AppStarFitness.View
                 Pessoa p = u.user;
 
                 lbl_nome.Text = p.name.Split(' ')[0];
-                btnimg_fotoperfil.Source = p.photo_url;
+                //btnimg_fotoperfil.Source = p.photo_url;
             }
             catch(Exception err) 
             {
@@ -51,20 +51,18 @@ namespace AppStarFitness.View
             }
         }
 
-        private async Task GetPhotoAsync()
-        {
-            var media = CrossMedia.Current;
-
-            var file = await media.PickPhotoAsync();
-
-            btnimg_fotoperfil.Source = file.Path; // Retorna o caminho da imagem.
-        }
-
         private async void btnimg_fotoperfil_Clicked(object sender, EventArgs e)
         {
             try
             {
-                await GetPhotoAsync();
+                var resultado = await MediaPicker.PickPhotoAsync(new MediaPickerOptions());
+
+                if (resultado != null) 
+                {
+                    var stream = await resultado.OpenReadAsync();
+
+                    btnimg_fotoperfil.Source = ImageSource.FromStream(() => stream);
+                }
             }
             catch (Exception err)
             {

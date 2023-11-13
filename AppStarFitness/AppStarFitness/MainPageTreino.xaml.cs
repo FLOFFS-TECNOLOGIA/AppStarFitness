@@ -18,17 +18,6 @@ namespace AppStarFitness
             InitializeComponent();
         }
 
-        private void pck_dia_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            /*try
-            {
-    
-            }
-            catch (Exception err)
-            {
-                DisplayAlert(err.Message, err.StackTrace, "OK");
-            }*/
-        }
         private void btn_abrir1_Clicked(object sender, EventArgs e)
         {
             try
@@ -41,18 +30,6 @@ namespace AppStarFitness
             }
         }
 
-        private void pck_treino_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            /*try
-            {
-
-            }
-            catch (Exception err)
-            {
-                DisplayAlert(err.Message, err.StackTrace, "OK");
-            }*/
-        }
-
         private void btn_abrir2_Clicked(object sender, EventArgs e)
         {
             try
@@ -63,6 +40,95 @@ namespace AppStarFitness
             {
                 DisplayAlert(err.Message, err.StackTrace, "OK");
             }
+        }
+
+        private async void btn_segunda_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                Navigation.PushAsync(new TreinoDoDia());
+            }
+            catch(Exception ex)
+            {
+                await DisplayAlert(ex.Message, ex.StackTrace, "OK");
+            }
+        }
+
+        private async void btn_terca_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                Navigation.PushAsync(new TreinoDoDia());
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert(ex.Message, ex.StackTrace, "OK");
+            }
+        }
+
+        private async void btn_quarta_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                Navigation.PushAsync(new TreinoDoDia());
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert(ex.Message, ex.StackTrace, "OK");
+            }
+        }
+
+        private async void btn_quinta_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                Navigation.PushAsync(new TreinoDoDia());
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert(ex.Message, ex.StackTrace, "OK");
+            }
+        }
+
+        private async void btn_sexta_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                Navigation.PushAsync(new TreinoDoDia());
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert(ex.Message, ex.StackTrace, "OK");
+            }
+        }
+
+        private async void btn_sabado_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                Navigation.PushAsync(new TreinoDoDia());
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert(ex.Message, ex.StackTrace, "OK");
+            }
+        }
+
+        private async void btn_domingo_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                Navigation.PushAsync(new TreinoDoDia());
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert(ex.Message, ex.StackTrace, "OK");
+            }
+        }
+
+        private void pck_treino_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
