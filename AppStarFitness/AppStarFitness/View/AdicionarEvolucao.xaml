@@ -11,47 +11,47 @@
                    CornerRadius="15" Margin="0, 15, 0, 0">
                 <Grid ColumnDefinitions="*, *, *" RowDefinitions="*, *, *, *, *, *, *, *, *, *">
                     <Label Text="Tórax: " HorizontalTextAlignment="Center" TextColor="#4F4F4F" FontSize="18" Grid.Row="0" Grid.Column="0" Margin="0, 15, 0, 0"/>
-                    <Entry x:Name="txt_torax" Grid.Row="0" Grid.Column="1" />
+                    <Entry x:Name="txt_torax" Grid.Row="0" Grid.Column="1" Keyboard="Numeric"/>
                     <Label Text="cm" Grid.Row="0" Grid.Column="2" FontSize="20" Margin="0, 15, 0, 0"/>
 
                     <Label Text="Glúteo: " TextColor="#4F4F4F" HorizontalTextAlignment="Center" FontSize="18"  Grid.Row="1" Grid.Column="0" Margin="0, 15, 0, 0"/>
-                    <Entry x:Name="txt_gluteo" Grid.Row="1" Grid.Column="1"/>
+                    <Entry x:Name="txt_gluteo" Grid.Row="1" Grid.Column="1" Keyboard="Numeric"/>
                     <Label Text="cm" Grid.Row="1" Grid.Column="2" FontSize="20" Margin="0, 15, 0, 0"/>
 
                     <Label Text="Cintura: " TextColor="#4F4F4F" HorizontalTextAlignment="Center" FontSize="18" Grid.Row="2" Grid.Column="0" Margin="0, 15, 0, 0"/>
-                    <Entry x:Name="txt_cintura" Grid.Row="2" Grid.Column="1"/>
+                    <Entry x:Name="txt_cintura" Grid.Row="2" Grid.Column="1" Keyboard="Numeric"/>
                     <Label Text="cm" Grid.Row="2" Grid.Column="2" FontSize="20" Margin="0, 15, 0, 0"/>
 
                     <Label Text="Braço Esquerdo: " TextColor="#4F4F4F" HorizontalTextAlignment="Center" FontSize="18" Grid.Row="3" Grid.Column="0"/>
-                    <Entry x:Name="txt_braco_esquerdo" Grid.Row="3" Grid.Column="1"/>
+                    <Entry x:Name="txt_braco_esquerdo" Grid.Row="3" Grid.Column="1" Keyboard="Numeric"/>
                     <Label Text="cm" Grid.Row="3" Grid.Column="2" FontSize="20" Margin="0, 15, 0, 0"/>
 
                     <Label Text="Braço Direito: " TextColor="#4F4F4F" HorizontalTextAlignment="Center" FontSize="18" Grid.Row="4" Grid.Column="0"/>
-                    <Entry x:Name="txt_braco_direito" Grid.Row="4" Grid.Column="1"/>
+                    <Entry x:Name="txt_braco_direito" Grid.Row="4" Grid.Column="1" Keyboard="Numeric"/>
                     <Label Text="cm" Grid.Row="4" Grid.Column="2" FontSize="20" Margin="0, 15, 0, 0"/>
 
                     <Label Text="Panturrilha Esq: " TextColor="#4F4F4F" HorizontalTextAlignment="Center" FontSize="18"  Grid.Row="5" Grid.Column="0"/>
-                    <Entry x:Name="txt_panturrilha_esquerda" Grid.Row="5" Grid.Column="1"/>
+                    <Entry x:Name="txt_panturrilha_esquerda" Grid.Row="5" Grid.Column="1" Keyboard="Numeric"/>
                     <Label Text="cm" Grid.Row="5" Grid.Column="2" FontSize="20" Margin="0, 15, 0, 0"/>
 
                     <Label Text="Panturrilha Dir: " TextColor="#4F4F4F" HorizontalTextAlignment="Center" FontSize="18" Grid.Row="6" Grid.Column="0"/>
-                    <Entry x:Name="txt_panturrilha_direita" Grid.Row="6" Grid.Column="1"/>
+                    <Entry x:Name="txt_panturrilha_direita" Grid.Row="6" Grid.Column="1" Keyboard="Numeric"/>
                     <Label Text="cm" Grid.Row="6" Grid.Column="2" FontSize="20" Margin="0, 15, 0, 0"/>
 
                     <Label Text="Antebraço Esq: " TextColor="#4F4F4F" HorizontalTextAlignment="Center" FontSize="18" Grid.Row="7" Grid.Column="0"/>
-                    <Entry x:Name="txt_antebraco_esquerdo" Grid.Row="7" Grid.Column="1"/>
+                    <Entry x:Name="txt_antebraco_esquerdo" Grid.Row="7" Grid.Column="1" Keyboard="Numeric"/>
                     <Label Text="cm" Grid.Row="7" Grid.Column="2" FontSize="20" Margin="0, 15, 0, 0"/>
 
                     <Label Text="Antebraço Dir: " TextColor="#4F4F4F" HorizontalTextAlignment="Center" FontSize="18" Grid.Row="8" Grid.Column="0"/>
-                    <Entry x:Name="txt_antebraco_direito" Grid.Row="8" Grid.Column="1"/>
+                    <Entry x:Name="txt_antebraco_direito" Grid.Row="8" Grid.Column="1" Keyboard="Numeric"/>
                     <Label Text="cm" Grid.Row="8" Grid.Column="2" FontSize="20" Margin="0, 15, 0, 0"/>
 
                     <Label Text="Quadríceps Esq: " TextColor="#4F4F4F" HorizontalTextAlignment="Center" FontSize="18" Grid.Row="9" Grid.Column="0"/>
-                    <Entry x:Name="txt_quadriceps_esquerdo" Grid.Row="9" Grid.Column="1"/>
+                    <Entry x:Name="txt_quadriceps_esquerdo" Grid.Row="9" Grid.Column="1" Keyboard="Numeric"/>
                     <Label Text="cm" Grid.Row="9" Grid.Column="2" FontSize="20" Margin="0, 15, 0, 0"/>
 
                     <Label Text="Quadríceps Dir: " TextColor="#4F4F4F" HorizontalTextAlignment="Center" FontSize="18" Grid.Row="10" Grid.Column="0"/>
-                    <Entry x:Name="txt_quadriceps_direito" Grid.Row="10" Grid.Column="1"/>
+                    <Entry x:Name="txt_quadriceps_direito" Grid.Row="10" Grid.Column="1" Keyboard="Numeric"/>
                     <Label Text="cm" Grid.Row="10" Grid.Column="2" FontSize="20" Margin="0, 15, 0, 0"/>
 
                     <Button x:Name="btn_salvar" Text="Salvar" Clicked="btn_salvar_Clicked" TextColor="White" CornerRadius="15" BackgroundColor="#3ca65a"
