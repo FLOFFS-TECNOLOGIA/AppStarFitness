@@ -28,7 +28,18 @@
                 <Frame BorderColor="#A9A9A9" Margin="20, 0, 20, 0" Padding="1" Opacity="0.5" />
 
                 <Label x:Name="lbl_dietaNome" Text="" FontSize="25" TextColor="Black" HorizontalTextAlignment="Center" Margin="10, 30, 10, 10"/>
-                
+
+                <ScrollView>
+                    <StackLayout>
+                        <Label Text="Café da Manhã" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="20"/>
+
+                        <Label Text="Almoço" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="20"/>
+
+                        <Label Text="Lanche" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="20"/>
+
+                        <Label Text="Jantar" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="20"/>
+                    </StackLayout>
+                </ScrollView>
             </StackLayout>
         </ScrollView>
     </ContentPage>

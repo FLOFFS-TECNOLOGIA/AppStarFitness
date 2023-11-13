@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using AppStarFitness.View;
 
 namespace AppStarFitness
 {
@@ -29,16 +30,15 @@ namespace AppStarFitness
             }*/
         }
 
-        private void btn_dieta_Clicked(object sender, EventArgs e)
+        private async void btn_dieta_Clicked(object sender, EventArgs e)
         {
-            /*try
+            try
             {
-    
             }
             catch (Exception err)
             {
-                DisplayAlert(err.Message, err.StackTrace, "OK");
-            }*/
+                await DisplayAlert(err.Message, err.StackTrace, "OK");
+            }
         }
     }
 }
