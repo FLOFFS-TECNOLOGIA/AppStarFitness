@@ -16,6 +16,7 @@ namespace AppStarFitness.View
         {
             InitializeComponent();
             logo.Source = ImageSource.FromResource("AppStarFitness.Imagens.logo.png");
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
         private void btn_enviar_Clicked(object sender, EventArgs e)
@@ -40,6 +41,11 @@ namespace AppStarFitness.View
             {
                 DisplayAlert(err.Message, err.StackTrace, "OK");
             }
+        }
+
+        private void btn_voltarLogin_Clicked(object sender, EventArgs e)
+        {
+            App.Current.MainPage = new NavigationPage(new View.Login());
         }
     }
 }

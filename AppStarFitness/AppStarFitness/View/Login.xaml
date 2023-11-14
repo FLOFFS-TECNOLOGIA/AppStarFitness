@@ -32,7 +32,7 @@
                                               BackgroundColor="#f5f6fa"/>
 
                     <Button x:Name="btn_login" Clicked="btn_login_Clicked" Text="Continuar" 
-                                Grid.Row="5" Style="{StaticResource ButtonLogin}" BackgroundColor="#3e61b1" />
+                                Grid.Row="5" Style="{StaticResource ButtonLogin}" BackgroundColor="#3ca65a" />
 
                     <Button x:Name="btn_esqueci" Clicked="btn_esqueci_Clicked" Text="Esqueci minha senha" 
                                 Grid.Row="6" Style="{StaticResource ButtonEsqueciSenha}" BackgroundColor="Transparent"

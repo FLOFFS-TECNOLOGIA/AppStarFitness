@@ -12,7 +12,7 @@
                    BorderColor="White" CornerRadius="15">
                 <StackLayout>
                     <ImageButton x:Name="btnimg_fotoperfil" HorizontalOptions="Center" Clicked="btnimg_fotoperfil_Clicked" 
-                                 HeightRequest="180" WidthRequest="180" CornerRadius="100" />
+                                 HeightRequest="180" WidthRequest="180" CornerRadius="100" BorderColor="Black" BorderWidth="1"/>
 
                     <Label x:Name="lbl_nome" Text="" FontSize="30" TextColor="#4F4F4F" HorizontalOptions="Center" Margin="0 , 0, 0, 40"/>
 

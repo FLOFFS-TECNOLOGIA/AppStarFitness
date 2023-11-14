@@ -22,7 +22,7 @@ namespace AppStarFitness.View
         {
             InitializeComponent();
 
-            //btnimg_fotoperfil.Source = ImageSource.FromResource("AppStarFitness.Imagens.default.jpg");
+            btnimg_fotoperfil.Source = ImageSource.FromResource("AppStarFitness.Imagens.default.jpg");
         }
 
         protected override async void OnAppearing()

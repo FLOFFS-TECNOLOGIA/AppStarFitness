@@ -2,27 +2,33 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppStarFitness.View.EsqueciSenha"
+             xmlns:local="clr-namespace:AppStarFitness.CustomeRenderer"
              BackgroundColor="White">
     <ContentPage.Content>
-        <StackLayout HorizontalOptions="Center">
-            <Button x:Name="btn_voltar" Text="Voltar" Clicked="btn_voltar_Clicked" TextColor="Black" BackgroundColor="Transparent"
-                     HorizontalOptions="Start" BorderColor="DarkSlateGray" BorderWidth="1.2" CornerRadius="10" Margin="10"/>
+        <StackLayout VerticalOptions="Center">
+            <Image x:Name="logo" HeightRequest="200"/>
 
-            <Image x:Name="logo" VerticalOptions="Center" Scale="1.3" Margin="30"/>
-
-            <Frame BackgroundColor="White" BorderColor="Black" Margin="20" CornerRadius="15" VerticalOptions="Center">
-                <Grid RowDefinitions="*, *, *, *">
-
-                    <Label Text="ESQUECI A SENHA" FontSize="30" Grid.Row="0" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="Black"/>
-
-                    <Label Text="Email ou Telefone" FontSize="20" Grid.Row="1" TextColor="Black" />
-                    <Entry x:Name="email_cpf" Grid.Row="2" 
-                           Placeholder="Digite um email ou telefone válido" PlaceholderColor="Gray" 
-                           TextColor="Black" ClearButtonVisibility="WhileEditing" />
-
-                    <Button x:Name="btn_enviar" Text="Enviar" Grid.Row="3" 
+            <Frame VerticalOptions="Center" HorizontalOptions="Center" BorderColor="Transparent">
+                <Grid RowDefinitions="Auto">
+                    <Frame BorderColor="#3ca65a" CornerRadius="15" HeightRequest="85" Grid.Row="0">
+                        <StackLayout>
+                            <Label Text="Será enviado para o email digitado, um link para a redefinição de sua senha."
+                                   TextColor="Black" FontSize="16"/>
+                            <Label Text="Caso precise de ajuda, procure pelo proprietário da academia."
+                                   TextColor="Black" FontSize="16"/>
+                        </StackLayout>
+                    </Frame>
+                    <Label Text="Email" FontSize="20" Margin="0, 20, 0, 0" TextColor="Black" Grid.Row="1" />
+                    <local:MyCustomeEntry x:Name="email_cpf" Grid.Row="2" 
+                           Placeholder="Digite seu email" PlaceholderColor="Gray" 
+                           TextColor="Black" BackgroundColor="#f5f6fa" ClearButtonVisibility="WhileEditing" />
+                    <Button x:Name="btn_enviar" Text="Enviar" Grid.Row="4" 
                             Style="{StaticResource ButtonLogin}" BackgroundColor="#3ca65a"
                             Clicked="btn_enviar_Clicked"/>
+
+                    <Button x:Name="btn_voltarLogin" Clicked="btn_voltarLogin_Clicked" Text="Voltar para Login" 
+                                Grid.Row="5" Style="{StaticResource ButtonLogin}"
+                                BackgroundColor="Transparent" TextColor="#3e61b1"/>
 
                 </Grid>
             </Frame>
