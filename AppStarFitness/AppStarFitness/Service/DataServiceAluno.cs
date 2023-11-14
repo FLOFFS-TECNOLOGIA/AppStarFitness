@@ -114,5 +114,21 @@ namespace AppStarFitness.DataService
 
             return evolucoes;
         }
+
+        public static async Task<Medidas> PuxarMedidas(string token, string id_evolucao)
+        {
+            string json = await DataService.GetDataFromService("/measurement/evolution/" + id_evolucao, token);
+
+            Console.WriteLine("=============================================================================");
+            Console.WriteLine(" ");
+            Console.WriteLine("PUXAR MEDIDAS - JSON");
+            Console.WriteLine(json);
+            Console.WriteLine(" ");
+            Console.WriteLine("=============================================================================");
+
+            Root_Medidas root = JsonConvert.DeserializeObject<Root_Medidas>(json);
+
+            return root.data;
+        }
     }
 }

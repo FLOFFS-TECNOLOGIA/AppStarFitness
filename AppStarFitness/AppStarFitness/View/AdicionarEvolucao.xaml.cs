@@ -81,9 +81,18 @@ namespace AppStarFitness.View
 
                 string id_aluno = p.gymMember.id;
 
+                string dia_hoje = DateTime.Today.ToString("yyyy-MM-dd");
+
+                Console.WriteLine("=============================================================================");
+                Console.WriteLine(" ");
+                Console.WriteLine("DIA HOJE");
+                Console.WriteLine(dia_hoje);
+                Console.WriteLine(" ");
+                Console.WriteLine("=============================================================================");
+
                 EvolucaoAluno ev = await DataServiceAluno.NovaEvolucao(new EvolucaoAluno
                 {
-                    complete_date = DateTime.Today,
+                    complete_date = dia_hoje,
                     id_gym_member = id_aluno,
 
                 }, new Usuario

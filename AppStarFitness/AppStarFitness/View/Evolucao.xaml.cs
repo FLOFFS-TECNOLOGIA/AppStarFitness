@@ -3,6 +3,7 @@ using AppStarFitness.Model;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +18,9 @@ namespace AppStarFitness.View
 	{
         ObservableCollection<EvolucaoAlunoList> lista_evolucoes = new ObservableCollection<EvolucaoAlunoList>();
 
+        string string_selecionada;
+        string string_selecionada1;
+        string string_selecionada2;
         public Evolucao ()
 		{
 			InitializeComponent ();
@@ -64,9 +68,9 @@ namespace AppStarFitness.View
             {
                 Picker disparador = sender as Picker;
 
-                // STRING ESTA VINDO VAZIA
-                string evolucao_selecionada = disparador.SelectedItem as string;
-                Application.Current.Properties.Add("evolucao_selecionada", evolucao_selecionada);
+                EvolucaoAlunoList evolucao_selecionada = disparador.SelectedItem as EvolucaoAlunoList;
+
+                string_selecionada = evolucao_selecionada.id;
             }
             catch (Exception err)
             {
@@ -92,9 +96,9 @@ namespace AppStarFitness.View
             {
                 Picker disparador = sender as Picker;
 
-                // STRING ESTA VINDO VAZIA
-                string evolucao_selecionada1 = disparador.SelectedItem as string;
-                Application.Current.Properties.Add("evolucao_selecionada1", evolucao_selecionada1);
+                EvolucaoAlunoList evolucao_selecionada1 = disparador.SelectedItem as EvolucaoAlunoList;
+
+                string_selecionada1 = evolucao_selecionada1.id;
             }
             catch (Exception err)
             {
@@ -108,17 +112,10 @@ namespace AppStarFitness.View
             {
                 Picker disparador = sender as Picker;
 
-                // STRING ESTA VINDO VAZIA
-                string evolucao_selecionada2 = disparador.SelectedItem as string;
+                EvolucaoAlunoList evolucao_selecionada2 = disparador.SelectedItem as EvolucaoAlunoList;
 
-                Console.WriteLine("=============================================================================");
-                Console.WriteLine(" ");
-                Console.WriteLine("SELECIONAADA 2");
-                Console.WriteLine(evolucao_selecionada2);
-                Console.WriteLine(" ");
-                Console.WriteLine("=============================================================================");
+                string_selecionada2 = evolucao_selecionada2.id;
 
-                Application.Current.Properties.Add("evolucao_selecionada2", evolucao_selecionada2);
             }
             catch (Exception err)
             {
@@ -130,7 +127,7 @@ namespace AppStarFitness.View
         {
             try
             {
-                await Navigation.PushAsync(new CompararEvolucao());
+                await Navigation.PushAsync(new CompararEvolucao(string_selecionada1,string_selecionada2));
             }
             catch (Exception err)
             {

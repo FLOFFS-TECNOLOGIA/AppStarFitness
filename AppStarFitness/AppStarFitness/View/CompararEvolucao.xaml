@@ -4,7 +4,8 @@
              x:Class="AppStarFitness.View.CompararEvolucao">
     <ContentPage.Content>
         <StackLayout>
-   
+            <Label x:Name="lbl_chest1"/>
+            <Label x:Name="lbl_chest2"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

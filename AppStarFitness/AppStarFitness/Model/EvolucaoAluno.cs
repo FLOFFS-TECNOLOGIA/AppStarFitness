@@ -6,7 +6,7 @@ namespace AppStarFitness.Model
 {
     public class EvolucaoAluno
     {
-        public DateTime complete_date {  get; set; }
+        public string complete_date {  get; set; }
         public string id_gym_member { get; set; }
         public string id { get; set; }
     }
@@ -21,7 +21,7 @@ namespace AppStarFitness.Model
     public class EvolucaoAlunoList
     {
         public string id { get; set; }
-        public DateTime complete_date { get; set; }
+        public string complete_date { get; set; }
         public string id_gym_member { get; set; }
     }
 
