@@ -6,6 +6,7 @@ using System.Net.Http.Headers;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Forms.PlatformConfiguration;
 
 namespace AppStarFitness.DataService
 {
@@ -80,6 +81,38 @@ namespace AppStarFitness.DataService
             Console.WriteLine("=============================================================================");
 
             return JsonConvert.DeserializeObject<Medidas>(json);
+        }
+
+        public static async Task<List<EvolucaoAlunoList>> PuxarEvolucoes(Usuario usuario)
+        {
+            string token = usuario.token;
+
+            string json = await DataService.GetDataFromService("/evolution", token);
+
+            Console.WriteLine("=============================================================================");
+            Console.WriteLine(" ");
+            Console.WriteLine("PUXAR EVOLUÇÕES - JSON");
+            Console.WriteLine(json);
+            Console.WriteLine(" ");
+            Console.WriteLine("=============================================================================");
+
+            Root_EvolucaoList root = JsonConvert.DeserializeObject<Root_EvolucaoList>(json);
+            var dados = JsonConvert.SerializeObject(root.data);
+            List<EvolucaoAlunoList> evolucoes = JsonConvert.DeserializeObject<List<EvolucaoAlunoList>>(dados);
+
+            Console.WriteLine("=============================================================================");
+            Console.WriteLine(" ");
+            Console.WriteLine("PUXAR EVOLUÇÕES - ARRAY EVOLUCOES");
+            foreach (var evolucao in evolucoes)
+            {
+                Console.WriteLine($"ID: {evolucao.id}");
+                Console.WriteLine($"Complete Date: {evolucao.complete_date}");
+                Console.WriteLine($"ID Gym Member: {evolucao.id_gym_member}");
+            }
+            Console.WriteLine(" ");
+            Console.WriteLine("=============================================================================");
+
+            return evolucoes;
         }
     }
 }

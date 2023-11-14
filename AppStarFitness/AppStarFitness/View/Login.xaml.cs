@@ -56,6 +56,7 @@ namespace AppStarFitness.View
                 {
                     Application.Current.Properties.Add("usuario_logado", cpf_digitado);
                     Application.Current.Properties.Add("usuario_senha", senha_digitada);
+                    Application.Current.Properties.Add("token", u.token);
                     await Application.Current.SavePropertiesAsync();
 
                     Application.Current.MainPage = new NavigationPage(new MainPage()
