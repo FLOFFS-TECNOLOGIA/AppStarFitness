@@ -5,7 +5,12 @@
     
     <ContentPage Title="Adicionar Treino">
         <StackLayout>
-            <Label x:Name="lbl_nome_treino" Text="!!!!!!!!!!!!!!!!!!!!!!DESCONSIDERAR ESSA TELA!!!!!!!!!!!!!!!!!!!!! " FontSize="20"/>
+            <Label Text="CRIAR NOVA FICHA DE TREINO" FontSize="25" HorizontalTextAlignment="Center"/>
+
+            <Label Text="Nome da ficha (exemplo: treino com ênfase em braço)" FontSize="15"/>
+            <Entry x:Name="txt_nome_ficha" />
+
+            <Button x:Name="btn_nova_ficha" Text="Criar nova ficha" Clicked="btn_nova_ficha_Clicked"/>
         </StackLayout>
     </ContentPage>
 
@@ -14,8 +19,8 @@
             <StackLayout>
                 <Frame BorderColor="#3ca65a" CornerRadius="15" Margin="20">
                     <Grid ColumnDefinitions="*, *">
-                        <Picker x:Name="pck_treino" SelectedIndexChanged="pck_treino_SelectedIndexChanged" Title="Selecionar treino" Grid.Column="0"/>
-                        <Button x:Name="btn_abrir2" Text="abrir" Clicked="btn_abrir2_Clicked" Grid.Column="1" BackgroundColor="Transparent" />
+                        <Picker x:Name="pck_treino" ItemDisplayBinding="{Binding name}" SelectedIndexChanged="pck_treino_SelectedIndexChanged" Title="Selecionar treino" Grid.Column="0"/>
+                        <Button x:Name="btn_abrir" Text="abrir" Clicked="btn_abrir_Clicked" Grid.Column="1" BackgroundColor="Transparent" />
                     </Grid>
                 </Frame>
             </StackLayout>

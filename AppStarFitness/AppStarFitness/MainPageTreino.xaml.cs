@@ -1,6 +1,9 @@
-﻿using AppStarFitness.View;
+﻿using AppStarFitness.DataService;
+using AppStarFitness.Model;
+using AppStarFitness.View;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,122 +16,88 @@ namespace AppStarFitness
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPageTreino : TabbedPage
     {
+        ObservableCollection<FichaTreinoList> lista_fichas = new ObservableCollection<FichaTreinoList>();
+
+        string string_selecionada;
         public MainPageTreino()
         {
             InitializeComponent();
+
+            pck_treino.ItemsSource = lista_fichas;
         }
 
-        private void btn_abrir1_Clicked(object sender, EventArgs e)
+        protected override async void OnAppearing()
         {
             try
             {
-                Navigation.PushAsync(new TreinoDoDia());
+                string token = (string)Application.Current.Properties["token"];
+                string id_aluno = (string)Application.Current.Properties["id_aluno"];
+
+                List<FichaTreinoList> arr_evolucoes = await DataServiceAluno.PuxarFichas(token, id_aluno);
+
+                lista_fichas.Clear();
+
+                arr_evolucoes.ForEach(i => lista_fichas.Add(i));
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert(ex.Message, ex.StackTrace, "OK");
+            }
+        }
+
+        private async void btn_nova_ficha_Clicked(object sender, EventArgs e)
+        {
+
+            string token = (string)Application.Current.Properties["token"];
+            string id_aluno = (string)Application.Current.Properties["id_aluno"];
+
+            try
+            {
+                FichaTreino f = await DataServiceAluno.NovaFicha(new FichaTreino
+                {
+                    name = txt_nome_ficha.Text,
+                    id_gym_member = id_aluno
+                }, token);
+
+                string id_ficha = f.id;
+
+                await Navigation.PushAsync(new OutroTreino(id_ficha, true));
+            }
+            catch(Exception ex) 
+            {
+                await DisplayAlert(ex.Message, ex.StackTrace, "OK");
+            }
+        }
+
+        private async void pck_treino_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                Picker disparador = sender as Picker;
+
+                FichaTreinoList treino_selecionado = disparador.SelectedItem as FichaTreinoList;
+
+                if (treino_selecionado != null)
+                {
+                    string_selecionada = treino_selecionado.id;
+                }
             }
             catch (Exception err)
             {
-                DisplayAlert(err.Message, err.StackTrace, "OK");
+                await DisplayAlert(err.Message, err.StackTrace, "OK");
             }
         }
 
-        private void btn_abrir2_Clicked(object sender, EventArgs e)
+        private async void btn_abrir_Clicked(object sender, EventArgs e)
         {
             try
             {
-                Navigation.PushAsync(new OutroTreino());
+                await Navigation.PushAsync(new OutroTreino(string_selecionada, false));
             }
             catch (Exception err)
             {
-                DisplayAlert(err.Message, err.StackTrace, "OK");
+                await DisplayAlert(err.Message, err.StackTrace, "OK");
             }
-        }
-
-        private async void btn_segunda_Clicked(object sender, EventArgs e)
-        {
-            try
-            {
-                Navigation.PushAsync(new TreinoDoDia());
-            }
-            catch(Exception ex)
-            {
-                await DisplayAlert(ex.Message, ex.StackTrace, "OK");
-            }
-        }
-
-        private async void btn_terca_Clicked(object sender, EventArgs e)
-        {
-            try
-            {
-                Navigation.PushAsync(new TreinoDoDia());
-            }
-            catch (Exception ex)
-            {
-                await DisplayAlert(ex.Message, ex.StackTrace, "OK");
-            }
-        }
-
-        private async void btn_quarta_Clicked(object sender, EventArgs e)
-        {
-            try
-            {
-                Navigation.PushAsync(new TreinoDoDia());
-            }
-            catch (Exception ex)
-            {
-                await DisplayAlert(ex.Message, ex.StackTrace, "OK");
-            }
-        }
-
-        private async void btn_quinta_Clicked(object sender, EventArgs e)
-        {
-            try
-            {
-                Navigation.PushAsync(new TreinoDoDia());
-            }
-            catch (Exception ex)
-            {
-                await DisplayAlert(ex.Message, ex.StackTrace, "OK");
-            }
-        }
-
-        private async void btn_sexta_Clicked(object sender, EventArgs e)
-        {
-            try
-            {
-                Navigation.PushAsync(new TreinoDoDia());
-            }
-            catch (Exception ex)
-            {
-                await DisplayAlert(ex.Message, ex.StackTrace, "OK");
-            }
-        }
-
-        private async void btn_sabado_Clicked(object sender, EventArgs e)
-        {
-            try
-            {
-                Navigation.PushAsync(new TreinoDoDia());
-            }
-            catch (Exception ex)
-            {
-                await DisplayAlert(ex.Message, ex.StackTrace, "OK");
-            }
-        }
-
-        private async void btn_domingo_Clicked(object sender, EventArgs e)
-        {
-            try
-            {
-                Navigation.PushAsync(new TreinoDoDia());
-            }
-            catch (Exception ex)
-            {
-                await DisplayAlert(ex.Message, ex.StackTrace, "OK");
-            }
-        }
-
-        private void pck_treino_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

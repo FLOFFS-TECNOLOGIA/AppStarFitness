@@ -70,7 +70,10 @@ namespace AppStarFitness.View
 
                 EvolucaoAlunoList evolucao_selecionada = disparador.SelectedItem as EvolucaoAlunoList;
 
-                string_selecionada = evolucao_selecionada.id;
+                if (evolucao_selecionada != null)
+                {
+                    string_selecionada = evolucao_selecionada.id;
+                }
             }
             catch (Exception err)
             {
@@ -82,7 +85,7 @@ namespace AppStarFitness.View
         {
             try
             {
-                //await Navigation.PushAsync();
+                await Navigation.PushAsync(new CompararEvolucao(string_selecionada, null));
             }
             catch (Exception err)
             {
@@ -98,7 +101,10 @@ namespace AppStarFitness.View
 
                 EvolucaoAlunoList evolucao_selecionada1 = disparador.SelectedItem as EvolucaoAlunoList;
 
-                string_selecionada1 = evolucao_selecionada1.id;
+                if (evolucao_selecionada1 != null)
+                {
+                    string_selecionada1 = evolucao_selecionada1.id;
+                }
             }
             catch (Exception err)
             {
@@ -114,8 +120,10 @@ namespace AppStarFitness.View
 
                 EvolucaoAlunoList evolucao_selecionada2 = disparador.SelectedItem as EvolucaoAlunoList;
 
-                string_selecionada2 = evolucao_selecionada2.id;
-
+                if (evolucao_selecionada2 != null)
+                {
+                    string_selecionada2 = evolucao_selecionada2.id;
+                }
             }
             catch (Exception err)
             {

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AppStarFitness.DataService;
+using AppStarFitness.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,32 +14,64 @@ namespace AppStarFitness.View
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class OutroTreino : ContentPage
 	{
-		public OutroTreino ()
+        string treino;
+        bool criar_ficha;
+		public OutroTreino (string treino_selecionado, bool criar_nova_ficha)
 		{
 			InitializeComponent ();
+
+            treino = treino_selecionado;
+            criar_ficha = criar_nova_ficha;
 		}
+
+        protected override async void OnAppearing()
+        {
+            try
+            {
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert(ex.Message, ex.StackTrace, "OK");
+            }
+        }
 
         private async void btn_segunda_Clicked(object sender, EventArgs e)
         {
             try
             {
-                Navigation.PushAsync(new TreinoDoDia());
+                if (criar_ficha == false)
+                {
+                    await Navigation.PushAsync(new TreinoDoDia());
+                }
+                else
+                {
+                    string dia = "Segunda";
+                    //await Navigation.PushAsync(new AdicionarTreino(dia));
+                }
             }
             catch (Exception err)
             {
-                DisplayAlert(err.Message, err.StackTrace, "OK");
+                await DisplayAlert(err.Message, err.StackTrace, "OK");
             }
         }
 
-        private async  void btn_terca_Clicked(object sender, EventArgs e)
+        private async void btn_terca_Clicked(object sender, EventArgs e)
         {
             try
             {
-                Navigation.PushAsync(new TreinoDoDia());
+                if (criar_ficha == false)
+                {
+                    await Navigation.PushAsync(new TreinoDoDia());
+                }
+                else
+                {
+                    string dia = "Terça";
+                    //await Navigation.PushAsync(new AdicionarTreino(dia));
+                }
             }
             catch (Exception err)
             {
-                DisplayAlert(err.Message, err.StackTrace, "OK");
+                await DisplayAlert(err.Message, err.StackTrace, "OK");
             }
         }
 
@@ -45,11 +79,19 @@ namespace AppStarFitness.View
         {
             try
             {
-                Navigation.PushAsync(new TreinoDoDia());
+                if (criar_ficha == false)
+                {
+                    await Navigation.PushAsync(new TreinoDoDia());
+                }
+                else
+                {
+                    string dia = "Quarta";
+                    //await Navigation.PushAsync(new AdicionarTreino(dia));
+                }
             }
             catch (Exception err)
             {
-                DisplayAlert(err.Message, err.StackTrace, "OK");
+                await DisplayAlert(err.Message, err.StackTrace, "OK");
             }
         }
 
@@ -57,11 +99,19 @@ namespace AppStarFitness.View
         {
             try
             {
-                Navigation.PushAsync(new TreinoDoDia());
+                if (criar_ficha == false)
+                {
+                    await Navigation.PushAsync(new TreinoDoDia());
+                }
+                else
+                {
+                    string dia = "Quinta";
+                    //await Navigation.PushAsync(new AdicionarTreino(dia));
+                }
             }
             catch (Exception err)
             {
-                DisplayAlert(err.Message, err.StackTrace, "OK");
+                await DisplayAlert(err.Message, err.StackTrace, "OK");
             }
         }
 
@@ -69,11 +119,19 @@ namespace AppStarFitness.View
         {
             try
             {
-                Navigation.PushAsync(new TreinoDoDia());
+                if (criar_ficha == false)
+                {
+                    await Navigation.PushAsync(new TreinoDoDia());
+                }
+                else
+                {
+                    string dia = "Sexta";
+                    //await Navigation.PushAsync(new AdicionarTreino(dia));
+                }
             }
             catch (Exception err)
             {
-                DisplayAlert(err.Message, err.StackTrace, "OK");
+                await DisplayAlert(err.Message, err.StackTrace, "OK");
             }
         }
 
@@ -81,11 +139,19 @@ namespace AppStarFitness.View
         {
             try
             {
-                Navigation.PushAsync(new TreinoDoDia());
+                if (criar_ficha == false)
+                {
+                    await Navigation.PushAsync(new TreinoDoDia());
+                }
+                else
+                {
+                    string dia = "Sábado";
+                    //await Navigation.PushAsync(new AdicionarTreino(dia));
+                }
             }
             catch (Exception err)
             {
-                DisplayAlert(err.Message, err.StackTrace, "OK");
+                await DisplayAlert(err.Message, err.StackTrace, "OK");
             }
         }
 
@@ -93,11 +159,19 @@ namespace AppStarFitness.View
         {
             try
             {
-                Navigation.PushAsync(new TreinoDoDia());
+                if (criar_ficha == false)
+                {
+                    await Navigation.PushAsync(new TreinoDoDia());
+                }
+                else
+                {
+                    string dia = "Domingo";
+                    //await Navigation.PushAsync(new AdicionarTreino(dia));
+                }
             }
             catch (Exception err)
             {
-                DisplayAlert(err.Message, err.StackTrace, "OK");
+                await DisplayAlert(err.Message, err.StackTrace, "OK");
             }
         }
     }

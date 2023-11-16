@@ -130,5 +130,60 @@ namespace AppStarFitness.DataService
 
             return root.data;
         }
+
+        public static async Task<FichaTreino> NovaFicha(FichaTreino f, string token)
+        {
+            var json_a_enviar = JsonConvert.SerializeObject(f);
+
+            Console.WriteLine("=============================================================================");
+            Console.WriteLine(" ");
+            Console.WriteLine("NOVA FICHA DE TREINO - JSON A ENVIAR");
+            Console.WriteLine(json_a_enviar);
+            Console.WriteLine(" ");
+            Console.WriteLine("=============================================================================");
+
+            string json = await DataService.PostDataToService(json_a_enviar, "/workout-routine", token);
+
+            Console.WriteLine("=============================================================================");
+            Console.WriteLine(" ");
+            Console.WriteLine("NOVA FICHA DE TREINO - JSON");
+            Console.WriteLine(json);
+            Console.WriteLine(" ");
+            Console.WriteLine("=============================================================================");
+
+            Root_FichaTreino root = JsonConvert.DeserializeObject<Root_FichaTreino>(json);
+
+            return root.data;
+        }
+
+        public static async Task<List<FichaTreinoList>> PuxarFichas(string token, string id_aluno)
+        {
+            string json = await DataService.GetDataFromService("/workout-routine/gym-member/" + id_aluno, token);
+
+            Console.WriteLine("=============================================================================");
+            Console.WriteLine(" ");
+            Console.WriteLine("PUXAR FICHAS DE TREINO - JSON");
+            Console.WriteLine(json);
+            Console.WriteLine(" ");
+            Console.WriteLine("=============================================================================");
+
+            Root_FichaTreinoList root = JsonConvert.DeserializeObject<Root_FichaTreinoList>(json);
+            var dados = JsonConvert.SerializeObject(root.data);
+            List<FichaTreinoList> fichas = JsonConvert.DeserializeObject<List<FichaTreinoList>>(dados);
+
+            Console.WriteLine("=============================================================================");
+            Console.WriteLine(" ");
+            Console.WriteLine("PUXAR FICHAS DE TREINO - ARRAY EVOLUCOES");
+            foreach (var ficha in fichas)
+            {
+                Console.WriteLine($"ID: {ficha.id}");
+                Console.WriteLine($"Name: {ficha.name}");
+                Console.WriteLine($"ID Gym Member: {ficha.id_gym_member}");
+            }
+            Console.WriteLine(" ");
+            Console.WriteLine("=============================================================================");
+
+            return fichas;
+        }
     }
 }
