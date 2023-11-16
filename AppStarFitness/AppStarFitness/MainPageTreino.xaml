@@ -1,16 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppStarFitness.MainPageTreino">
+             x:Class="AppStarFitness.MainPageTreino"
+            xmlns:local="clr-namespace:AppStarFitness.CustomeRenderer">
     
     <ContentPage Title="Adicionar Treino">
         <StackLayout>
-            <Label Text="CRIAR NOVA FICHA DE TREINO" FontSize="25" HorizontalTextAlignment="Center"/>
+            <Frame BorderColor="Transparent" CornerRadius="15">
+                <StackLayout>
+                    <Grid RowDefinitions="Auto">
+                        <Label Text="CRIE UMA NOVA FICHA DE TREINO" TextColor="Black" FontSize="25" 
+                               HorizontalTextAlignment="Center" Grid.Row="0" Margin="0, 20, 0, 0"/>
 
-            <Label Text="Nome da ficha (exemplo: treino com ênfase em braço)" FontSize="15"/>
-            <Entry x:Name="txt_nome_ficha" />
+                        <Label Text="Ex: treino com ênfase em braço." FontSize="15" Grid.Row="2" Margin="0, 25, 0, 0"/>
+                        <local:MyCustomeEntry x:Name="txt_nome_ficha" TextColor="Black" Placeholder="Digite um nome para a ficha" 
+                                              PlaceholderColor="Gray" ClearButtonVisibility="WhileEditing"
+                                              BackgroundColor="#f5f6fa" Grid.Row="3"/>
 
-            <Button x:Name="btn_nova_ficha" Text="Criar nova ficha" Clicked="btn_nova_ficha_Clicked"/>
+                        <Button x:Name="btn_nova_ficha" Text="Criar nova ficha" Clicked="btn_nova_ficha_Clicked"
+                                Style="{StaticResource ButtonLogin}" BackgroundColor="#3ca65a" Grid.Row="5" />
+                    </Grid>
+                </StackLayout>
+            </Frame>
+            
         </StackLayout>
     </ContentPage>
 
