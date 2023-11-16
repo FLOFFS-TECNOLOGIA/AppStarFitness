@@ -217,5 +217,60 @@ namespace AppStarFitness.DataService
 
             return exercicios;
         }
+
+        public static async Task<Dietas> CriarDieta(Dietas d, string token)
+        {
+            var json_a_enviar = JsonConvert.SerializeObject(d);
+
+            Console.WriteLine("=============================================================================");
+            Console.WriteLine(" ");
+            Console.WriteLine("CRIAR DIETA - JSON A ENVIAR");
+            Console.WriteLine(json_a_enviar);
+            Console.WriteLine(" ");
+            Console.WriteLine("=============================================================================");
+
+            string json = await DataService.PostDataToService(json_a_enviar, "/diet", token);
+
+            Console.WriteLine("=============================================================================");
+            Console.WriteLine(" ");
+            Console.WriteLine("CRIAR DIETA - JSON");
+            Console.WriteLine(json);
+            Console.WriteLine(" ");
+            Console.WriteLine("=============================================================================");
+
+            Root_Dietas root = JsonConvert.DeserializeObject<Root_Dietas>(json);
+
+            return root.data;
+        }
+
+        public static async Task<List<DietasList>> PuxarDietas(string id_aluno, string token)
+        {
+            string json = await DataService.GetDataFromService("/diet/gym-member/" + id_aluno, token);
+
+            Console.WriteLine("=============================================================================");
+            Console.WriteLine(" ");
+            Console.WriteLine("PUXAR DIETAS - JSON");
+            Console.WriteLine(json);
+            Console.WriteLine(" ");
+            Console.WriteLine("=============================================================================");
+
+            Root_DietasList root = JsonConvert.DeserializeObject<Root_DietasList>(json);
+            var dados = JsonConvert.SerializeObject(root.data);
+            List<DietasList> dietas = JsonConvert.DeserializeObject<List<DietasList>>(dados);
+
+            Console.WriteLine("=============================================================================");
+            Console.WriteLine(" ");
+            Console.WriteLine("PUXAR DIETAS - ARRAY DIETAS");
+            foreach (var dieta in dietas)
+            {
+                Console.WriteLine($"ID: {dieta.id}");
+                Console.WriteLine($"Name: {dieta.name}");
+                Console.WriteLine($"ID Gym_Member: {dieta.id_gym_member}");
+            }
+            Console.WriteLine(" ");
+            Console.WriteLine("=============================================================================");
+
+            return dietas;
+        }
     }
 }

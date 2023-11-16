@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppStarFitness.View.AdicionarRefeicao">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Café da manhã:" />
+            <Picker x:Name="pck_cafe_da_manha"/>
+            <Button x:Name="btn_add_cafe" Text="Adicionar ao café da manhã"/>
+
+            <Label Text="Almoço" />
+            <Picker x:Name="pck_almoco"/>
+            <Button x:Name="btn_add_almoco" Text="Adicionar ao almoço"/>
+
+            <Label Text="Lanche/Café da tarde" />
+            <Picker x:Name="pck_lanche"/>
+            <Button x:Name="btn_add_lanche" Text="Adicionar ao lanche/café da tarde"/>
+
+            <Label Text="Jantar" />
+            <Picker x:Name="pck_jantar"/>
+            <Button x:Name="btn_add_jantar" Text="Adicionar ao jantar"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

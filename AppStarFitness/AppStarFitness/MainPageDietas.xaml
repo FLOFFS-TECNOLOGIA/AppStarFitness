@@ -6,7 +6,12 @@
 
     <ContentPage Title="Dieta Atual">
         <StackLayout>
-            <Label Text="DIETA ATUAL"/>
+            <Label Text="CRIE UMA NOVA DIETA"/>
+
+            <Label Text="Nome da dieta: "/>
+            <Entry x:Name="txt_nome"/>
+
+            <Button x:Name="btn_criar_dieta" Text="Criar Nova Dieta" Clicked="btn_criar_dieta_Clicked"/>
         </StackLayout>
     </ContentPage>
 
@@ -20,24 +25,36 @@
 
                 <Frame BorderColor="#3ca65a" CornerRadius="15" Margin="20">
                     <Grid ColumnDefinitions="*, *">
-                        <Picker x:Name="pck_dieta" SelectedIndexChanged="pck_dieta_SelectedIndexChanged" Title="Selecionar dieta" Grid.Column="0"/>
+                        <Picker x:Name="pck_dieta" ItemDisplayBinding="{Binding name}" SelectedIndexChanged="pck_dieta_SelectedIndexChanged" Title="Selecionar dieta" Grid.Column="0"/>
                         <Button x:Name="btn_dieta" Text="abrir" Clicked="btn_dieta_Clicked" Grid.Column="1" BackgroundColor="Transparent" />
                     </Grid>
                 </Frame>
 
                 <Frame BorderColor="#A9A9A9" Margin="20, 0, 20, 0" Padding="1" Opacity="0.5" />
 
-                <Label x:Name="lbl_dietaNome" Text="" FontSize="25" TextColor="Black" HorizontalTextAlignment="Center" Margin="10, 30, 10, 10"/>
+                <Label x:Name="lbl_dietaNome" Text="BULKING" FontSize="25" TextColor="Black" HorizontalTextAlignment="Center" Margin="10, 30, 10, 10"/>
 
                 <ScrollView>
                     <StackLayout>
+                        <!-- Texts inseridos manualmente para testes -->
                         <Label Text="Café da Manhã" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="20"/>
+                        <Label Text="Café" FontSize="20" HorizontalTextAlignment="Center"/>
+                        <Label Text="Pão Integral" FontSize="20" HorizontalTextAlignment="Center"/>
 
                         <Label Text="Almoço" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="20"/>
+                        <Label Text="Arroz" FontSize="20" HorizontalTextAlignment="Center"/>
+                        <Label Text="Feijão" FontSize="20" HorizontalTextAlignment="Center"/>
+                        <Label Text="Frango" FontSize="20" HorizontalTextAlignment="Center"/>
 
                         <Label Text="Lanche" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="20"/>
-
+                        <Label Text="Maçã" FontSize="20" HorizontalTextAlignment="Center"/>
+                        <Label Text="Banana" FontSize="20" HorizontalTextAlignment="Center"/>
+                        
                         <Label Text="Jantar" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="20"/>
+                        <Label Text="Arroz" FontSize="20" HorizontalTextAlignment="Center"/>
+                        <Label Text="Feijão" FontSize="20" HorizontalTextAlignment="Center"/>
+                        <Label Text="Frango" FontSize="20" HorizontalTextAlignment="Center"/>
+
                     </StackLayout>
                 </ScrollView>
             </StackLayout>

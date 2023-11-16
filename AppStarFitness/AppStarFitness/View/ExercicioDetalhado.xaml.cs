@@ -13,13 +13,15 @@ namespace AppStarFitness.View
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ExercicioDetalhado : ContentPage
 	{
-        int tempo_de_descanso = 0;
+        int tempo_de_descanso = 10;
 
         bool condicao = true;
 
         public ExercicioDetalhado()
 		{
 			InitializeComponent();
+
+            lbl_timer_descanso.Text = tempo_de_descanso.ToString();
         }
 
         private void btn_timer_Clicked(object sender, EventArgs e)
@@ -28,9 +30,15 @@ namespace AppStarFitness.View
 
             Device.StartTimer(TimeSpan.FromSeconds(1), () =>
             {
+                if(tempo_de_descanso == 0)
+                {
+                    Parar();
+                    tempo_de_descanso = 11;
+                }
+
                 if (condicao == true)
                 {
-                    tempo_de_descanso += 1;
+                    tempo_de_descanso -= 1;
 
                     lbl_timer_descanso.Text = tempo_de_descanso.ToString();
 
@@ -45,12 +53,15 @@ namespace AppStarFitness.View
             btn_timer.IsEnabled = false;
         }
 
-        private void btn_parar_Clicked(object sender, EventArgs e)
+        void Parar()
         {
             condicao = false;
-            tempo_de_descanso = 0;
-            lbl_timer_descanso.Text = tempo_de_descanso.ToString();
             btn_timer.IsEnabled = true;
+        }
+
+        private void btn_parar_Clicked(object sender, EventArgs e)
+        {
+            Parar();
         }
     }
 }

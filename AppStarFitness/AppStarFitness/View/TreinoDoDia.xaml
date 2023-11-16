@@ -4,9 +4,12 @@
              x:Class="AppStarFitness.View.TreinoDoDia">
     <ContentPage.Content>
         <StackLayout>
-            <Label x:Name="lbl_treino_dia" Text="TREINO DO DIA (Ex: Segunda - Peito)" />
+            <Label x:Name="lbl_treino_dia" Text="TREINO DO DIA (Ex: Segunda - COSTAS)" FontSize="20" HorizontalTextAlignment="Center"/>
 
-            <Button Clicked="Button_Clicked"/>
+            <Button Text="Remada baixa" Clicked="Button_Clicked"/>
+            <Button Text="Remada alta" Clicked="Button_Clicked"/>
+            <Button Text="Puxada baixa" Clicked="Button_Clicked"/>
+            <Button Text="Puxada alta" Clicked="Button_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
