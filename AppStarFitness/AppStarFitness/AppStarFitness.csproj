@@ -72,6 +72,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="View\AdicionarTreino.xaml.cs">
+      <DependentUpon>AdicionarTreino.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="View\ExercicioDetalhado.xaml.cs">
+      <DependentUpon>ExercicioDetalhado.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
     <EmbeddedResource Update="MainPageDietas.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

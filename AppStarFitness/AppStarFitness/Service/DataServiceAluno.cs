@@ -173,7 +173,7 @@ namespace AppStarFitness.DataService
 
             Console.WriteLine("=============================================================================");
             Console.WriteLine(" ");
-            Console.WriteLine("PUXAR FICHAS DE TREINO - ARRAY EVOLUCOES");
+            Console.WriteLine("PUXAR FICHAS DE TREINO - ARRAY FICHAS");
             foreach (var ficha in fichas)
             {
                 Console.WriteLine($"ID: {ficha.id}");
@@ -184,6 +184,38 @@ namespace AppStarFitness.DataService
             Console.WriteLine("=============================================================================");
 
             return fichas;
+        }
+
+        public static async Task<List<ExerciciosList>> PuxarExercicios(string token)
+        {
+            string json = await DataService.GetDataFromService("/exercise", token);
+
+            Console.WriteLine("=============================================================================");
+            Console.WriteLine(" ");
+            Console.WriteLine("PUXAR EXERCÍCIOS - JSON");
+            Console.WriteLine(json);
+            Console.WriteLine(" ");
+            Console.WriteLine("=============================================================================");
+
+            Root_ExerciciosList root = JsonConvert.DeserializeObject<Root_ExerciciosList>(json);
+            var dados = JsonConvert.SerializeObject(root.data);
+            List<ExerciciosList> exercicios = JsonConvert.DeserializeObject<List<ExerciciosList>>(dados);
+
+            Console.WriteLine("=============================================================================");
+            Console.WriteLine(" ");
+            Console.WriteLine("PUXAR EXERCÍCIOS - ARRAY EXERCÍCIOS");
+            foreach (var exercicio in exercicios)
+            {
+                Console.WriteLine($"ID: {exercicio.id}");
+                Console.WriteLine($"Name: {exercicio.name}");
+                Console.WriteLine($"Exercise GIF: {exercicio.exercise_gif}");
+                Console.WriteLine($"Equipment Gym Photo: {exercicio.equipment_gym_photo}");
+                Console.WriteLine($"Muscle Group: {exercicio.muscle_groups}");
+            }
+            Console.WriteLine(" ");
+            Console.WriteLine("=============================================================================");
+
+            return exercicios;
         }
     }
 }

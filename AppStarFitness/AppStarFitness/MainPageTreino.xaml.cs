@@ -33,11 +33,11 @@ namespace AppStarFitness
                 string token = (string)Application.Current.Properties["token"];
                 string id_aluno = (string)Application.Current.Properties["id_aluno"];
 
-                List<FichaTreinoList> arr_evolucoes = await DataServiceAluno.PuxarFichas(token, id_aluno);
+                List<FichaTreinoList> arr_fichas = await DataServiceAluno.PuxarFichas(token, id_aluno);
 
                 lista_fichas.Clear();
 
-                arr_evolucoes.ForEach(i => lista_fichas.Add(i));
+                arr_fichas.ForEach(i => lista_fichas.Add(i));
             }
             catch (Exception ex)
             {

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppStarFitness.View.AdicionarTreino"
+             BackgroundColor="#d0d0d0"
+             Title="Adicione os exercícios!">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Monte seu treino referente ao dia selecionado" FontSize="15" />
+
+            <Frame>
+                <ScrollView>
+                    <StackLayout>
+                        <Picker x:Name="pck_treino" ItemDisplayBinding="{Binding name}" SelectedIndexChanged="pck_treino_SelectedIndexChanged"/>
+
+                        <Label Text="Nome do exercício: "/>
+                        <Label x:Name="lbl_nome_exercicio"/>
+
+                        <Label Text="Exercício: " />
+                        <Image x:Name="img_gif" IsAnimationPlaying="True"/>
+
+                        <Label Text="Máquina utilizada: "/>
+                        <Image x:Name="img_maquina" />
+
+                        <Label Text="Grupo muscular: "/>
+                        <Label x:Name="lbl_grupo_muscular" />
+
+                        <Label Text="Quantidade de séries: " />
+                        <Entry x:Name="txt_series" />
+
+                        <Label Text="Repetições: "/>
+                        <Entry x:Name="txt_reps" />
+
+                        <Label Text="Tempo de descanso: "/>
+                        <Entry x:Name="txt_descanso" />
+
+                        <Label x:Name="lbl_aviso" Text="Exercício adicionado à sua ficha " HorizontalTextAlignment="Center" Margin="20"/>
+                    </StackLayout>
+                </ScrollView>
+            </Frame>
+
+        
+            <Label Text="Adicione quantos exercícios quiser!" HorizontalTextAlignment="Center"/>
+
+            <Button x:Name="btn_salvar" Text="Adicionar Exercício" Clicked="btn_salvar_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

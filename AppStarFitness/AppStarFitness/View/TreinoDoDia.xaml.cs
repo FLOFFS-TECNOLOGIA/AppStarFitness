@@ -12,9 +12,14 @@ namespace AppStarFitness.View
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class TreinoDoDia : ContentPage
 	{
-		public TreinoDoDia ()
+		public TreinoDoDia (string dia)
 		{
 			InitializeComponent ();
 		}
-	}
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+			Navigation.PushAsync(new ExercicioDetalhado());
+        }
+    }
 }

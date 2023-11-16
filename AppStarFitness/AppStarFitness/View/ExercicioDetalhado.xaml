@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppStarFitness.View.ExercicioDetalhado">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="INICIAR TEMPO DE DESCANSO" HorizontalTextAlignment="Center" FontSize="20"/>
+            <Label x:Name="lbl_timer_descanso" HorizontalTextAlignment="Center" FontSize="20"/>
+            <Button x:Name="btn_timer" Text="Iniciar" Clicked="btn_timer_Clicked"/>
+            <Button x:Name="btn_parar" Text="Parar" Clicked="btn_parar_Clicked"/>
+
+            <Label Text="Nome do exercício: "/>
+            <Label x:Name="lbl_nome" />
+            
+            <Label Text="Exercício: "/>
+            <Image x:Name="img_gif" />
+
+            <Label Text="Máquina utilizada: "/>
+            <Image x:Name="img_maquina"/>
+
+            <Label Text="Grupo muscular: "/>
+            <Label x:Name="lbl_grupo_muscular"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

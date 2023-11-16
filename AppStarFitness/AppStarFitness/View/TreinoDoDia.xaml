@@ -5,6 +5,8 @@
     <ContentPage.Content>
         <StackLayout>
             <Label x:Name="lbl_treino_dia" Text="TREINO DO DIA (Ex: Segunda - Peito)" />
+
+            <Button Clicked="Button_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
