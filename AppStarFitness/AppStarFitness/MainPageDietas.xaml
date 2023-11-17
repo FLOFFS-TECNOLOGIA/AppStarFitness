@@ -2,16 +2,25 @@
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:View="clr-namespace:AppStarFitness.View"
-             x:Class="AppStarFitness.MainPageDietas">
+             x:Class="AppStarFitness.MainPageDietas"
+            xmlns:local="clr-namespace:AppStarFitness.CustomeRenderer"
+            BackgroundColor="White">
 
-    <ContentPage Title="Dieta Atual">
+    <ContentPage Title="Adicionar Dieta">
         <StackLayout>
-            <Label Text="CRIE UMA NOVA DIETA"/>
+            <Frame BorderColor="Transparent" VerticalOptions="Center" HorizontalOptions="Center" Margin="0, 40, 0, 0">
+                <StackLayout>
+                    <Label Text="ADICIONE UMA NOVA DIETA!" FontSize="32" HorizontalTextAlignment="Center" TextColor="Black" Margin="0, 0, 0, 30"/>
 
-            <Label Text="Nome da dieta: "/>
-            <Entry x:Name="txt_nome"/>
+                    <Label Text="Nome da dieta: "/>
+                    <local:MyCustomeEntry x:Name="txt_nome" TextColor="Black" Placeholder="Digite um nome para a ficha" 
+                                  PlaceholderColor="Gray" ClearButtonVisibility="WhileEditing"
+                                  BackgroundColor="#f5f6fa"/>
 
-            <Button x:Name="btn_criar_dieta" Text="Criar Nova Dieta" Clicked="btn_criar_dieta_Clicked"/>
+                    <Button x:Name="btn_criar_dieta" Margin="0, 20, 0, 0" Text="Criar Nova Dieta" Clicked="btn_criar_dieta_Clicked" Style="{StaticResource ButtonLogin}" BackgroundColor="#3ca65a" />
+                </StackLayout>
+            </Frame>
+            
         </StackLayout>
     </ContentPage>
 
@@ -19,7 +28,7 @@
         <ScrollView>
             <StackLayout>
                 
-                <Label Text="SUAS DIETAS" FontSize="35" HorizontalTextAlignment="Center" Margin="10, 30, 10, 10"/>
+                <Label Text="SUAS DIETAS" FontSize="35" TextColor="Black" HorizontalTextAlignment="Center" Margin="10, 30, 10, 10"/>
 
                 <Frame BorderColor="#A9A9A9" Margin="20, 0, 20, 0" Padding="1" Opacity="0.5" />
 
