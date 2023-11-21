@@ -334,7 +334,7 @@ namespace AppStarFitness.DataService
 
             Console.WriteLine("=============================================================================");
             Console.WriteLine(" ");
-            Console.WriteLine("PUXAR DIETAS - ARRAY DIETAS");
+            Console.WriteLine("ASSOC FICHA EXERCICIO - ARRAY ASSOC");
             foreach (var assoc in array_assoc)
             {
                 Console.WriteLine($"ID Workout Routine: {assoc.id_workout_routine}");

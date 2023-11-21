@@ -6,10 +6,26 @@
         <StackLayout>
             <Label x:Name="lbl_treino_dia" Text="TREINO DO DIA (Ex: Segunda - COSTAS)" FontSize="20" HorizontalTextAlignment="Center"/>
 
-            <Button Text="Remada baixa" Clicked="Button_Clicked"/>
-            <Button Text="Remada alta" Clicked="Button_Clicked"/>
-            <Button Text="Puxada baixa" Clicked="Button_Clicked"/>
-            <Button Text="Puxada alta" Clicked="Button_Clicked"/>
+            <Label Text="Selecione um exercício e clique no botão para mais detalhes" FontAttributes="Italic" FontSize="20" HorizontalTextAlignment="Center"/>
+
+            <ScrollView>
+                    <ListView x:Name="lst_assoc">
+                    <ListView.Header>
+                        <Label Grid.Row="0" Grid.Column="0" Text="Exercícios" FontSize="20" HorizontalTextAlignment="Center"/>
+                    </ListView.Header>
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                            <Label Grid.Row="0" Grid.Column="0" Text="{Binding repetitions}" FontSize="20" HorizontalTextAlignment="Center"/>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollView>
+
+            <Button Text="Abrir detalhes do exercício" Clicked="Button_Clicked" FontSize="20"/>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

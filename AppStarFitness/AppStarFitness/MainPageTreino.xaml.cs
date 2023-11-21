@@ -18,12 +18,14 @@ namespace AppStarFitness
     {
         ObservableCollection<FichaTreinoList> lista_fichas = new ObservableCollection<FichaTreinoList>();
 
+        bool picker_item;
         string string_selecionada;
         public MainPageTreino()
         {
             InitializeComponent();
 
             pck_treino.ItemsSource = lista_fichas;
+            picker_item = false;
         }
 
         protected override async void OnAppearing()
@@ -77,6 +79,8 @@ namespace AppStarFitness
 
                 FichaTreinoList treino_selecionado = disparador.SelectedItem as FichaTreinoList;
 
+                picker_item = true;
+
                 if (treino_selecionado != null)
                 {
                     string_selecionada = treino_selecionado.id;
@@ -92,7 +96,15 @@ namespace AppStarFitness
         {
             try
             {
-                await Navigation.PushAsync(new OutroTreino(string_selecionada, false));
+                if (picker_item == true)
+                {
+                    await Navigation.PushAsync(new OutroTreino(string_selecionada, false));
+                    picker_item = false;
+                }
+                else
+                {
+                    await DisplayAlert("Erro", "Seleciona um treino!", "OK");
+                }
             }
             catch (Exception err)
             {

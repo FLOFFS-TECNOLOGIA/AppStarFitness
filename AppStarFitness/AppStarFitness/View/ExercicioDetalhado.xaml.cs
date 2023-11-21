@@ -15,13 +15,19 @@ namespace AppStarFitness.View
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ExercicioDetalhado : ContentPage
 	{
-        int tempo_de_descanso;
-
+        double tempo_de_descanso;
+        string id_exercicio;
         bool condicao = true;
 
-        public ExercicioDetalhado()
+        public ExercicioDetalhado(string exercicio, string descanso)
 		{
 			InitializeComponent();
+
+            id_exercicio = exercicio;
+            string[] array = descanso.Split(':');
+            string descanso_em_seg = array[0] + array[1];
+            tempo_de_descanso = Convert.ToDouble(descanso_em_seg);
+            tempo_de_descanso /= 100 * 60;
 
             lbl_timer_descanso.Text = tempo_de_descanso.ToString();
         }
@@ -31,8 +37,6 @@ namespace AppStarFitness.View
             try
             {
                 string token = (string)Application.Current.Properties["token"];
-                // ID COLOCADO MANUALMENTE AFIM DE TESTES
-                string id_exercicio = "ba8663d5-3cc4-4068-9cac-7153ee2db90e";
 
                 Exercicios e = await DataServiceAluno.ExercicioById(id_exercicio, token);
 
