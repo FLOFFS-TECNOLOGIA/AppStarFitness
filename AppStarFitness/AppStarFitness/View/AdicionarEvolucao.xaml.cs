@@ -20,7 +20,6 @@ namespace AppStarFitness.View
 
             txt_torax.Text = string.Empty;
             txt_gluteo.Text = string.Empty;
-            txt_cintura.Text = string.Empty;
             txt_braco_esquerdo.Text = string.Empty;
             txt_braco_direito.Text = string.Empty;
             txt_panturrilha_esquerda.Text = string.Empty;
@@ -61,6 +60,8 @@ namespace AppStarFitness.View
 
                     string id_evolucao = ev.id;
 
+                    Application.Current.Properties.Add("id_medida_atual", id_evolucao);
+
                     Medidas m = await DataServiceAluno.MedidasAluno(new Medidas
                     {
                         chest = txt_torax.Text,
@@ -79,6 +80,10 @@ namespace AppStarFitness.View
                     {
                         token = token
                     });
+
+                    Application.Current.Properties.Add("gordura", txt_gordura.Text);
+                    Application.Current.Properties.Add("massa_magra", txt_massa_magra.Text);
+                    Application.Current.Properties.Add("massa_gorda", txt_massa_gorda.Text);
 
                     await Navigation.PopAsync();
                 }

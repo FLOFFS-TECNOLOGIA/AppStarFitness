@@ -55,6 +55,10 @@ namespace AppStarFitness.View
             try
             {
                 Navigation.PushAsync(new AdicionarEvolucao());
+                Application.Current.Properties.Remove("id_medida_atual");
+                Application.Current.Properties.Remove("gordura");
+                Application.Current.Properties.Remove("massa_magra");
+                Application.Current.Properties.Remove("massa_gorda");
             }
             catch (Exception err)
             {

@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Security;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,9 +22,22 @@ namespace AppStarFitness
 		{
 			InitializeComponent();
 
-            logo_1.Source = ImageSource.FromResource("AppStarFitness.Imagens.logo.png");
+            //logo_1.Source = ImageSource.FromResource("AppStarFitness.Imagens.logo.png");
             //logo_2.Source = ImageSource.FromResource("AppStarFitness.Imagens.logo.png");
             logo_3.Source = ImageSource.FromResource("AppStarFitness.Imagens.logo.png");
+
+            string gordura = (string)Application.Current.Properties["gordura"];
+            string massa_magra = (string)Application.Current.Properties["massa_magra"];
+            string massa_gorda = (string)Application.Current.Properties["massa_gorda"];
+
+            if(gordura != null)
+                lbl_gordura.Text = gordura;
+
+            if(massa_magra != null)
+                lbl_massa_magra.Text = massa_magra;
+
+            if(massa_gorda != null)
+                lbl_massa_gorda.Text = massa_gorda;
         }
 
         protected override async void OnAppearing()
@@ -42,13 +56,17 @@ namespace AppStarFitness
                 Pessoa p = u.user;
 
                 lbl_altura.Text = p.gymMember.height_cm;
-                lbl_peso.Text = p.gymMember.weight_kg;
+                lbl_peso.Text = p.gymMember.weight_kg.Replace('.', ',');
 
-                double peso = Convert.ToDouble(p.gymMember.weight_kg);
-                double altura = Convert.ToDouble(p.gymMember.height_cm);
+                string peso_sem_ponto = p.gymMember.weight_kg.Replace('.', ',');
+                double peso = Convert.ToDouble(peso_sem_ponto);
+                double altura_cm = Convert.ToDouble(p.gymMember.height_cm);
 
                 // ==================== Cálculo IMC ==========================
-                double imc = peso / ((altura / 100) * (altura / 100));
+
+                double altura_metros = altura_cm / 100;
+
+                double imc = peso / (altura_metros * altura_metros);
                 imc = Math.Round(imc, 1);
 
                 lbl_imc.Text = imc.ToString();
@@ -79,7 +97,6 @@ namespace AppStarFitness
                 }
 
                 // ==================== Cálculo Idade ==========================
-                string sexo = p.gender;
 
                 DateTime data_nasc = Convert.ToDateTime(p.birthday);
                 TimeSpan diferenca = DateTime.Today - data_nasc;
@@ -91,14 +108,17 @@ namespace AppStarFitness
                 lbl_idade.Text = idade.ToString();
 
                 // ==================== Cálculo TMB ==========================
+                string sexo = p.gender;
+
+
                 if (sexo == "M")
                 {
-                    double tmb = 88.362 + (13.397 * peso) + (4.779 * altura) - (5.677 * idade);
+                    double tmb = 88.362 + (13.397 * peso) + (4.799 * altura_cm) - (5.677 * idade);
                     lbl_tmb.Text = tmb.ToString();
                 }
                 else
                 {
-                    double tmb = 447.593 + (9.247 * peso) + (3.098 * altura) - (4.330 - idade);
+                    double tmb = 447.593 + (9.247 * peso) + (3.098 * altura_cm) - (4.330 - idade);
                     lbl_tmb.Text = tmb.ToString();
                 }
 
@@ -125,6 +145,28 @@ namespace AppStarFitness
                     lbl_status.Text = "Em atraso";
                     lbl_status.TextColor = Color.Red;
                 }
+
+                // ======================================= MEDIDAS ATUAIS ==========================================
+                string token = (string)Application.Current.Properties["token"];
+                /*string id_medida_atual = (string)Application.Current.Properties["id_medida_atual"];
+
+
+
+                if (id_medida_atual != null)
+                {
+                    Medidas m = await DataServiceAluno.PuxarMedidas(token, id_medida_atual);
+
+                    lbl_torax.Text = m.chest;
+                    lbl_gluteo.Text = m.glute;
+                    lbl_braco_esquerdo.Text = m.left_arm;
+                    lbl_braco_direito.Text = m.right_arm;
+                    lbl_panturrilha_esquerda.Text = m.left_calf;
+                    lbl_panturrilha_direita.Text = m.right_calf;
+                    lbl_antebraco_esquerdo.Text = m.left_forearm;
+                    lbl_antebraco_direito.Text = m.right_forearm;
+                    lbl_quadriceps_esquerdo.Text = m.left_quadriceps;
+                    lbl_quadriceps_direito.Text = m.right_quadriceps;
+                }*/
             }
             catch (Exception ex) 
             {

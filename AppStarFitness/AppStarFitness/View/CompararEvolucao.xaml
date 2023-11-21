@@ -3,46 +3,218 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppStarFitness.View.CompararEvolucao">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="PEITO"  FontSize="25" HorizontalTextAlignment="Center"/>
-            <Label x:Name="lbl_chest1" FontSize="20" HorizontalTextAlignment="Center"/>
-            <Label x:Name="lbl_chest2" FontSize="20" HorizontalTextAlignment="Center"/>
+        <ScrollView>
+            <StackLayout Margin="0" HeightRequest="1000">
+            <Label Text="PEITO" FontSize="20" HorizontalTextAlignment="Center"/>
+            <Label FontSize="20" HorizontalTextAlignment="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span x:Name="lbl_chest_antiga" Text="" />
+                        <Span x:Name="lbl_chest1"/>
+                        <Span Text=" cm" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
 
-            <Label Text="GLÚTEO"  FontSize="25" HorizontalTextAlignment="Center"/>
-            <Label x:Name="lbl_glute1" FontSize="20" HorizontalTextAlignment="Center"/>
-            <Label x:Name="lbl_glute2" FontSize="20" HorizontalTextAlignment="Center"/>
+            <Label x:Name="lbl_chest_atual" FontSize="20" HorizontalTextAlignment="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Data 2: " />
+                        <Span x:Name="lbl_chest2"/>
+                        <Span Text=" cm" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
 
-            <Label Text="BRAÇO ESQUERDO"  FontSize="25" HorizontalTextAlignment="Center"/>
-            <Label x:Name="lbl_left_arm1" FontSize="20" HorizontalTextAlignment="Center"/>
-            <Label x:Name="lbl_left_arm2" FontSize="20" HorizontalTextAlignment="Center"/>
+            <Label Text="GLÚTEO"  FontSize="20" HorizontalTextAlignment="Center"/>
+            <Label FontSize="20" HorizontalTextAlignment="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span x:Name="lbl_glute_antiga" Text="" />
+                        <Span x:Name="lbl_glute1"/>
+                        <Span Text=" cm" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
 
-            <Label Text="BRAÇO DIREITO"  FontSize="25" HorizontalTextAlignment="Center"/>
-            <Label x:Name="lbl_right_arm1" FontSize="20" HorizontalTextAlignment="Center"/>
-            <Label x:Name="lbl_right_arm2" FontSize="20" HorizontalTextAlignment="Center"/>
+            <Label x:Name="lbl_glute_atual" FontSize="20" HorizontalTextAlignment="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Data 2: " />
+                        <Span x:Name="lbl_glute2"/>
+                        <Span Text=" cm" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
 
-            <Label Text="PANTURRILHA ESQUERDA"  FontSize="25" HorizontalTextAlignment="Center"/>
-            <Label x:Name="lbl_left_calf1" FontSize="20" HorizontalTextAlignment="Center"/>
-            <Label x:Name="lbl_left_calf2" FontSize="20" HorizontalTextAlignment="Center"/>
+            <Label Text="BRAÇO ESQUERDO" FontSize="20" HorizontalTextAlignment="Center"/>
+            <Label FontSize="20" HorizontalTextAlignment="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span x:Name="lbl_left_arm_antiga" Text="" />
+                        <Span x:Name="lbl_left_arm1"/>
+                        <Span Text=" cm" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
 
-            <Label Text="PANTURRILHA DIREITA"  FontSize="25" HorizontalTextAlignment="Center"/>
-            <Label x:Name="lbl_right_calf1" FontSize="20" HorizontalTextAlignment="Center"/>
-            <Label x:Name="lbl_right_calf2" FontSize="20" HorizontalTextAlignment="Center"/>
+            <Label x:Name="lbl_left_arm_atual" FontSize="20" HorizontalTextAlignment="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Data 2: " />
+                        <Span x:Name="lbl_left_arm2"/>
+                        <Span Text=" cm" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
 
-            <Label Text="ANTEBRAÇO ESQUERDO"  FontSize="25" HorizontalTextAlignment="Center"/>
-            <Label x:Name="lbl_left_forearm1" FontSize="20" HorizontalTextAlignment="Center"/>
-            <Label x:Name="lbl_left_forearm2" FontSize="20" HorizontalTextAlignment="Center"/>
+            <Label Text="BRAÇO DIREITO" FontSize="20" HorizontalTextAlignment="Center"/>
+            <Label FontSize="20" HorizontalTextAlignment="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span x:Name="lbl_right_arm_antiga" Text="" />
+                        <Span x:Name="lbl_right_arm1"/>
+                        <Span Text=" cm" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
 
-            <Label Text="ANTEBRAÇO DIREITO"  FontSize="25" HorizontalTextAlignment="Center"/>
-            <Label x:Name="lbl_right_forearm1" FontSize="20" HorizontalTextAlignment="Center"/>
-            <Label x:Name="lbl_right_forearm2" FontSize="20" HorizontalTextAlignment="Center"/>
+            <Label x:Name="lbl_right_arm_atual" FontSize="20" HorizontalTextAlignment="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Data 2: " />
+                        <Span x:Name="lbl_right_arm2"/>
+                        <Span Text=" cm" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
 
-            <Label Text="QUADRÍCEPS ESQUERDO"  FontSize="25" HorizontalTextAlignment="Center"/>
-            <Label x:Name="lbl_left_quadriceps1" FontSize="20" HorizontalTextAlignment="Center"/>
-            <Label x:Name="lbl_left_quadriceps2" FontSize="20" HorizontalTextAlignment="Center"/>
+            <Label Text="PANTURRILHA ESQUERDA" FontSize="20" HorizontalTextAlignment="Center"/>
+            <Label FontSize="20" HorizontalTextAlignment="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span x:Name="lbl_left_calf_antiga" Text="" />
+                        <Span x:Name="lbl_left_calf1"/>
+                        <Span Text=" cm" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
 
-            <Label Text="QUADRÍCEPS DIREITO"  FontSize="25" HorizontalTextAlignment="Center"/>
-            <Label x:Name="lbl_right_quadriceps1" FontSize="20" HorizontalTextAlignment="Center"/>
-            <Label x:Name="lbl_right_quadriceps2" FontSize="20" HorizontalTextAlignment="Center"/>
-        </StackLayout>
+            <Label x:Name="lbl_left_calf_atual" FontSize="20" HorizontalTextAlignment="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Data 2: " />
+                        <Span x:Name="lbl_left_calf2"/>
+                        <Span Text=" cm" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label Text="PANTURRILHA DIREITA" FontSize="20" HorizontalTextAlignment="Center"/>
+            <Label FontSize="20" HorizontalTextAlignment="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span x:Name="lbl_right_calf_antiga" Text="" />
+                        <Span x:Name="lbl_right_calf1"/>
+                        <Span Text=" cm" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label x:Name="lbl_right_calf_atual" FontSize="20" HorizontalTextAlignment="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Data 2: " />
+                        <Span x:Name="lbl_right_calf2"/>
+                        <Span Text=" cm" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label Text="ANTEBRAÇO ESQUERDO" FontSize="20" HorizontalTextAlignment="Center"/>
+            <Label FontSize="20" HorizontalTextAlignment="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span x:Name="lbl_left_forearm_antiga" Text="" />
+                        <Span x:Name="lbl_left_forearm1"/>
+                        <Span Text=" cm" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label x:Name="lbl_left_forearm_atual" FontSize="20" HorizontalTextAlignment="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Data 2: " />
+                        <Span x:Name="lbl_left_forearm2"/>
+                        <Span Text=" cm" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label Text="ANTEBRAÇO DIREITO" FontSize="20" HorizontalTextAlignment="Center"/>
+            <Label FontSize="20" HorizontalTextAlignment="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span x:Name="lbl_right_forearm_antiga" Text="" />
+                        <Span x:Name="lbl_right_forearm1"/>
+                        <Span Text=" cm" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label x:Name="lbl_right_forearm_atual" FontSize="20" HorizontalTextAlignment="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Data 2: " />
+                        <Span x:Name="lbl_right_forearm2"/>
+                        <Span Text=" cm" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label Text="QUADRÍCEPS ESQUERDO" FontSize="20" HorizontalTextAlignment="Center"/>
+            <Label FontSize="20" HorizontalTextAlignment="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span x:Name="lbl_left_quadriceps_antiga" Text="" />
+                        <Span x:Name="lbl_left_quadriceps1"/>
+                        <Span Text=" cm" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label x:Name="lbl_left_quadriceps_atual" FontSize="20" HorizontalTextAlignment="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Data 2: " />
+                        <Span x:Name="lbl_left_quadriceps2"/>
+                        <Span Text=" cm" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label Text="QUADRÍCEPS DIREITO" FontSize="20" HorizontalTextAlignment="Center"/>
+            <Label FontSize="20" HorizontalTextAlignment="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span x:Name="lbl_right_quadriceps_antiga" Text="" />
+                        <Span x:Name="lbl_right_quadriceps1"/>
+                        <Span Text=" cm" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label x:Name="lbl_right_quadriceps_atual" FontSize="20" HorizontalTextAlignment="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Data 2: " />
+                        <Span x:Name="lbl_right_quadriceps2"/>
+                        <Span Text=" cm" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

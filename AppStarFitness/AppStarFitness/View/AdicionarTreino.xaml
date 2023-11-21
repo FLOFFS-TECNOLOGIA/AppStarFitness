@@ -31,10 +31,13 @@
                         <Label Text="Repetições: "/>
                         <Entry x:Name="txt_reps" />
 
-                        <Label Text="Tempo de descanso: "/>
+                        <Label Text="Tempo de descanso (exemplo: 1:30, um minuto e meio): "/>
                         <Entry x:Name="txt_descanso" />
 
-                        <Label x:Name="lbl_aviso" Text="Exercício adicionado à sua ficha " HorizontalTextAlignment="Center" Margin="20"/>
+                        <Label Text="Observações"/>
+                        <Entry x:Name="txt_obs" />
+
+                        <Label x:Name="lbl_aviso" Text="Exercício adicionado à sua ficha" HorizontalTextAlignment="Center" Margin="20"/>
                     </StackLayout>
                 </ScrollView>
             </Frame>

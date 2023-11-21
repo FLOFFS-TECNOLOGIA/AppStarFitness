@@ -23,6 +23,7 @@ namespace AppStarFitness.Model
         public string id { get; set; }
         public string complete_date { get; set; }
         public string id_gym_member { get; set; }
+        public string created_at {  get; set; }
     }
 
     public class Root_EvolucaoList

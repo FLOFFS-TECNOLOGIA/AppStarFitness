@@ -4,6 +4,23 @@ using System.Text;
 
 namespace AppStarFitness.Model
 {
+    public class Exercicios
+    {
+        public string id { get; set; }
+        public string name { get; set; }
+        public string exercise_gif { get; set; }
+        public string equipment_gym_photo { get; set; }
+        public string muscle_groups { get; set; }
+    }
+
+    public class Root_Exercicios
+    {
+        public string success_message { get; set; }
+        public Exercicios data { get; set; }
+    }
+
+    // =====================================
+
     public class ExerciciosList
     {
         public string id {  get; set; }

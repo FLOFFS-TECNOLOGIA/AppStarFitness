@@ -71,7 +71,7 @@
                             <FormattedString>
                                 <Span Text="Percentual de gordura: " />
                                 <Span x:Name="lbl_gordura" Text="" />
-                                <Span Text=" %" />
+                                <Span Text="%" />
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
@@ -115,7 +115,7 @@
                    CornerRadius="15">
                 <StackLayout>
                     <Label Text="MEDIDAS ATUAIS" FontSize="35" HorizontalTextAlignment="Center" TextColor="Black" />
-                    <Label HorizontalTextAlignment="Center" TextColor="#4F4F4F" FontSize="20" Margin="10" HorizontalOptions="Start">
+                    <Label HorizontalTextAlignment="Center" TextColor="#4F4F4F" FontSize="20" Margin="10" HorizontalOptions="Center">
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Text="Tórax: "/>
@@ -125,7 +125,7 @@
                         </Label.FormattedText>
                     </Label>
 
-                    <Label HorizontalTextAlignment="Center" TextColor="#4F4F4F" FontSize="20" Margin="10" HorizontalOptions="Start">
+                    <Label HorizontalTextAlignment="Center" TextColor="#4F4F4F" FontSize="20" Margin="10" HorizontalOptions="Center">
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Text="Glúteo: "/>
@@ -135,17 +135,7 @@
                         </Label.FormattedText>
                     </Label>
 
-                    <Label HorizontalTextAlignment="Center" TextColor="#4F4F4F" FontSize="20" Margin="10" HorizontalOptions="Start" >
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="Cintura: "/>
-                                <Span x:Name="lbl_cintura" Text=""/>
-                                <Span Text=" cm"/>
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-
-                    <Label HorizontalTextAlignment="Center" TextColor="#4F4F4F" FontSize="20" Margin="10" HorizontalOptions="Start">
+                    <Label HorizontalTextAlignment="Center" TextColor="#4F4F4F" FontSize="20" Margin="10" HorizontalOptions="Center">
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Text="Braço Esq: "/>
@@ -155,7 +145,7 @@
                         </Label.FormattedText>
                     </Label>
 
-                    <Label HorizontalTextAlignment="Center" TextColor="#4F4F4F" FontSize="20" Margin="10" HorizontalOptions="Start">
+                    <Label HorizontalTextAlignment="Center" TextColor="#4F4F4F" FontSize="20" Margin="10" HorizontalOptions="Center">
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Text="Braço Dir: "/>
@@ -165,7 +155,7 @@
                         </Label.FormattedText>
                     </Label>
 
-                    <Label HorizontalTextAlignment="Center" TextColor="#4F4F4F" FontSize="20" Margin="10" HorizontalOptions="Start" >
+                    <Label HorizontalTextAlignment="Center" TextColor="#4F4F4F" FontSize="20" Margin="10" HorizontalOptions="Center" >
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Text="Panturrilha Esq: "/>
@@ -175,7 +165,7 @@
                         </Label.FormattedText>
                     </Label>
 
-                    <Label HorizontalTextAlignment="Center" TextColor="#4F4F4F" FontSize="20" Margin="10" HorizontalOptions="Start">
+                    <Label HorizontalTextAlignment="Center" TextColor="#4F4F4F" FontSize="20" Margin="10" HorizontalOptions="Center">
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Text="Panturrilha Dir: "/>
@@ -185,7 +175,7 @@
                         </Label.FormattedText>
                     </Label>
 
-                    <Label HorizontalTextAlignment="Center" TextColor="#4F4F4F" FontSize="20" Margin="10" HorizontalOptions="Start">
+                    <Label HorizontalTextAlignment="Center" TextColor="#4F4F4F" FontSize="20" Margin="10" HorizontalOptions="Center">
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Text="Antebraço Esq: "/>
@@ -195,7 +185,7 @@
                         </Label.FormattedText>
                     </Label>
 
-                    <Label HorizontalTextAlignment="Center" TextColor="#4F4F4F" FontSize="20" Margin="10" HorizontalOptions="Start">
+                    <Label HorizontalTextAlignment="Center" TextColor="#4F4F4F" FontSize="20" Margin="10" HorizontalOptions="Center">
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Text="Antebraço Dir: "/>
@@ -205,7 +195,7 @@
                         </Label.FormattedText>
                     </Label>
 
-                    <Label HorizontalTextAlignment="Center" TextColor="#4F4F4F" FontSize="20" Margin="10" HorizontalOptions="Start">
+                    <Label HorizontalTextAlignment="Center" TextColor="#4F4F4F" FontSize="20" Margin="10" HorizontalOptions="Center">
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Text="Quadríceps Esq.: "/>
@@ -215,7 +205,7 @@
                         </Label.FormattedText>
                     </Label>
 
-                    <Label HorizontalTextAlignment="Center" TextColor="#4F4F4F" FontSize="20" Margin="10" HorizontalOptions="Start">
+                    <Label HorizontalTextAlignment="Center" TextColor="#4F4F4F" FontSize="20" Margin="10" HorizontalOptions="Center">
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Text="Quadríceps Dir.: "/>

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AppStarFitness.DataService;
+using AppStarFitness.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +15,7 @@ namespace AppStarFitness.View
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ExercicioDetalhado : ContentPage
 	{
-        int tempo_de_descanso = 10;
+        int tempo_de_descanso;
 
         bool condicao = true;
 
@@ -22,6 +24,27 @@ namespace AppStarFitness.View
 			InitializeComponent();
 
             lbl_timer_descanso.Text = tempo_de_descanso.ToString();
+        }
+
+        protected override async void OnAppearing()
+        {
+            try
+            {
+                string token = (string)Application.Current.Properties["token"];
+                // ID COLOCADO MANUALMENTE AFIM DE TESTES
+                string id_exercicio = "ba8663d5-3cc4-4068-9cac-7153ee2db90e";
+
+                Exercicios e = await DataServiceAluno.ExercicioById(id_exercicio, token);
+
+                lbl_nome.Text = e.name;
+                img_gif.Source = e.exercise_gif;
+                img_maquina.Source = e.equipment_gym_photo;
+                lbl_grupo_muscular.Text = e.muscle_groups;
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert(ex.Message, ex.StackTrace, "OK");
+            }
         }
 
         private void btn_timer_Clicked(object sender, EventArgs e)

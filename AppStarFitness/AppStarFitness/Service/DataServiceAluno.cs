@@ -7,6 +7,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms.PlatformConfiguration;
+using System.Security.Cryptography.X509Certificates;
 
 namespace AppStarFitness.DataService
 {
@@ -53,7 +54,7 @@ namespace AppStarFitness.DataService
             Console.WriteLine(" ");
             Console.WriteLine("=============================================================================");
 
-            Root_Evolucao root =  JsonConvert.DeserializeObject<Root_Evolucao>(json);
+            Root_Evolucao root = JsonConvert.DeserializeObject<Root_Evolucao>(json);
 
             return root.data;
         }
@@ -108,6 +109,7 @@ namespace AppStarFitness.DataService
                 Console.WriteLine($"ID: {evolucao.id}");
                 Console.WriteLine($"Complete Date: {evolucao.complete_date}");
                 Console.WriteLine($"ID Gym Member: {evolucao.id_gym_member}");
+                Console.WriteLine($"Created_at: {evolucao.created_at}");
             }
             Console.WriteLine(" ");
             Console.WriteLine("=============================================================================");
@@ -218,6 +220,22 @@ namespace AppStarFitness.DataService
             return exercicios;
         }
 
+        public static async Task<Exercicios> ExercicioById(string id_exercicio, string token)
+        {
+            string json = await DataService.GetDataFromService("/exercise/" + id_exercicio, token);
+
+            Console.WriteLine("=============================================================================");
+            Console.WriteLine(" ");
+            Console.WriteLine("PUXAR EXERCICIO PELO ID - JSON");
+            Console.WriteLine(json);
+            Console.WriteLine(" ");
+            Console.WriteLine("=============================================================================");
+
+            Root_Exercicios root = JsonConvert.DeserializeObject<Root_Exercicios>(json);
+
+            return root.data;
+        }
+
         public static async Task<Dietas> CriarDieta(Dietas d, string token)
         {
             var json_a_enviar = JsonConvert.SerializeObject(d);
@@ -271,6 +289,66 @@ namespace AppStarFitness.DataService
             Console.WriteLine("=============================================================================");
 
             return dietas;
+        }
+
+        public static async Task<FichaExercicioAssoc> CriarAssocFichaExercicio(FichaExercicioAssoc f, string token)
+        {
+            var json_a_enviar = JsonConvert.SerializeObject(f);
+
+            Console.WriteLine("=============================================================================");
+            Console.WriteLine(" ");
+            Console.WriteLine("CRIAR ASSOC - JSON A ENVIAR");
+            Console.WriteLine(json_a_enviar);
+            Console.WriteLine(" ");
+            Console.WriteLine("=============================================================================");
+
+            string json = await DataService.PostDataToService(json_a_enviar, "/workout-routine/mobile", token);
+
+            Console.WriteLine("=============================================================================");
+            Console.WriteLine(" ");
+            Console.WriteLine("CRIAR ASSOC - JSON");
+            Console.WriteLine(json);
+            Console.WriteLine(" ");
+            Console.WriteLine("=============================================================================");
+
+            Root_FichaExercicioAssoc root = JsonConvert.DeserializeObject<Root_FichaExercicioAssoc>(json);
+
+            return root.data;
+        }
+
+        public static async Task<List<AssocTreinoList>> PuxarAssocFichaExercicio(string dia_semana, string id_ficha, string token)
+        {
+
+            string json = await DataService.GetDataFromService("/workout-routine/mobile/" + dia_semana + "/" + id_ficha, token);
+
+            Console.WriteLine("=============================================================================");
+            Console.WriteLine(" ");
+            Console.WriteLine("LISTAR ASSOC FICHA EXERCICIO - JSON");
+            Console.WriteLine(json);
+            Console.WriteLine(" ");
+            Console.WriteLine("=============================================================================");
+
+            Root_AssocTreinoList root = JsonConvert.DeserializeObject<Root_AssocTreinoList>(json);
+            var dados = JsonConvert.SerializeObject(root.data);
+            List<AssocTreinoList> array_assoc = JsonConvert.DeserializeObject<List<AssocTreinoList>>(dados);
+
+            Console.WriteLine("=============================================================================");
+            Console.WriteLine(" ");
+            Console.WriteLine("PUXAR DIETAS - ARRAY DIETAS");
+            foreach (var assoc in array_assoc)
+            {
+                Console.WriteLine($"ID Workout Routine: {assoc.id_workout_routine}");
+                Console.WriteLine($"ID Exercise: {assoc.id_exercise}");
+                Console.WriteLine($"Week Day: {assoc.week_day}");
+                Console.WriteLine($"Sets: {assoc.sets}");
+                Console.WriteLine($"Repetitions: {assoc.repetitions}");
+                Console.WriteLine($"Rest seconds: {assoc.rest_seconds}");
+                Console.WriteLine($"Observation: {assoc.observation}");
+            }
+            Console.WriteLine(" ");
+            Console.WriteLine("=============================================================================");
+
+            return array_assoc;
         }
     }
 }

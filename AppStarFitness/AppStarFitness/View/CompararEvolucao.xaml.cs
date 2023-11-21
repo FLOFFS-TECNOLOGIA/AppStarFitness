@@ -23,6 +23,17 @@ namespace AppStarFitness.View
 
 			evolucao_selecionada1 = evolucao1;
 			evolucao_selecionada2 = evolucao2;
+
+            lbl_chest_atual.IsVisible = false;
+            lbl_glute_atual.IsVisible = false;
+            lbl_left_arm_atual.IsVisible = false;
+            lbl_right_arm_atual.IsVisible = false;
+            lbl_left_calf_atual.IsVisible = false;
+            lbl_right_calf_atual.IsVisible = false;
+            lbl_left_forearm_atual.IsVisible = false;
+            lbl_right_forearm_atual.IsVisible = false;
+            lbl_left_quadriceps_atual.IsVisible = false;
+            lbl_right_quadriceps_atual.IsVisible = false;
         }
 
         protected override async void OnAppearing()
@@ -48,7 +59,29 @@ namespace AppStarFitness.View
 				{
 					Medidas m2 = await DataServiceAluno.PuxarMedidas(token, evolucao_selecionada2);
 
-					lbl_chest2.Text = m2.chest;
+					lbl_chest_antiga.Text = "Data 1: ";
+                    lbl_glute_antiga.Text = "Data 1: ";
+                    lbl_left_arm_antiga.Text = "Data 1: ";
+                    lbl_right_arm_antiga.Text = "Data 1: ";
+                    lbl_left_calf_antiga.Text = "Data 1: ";
+                    lbl_right_calf_antiga.Text = "Data 1: ";
+                    lbl_left_forearm_antiga.Text = "Data 1: ";
+                    lbl_right_forearm_antiga.Text = "Data 1: ";
+                    lbl_left_quadriceps_antiga.Text = "Data 1: ";
+                    lbl_right_quadriceps_antiga.Text = "Data 1: ";
+
+                    lbl_chest_atual.IsVisible = true;
+                    lbl_glute_atual.IsVisible = true;
+                    lbl_left_arm_atual.IsVisible = true;
+                    lbl_right_arm_atual.IsVisible = true;
+                    lbl_left_calf_atual.IsVisible = true;
+                    lbl_right_calf_atual.IsVisible = true;
+                    lbl_left_forearm_atual.IsVisible = true;
+                    lbl_right_forearm_atual.IsVisible = true;
+                    lbl_left_quadriceps_atual.IsVisible = true;
+                    lbl_right_quadriceps_atual.IsVisible = true;
+
+                    lbl_chest2.Text = m2.chest;
 					lbl_glute2.Text = m2.glute;
 					lbl_left_arm2.Text = m2.left_arm;
 					lbl_right_arm2.Text = m2.right_arm;

@@ -40,15 +40,15 @@ namespace AppStarFitness.View
         {
             try
             {
-                string dia = "Segunda-Feira";
+                string dia = "SEG";
 
                 if (criar_ficha == false)
                 {
-                    await Navigation.PushAsync(new TreinoDoDia(dia));
+                    await Navigation.PushAsync(new TreinoDoDia(dia, treino));
                 }
                 else
                 {
-                    await Navigation.PushAsync(new AdicionarTreino(dia));
+                    await Navigation.PushAsync(new AdicionarTreino(dia, treino));
                 }
             }
             catch (Exception err)
@@ -61,15 +61,15 @@ namespace AppStarFitness.View
         {
             try
             {
-                string dia = "Terça-Feira";
+                string dia = "TER";
 
                 if (criar_ficha == false)
                 {
-                    await Navigation.PushAsync(new TreinoDoDia(dia));
+                    await Navigation.PushAsync(new TreinoDoDia(dia, treino));
                 }
                 else
                 {
-                    await Navigation.PushAsync(new AdicionarTreino(dia));
+                    await Navigation.PushAsync(new AdicionarTreino(dia, treino));
                 }
             }
             catch (Exception err)
@@ -82,15 +82,15 @@ namespace AppStarFitness.View
         {
             try
             {
-                string dia = "Quarta-Feira";
+                string dia = "QUA";
 
                 if (criar_ficha == false)
                 {
-                    await Navigation.PushAsync(new TreinoDoDia(dia));
+                    await Navigation.PushAsync(new TreinoDoDia(dia, treino));
                 }
                 else
                 {
-                    await Navigation.PushAsync(new AdicionarTreino(dia));
+                    await Navigation.PushAsync(new AdicionarTreino(dia, treino));
                 }
             }
             catch (Exception err)
@@ -103,15 +103,15 @@ namespace AppStarFitness.View
         {
             try
             {
-                string dia = "Quinta-Feira";
+                string dia = "QUI";
 
                 if (criar_ficha == false)
                 {
-                    await Navigation.PushAsync(new TreinoDoDia(dia));
+                    await Navigation.PushAsync(new TreinoDoDia(dia, treino));
                 }
                 else
                 {
-                    await Navigation.PushAsync(new AdicionarTreino(dia));
+                    await Navigation.PushAsync(new AdicionarTreino(dia, treino));
                 }
             }
             catch (Exception err)
@@ -124,15 +124,15 @@ namespace AppStarFitness.View
         {
             try
             {
-                string dia = "Sexta-Feira";
+                string dia = "SEX";
 
                 if (criar_ficha == false)
                 {
-                    await Navigation.PushAsync(new TreinoDoDia(dia));
+                    await Navigation.PushAsync(new TreinoDoDia(dia, treino));
                 }
                 else
                 {
-                    await Navigation.PushAsync(new AdicionarTreino(dia));
+                    await Navigation.PushAsync(new AdicionarTreino(dia, treino));
                 }
             }
             catch (Exception err)
@@ -145,15 +145,15 @@ namespace AppStarFitness.View
         {
             try
             {
-                string dia = "Sábado";
+                string dia = "SAB";
 
                 if (criar_ficha == false)
                 {
-                    await Navigation.PushAsync(new TreinoDoDia(dia));
+                    await Navigation.PushAsync(new TreinoDoDia(dia, treino));
                 }
                 else
                 {
-                    await Navigation.PushAsync(new AdicionarTreino(dia));
+                    await Navigation.PushAsync(new AdicionarTreino(dia, treino));
                 }
             }
             catch (Exception err)
@@ -166,15 +166,15 @@ namespace AppStarFitness.View
         {
             try
             {
-                string dia = "Domingo";
+                string dia = "DOM";
 
                 if (criar_ficha == false)
                 {
-                    await Navigation.PushAsync(new TreinoDoDia(dia));
+                    await Navigation.PushAsync(new TreinoDoDia(dia, treino));
                 }
                 else
                 {
-                    await Navigation.PushAsync(new AdicionarTreino(dia));
+                    await Navigation.PushAsync(new AdicionarTreino(dia, treino));
                 }
             }
             catch (Exception err)
