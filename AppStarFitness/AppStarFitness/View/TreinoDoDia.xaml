@@ -4,11 +4,11 @@
              x:Class="AppStarFitness.View.TreinoDoDia">
     <ContentPage.Content>
         <StackLayout>
-            <Label x:Name="lbl_treino_dia" Text="TREINO DO DIA (Ex: Segunda - COSTAS)" FontSize="20" HorizontalTextAlignment="Center"/>
+            <Label x:Name="lbl_treino_dia" Text="EXERCÍCIOS" FontSize="20" TextColor="Black" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
 
             <Label Text="Selecione um exercício e clique no botão para mais detalhes" FontAttributes="Italic" FontSize="20" HorizontalTextAlignment="Center"/>
 
-            <ScrollView>
+            <ScrollView Margin="0, 20, 0, 0">
                 <ListView x:Name="lst_assoc">
                     <ListView.Header>
                         <Grid ColumnDefinitions="*, *, *">
