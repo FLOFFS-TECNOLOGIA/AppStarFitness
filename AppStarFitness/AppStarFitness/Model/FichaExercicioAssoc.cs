@@ -13,6 +13,7 @@ namespace AppStarFitness.Model
         public string repetitions { get; set; }
         public string rest_seconds { get; set; }
         public string observation { get; set; }
+        public string exercise_name { get; set; }
     }
 
     public class Root_FichaExercicioAssoc 
@@ -32,6 +33,7 @@ namespace AppStarFitness.Model
         public string repetitions { get; set; }
         public string rest_seconds { get; set; }
         public string observation { get; set; }
+        public string exercise_name { get; set; }
     }
 
     public class Root_AssocTreinoList

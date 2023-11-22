@@ -20,10 +20,10 @@ namespace AppStarFitness.View
     {
         ObservableCollection<ExerciciosList> lista_exercicios = new ObservableCollection<ExerciciosList>();
         ObservableCollection<string> lista_assoc = new ObservableCollection<string>();
-
         string dia_da_semana;
         string id_exercicio;
         string id_ficha;
+
         public AdicionarTreino(string dia, string id_treino)
         {
             InitializeComponent();
@@ -63,11 +63,14 @@ namespace AppStarFitness.View
 
                 ExerciciosList exercicio_selecionado = disparador.SelectedItem as ExerciciosList;
 
-                id_exercicio = exercicio_selecionado.id;
-                lbl_nome_exercicio.Text = exercicio_selecionado.name;
-                img_gif.Source = exercicio_selecionado.exercise_gif;
-                img_maquina.Source = exercicio_selecionado.equipment_gym_photo;
-                lbl_grupo_muscular.Text = exercicio_selecionado.muscle_groups;
+                if (exercicio_selecionado.id != null)
+                {
+                    id_exercicio = exercicio_selecionado.id;
+                    lbl_nome_exercicio.Text = exercicio_selecionado.name;
+                    img_gif.Source = exercicio_selecionado.exercise_gif;
+                    img_maquina.Source = exercicio_selecionado.equipment_gym_photo;
+                    lbl_grupo_muscular.Text = exercicio_selecionado.muscle_groups;
+                }
             }
             catch (Exception err)
             {
@@ -82,13 +85,6 @@ namespace AppStarFitness.View
                 string token = (string)Application.Current.Properties["token"];
                 string observacao;
 
-                // TEMPO DE MINUTO -> SEGUNDO
-                /*string[] tempo_descanso = txt_descanso.Text.Split(':');
-                string descanso = tempo_descanso[0] + tempo_descanso[1];
-
-                double descanso_em_segundos = Convert.ToDouble(descanso);
-                descanso_em_segundos /= 60;*/
-
                 if (txt_obs.Text != null)
                 {
                     observacao = txt_obs.Text;
@@ -98,6 +94,15 @@ namespace AppStarFitness.View
                     observacao = null;
                 }
 
+                string descanso = txt_descanso.Text;
+                string[] array = descanso.Split(':');
+
+                string tempo_em_seg = String.Concat(array[0], array[1]);
+
+                Console.WriteLine("===========================");
+                Console.WriteLine(tempo_em_seg);
+                Console.WriteLine("===========================");
+
                 FichaExercicioAssoc assoc = await DataServiceAluno.CriarAssocFichaExercicio(new FichaExercicioAssoc
                 {
                     id_workout_routine = id_ficha,
@@ -105,11 +110,16 @@ namespace AppStarFitness.View
                     week_day = dia_da_semana,
                     sets = txt_series.Text,
                     repetitions = txt_reps.Text,
-                    rest_seconds = txt_descanso.Text,
+                    rest_seconds = tempo_em_seg,
                     observation = observacao
                 }, token);
 
                 lbl_aviso.IsVisible = true;
+
+                txt_series.Text = string.Empty;
+                txt_reps.Text = string.Empty;
+                txt_descanso.Text = string.Empty;
+                txt_obs.Text = string.Empty;
             }
             catch(Exception ex)
             {

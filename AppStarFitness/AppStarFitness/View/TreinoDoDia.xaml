@@ -11,13 +11,21 @@
             <ScrollView>
                 <ListView x:Name="lst_assoc">
                     <ListView.Header>
-                        <Label Grid.Row="0" Grid.Column="0" Text="Exercícios" FontSize="20" HorizontalTextAlignment="Center"/>
+                        <Grid ColumnDefinitions="*, *, *">
+                            <Label Grid.Row="0" Grid.Column="0" Text="Exercícios" FontSize="20" HorizontalTextAlignment="Center"/>
+                            <Label Grid.Row="0" Grid.Column="1" Text="Séries" FontSize="20" HorizontalTextAlignment="Center"/>
+                            <Label Grid.Row="0" Grid.Column="2" Text="Repetições" FontSize="20" HorizontalTextAlignment="Center"/>
+                        </Grid>
                     </ListView.Header>
 
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <Label Grid.Row="0" Grid.Column="0" Text="{Binding repetitions}" FontSize="20" HorizontalTextAlignment="Center"/>
+                                <Grid ColumnDefinitions="*, *, *">
+                                    <Label Grid.Row="0" Grid.Column="0" Text="{Binding exercise_name}" FontSize="20" HorizontalTextAlignment="Center"/>
+                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding sets}" FontSize="20" HorizontalTextAlignment="Center"/>
+                                    <Label Grid.Row="0" Grid.Column="2" Text="{Binding repetitions}" FontSize="20" HorizontalTextAlignment="Center"/>
+                                </Grid>
                             </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>

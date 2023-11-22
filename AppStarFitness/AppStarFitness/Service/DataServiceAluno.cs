@@ -344,6 +344,7 @@ namespace AppStarFitness.DataService
                 Console.WriteLine($"Repetitions: {assoc.repetitions}");
                 Console.WriteLine($"Rest seconds: {assoc.rest_seconds}");
                 Console.WriteLine($"Observation: {assoc.observation}");
+                Console.WriteLine($"Execise Name: {assoc.exercise_name}");
             }
             Console.WriteLine(" ");
             Console.WriteLine("=============================================================================");

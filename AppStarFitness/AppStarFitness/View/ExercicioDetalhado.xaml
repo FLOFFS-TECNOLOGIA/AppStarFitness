@@ -13,7 +13,7 @@
             <Label x:Name="lbl_nome" />
             
             <Label Text="Exercício: "/>
-            <Image x:Name="img_gif" />
+            <Image x:Name="img_gif" IsAnimationPlaying="True" />
 
             <Label Text="Máquina utilizada: "/>
             <Image x:Name="img_maquina"/>
