@@ -23,7 +23,7 @@
             <Frame BackgroundColor="Transparent" CornerRadius="15" Margin="20, 0, 20, 10" BorderColor="Gray">
                 <StackLayout>
                     <Picker x:Name="pck_data1" ItemDisplayBinding="{Binding complete_date}" SelectedIndexChanged="pck_data1_SelectedIndexChanged" Title="Selecionar data" 
-                            HorizontalTextAlignment="Center"/>
+                            HorizontalTextAlignment="Center" />
                     <Picker x:Name="pck_data2" ItemDisplayBinding="{Binding complete_date}" SelectedIndexChanged="pck_data2_SelectedIndexChanged" Title="Selecionar data" 
                             HorizontalTextAlignment="Center" />
                 </StackLayout>

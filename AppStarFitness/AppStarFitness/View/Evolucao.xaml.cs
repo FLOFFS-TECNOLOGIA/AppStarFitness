@@ -21,6 +21,8 @@ namespace AppStarFitness.View
         string string_selecionada;
         string string_selecionada1;
         string string_selecionada2;
+        bool condicao = false;
+        bool condicao2 = false;
         public Evolucao ()
 		{
 			InitializeComponent ();
@@ -73,10 +75,11 @@ namespace AppStarFitness.View
                 Picker disparador = sender as Picker;
 
                 EvolucaoAlunoList evolucao_selecionada = disparador.SelectedItem as EvolucaoAlunoList;
-
+            
                 if (evolucao_selecionada != null)
                 {
                     string_selecionada = evolucao_selecionada.id;
+                    condicao = true;
                 }
             }
             catch (Exception err)
@@ -89,7 +92,15 @@ namespace AppStarFitness.View
         {
             try
             {
-                await Navigation.PushAsync(new CompararEvolucao(string_selecionada, null));
+                if (condicao == true)
+                {
+                    await Navigation.PushAsync(new CompararEvolucao(string_selecionada, null));
+                    condicao = false;
+                }
+                else
+                {
+                    await DisplayAlert("Erro", "Selecione a data!", "OK");
+                }
             }
             catch (Exception err)
             {
@@ -108,6 +119,7 @@ namespace AppStarFitness.View
                 if (evolucao_selecionada1 != null)
                 {
                     string_selecionada1 = evolucao_selecionada1.id;
+                    condicao = true;
                 }
             }
             catch (Exception err)
@@ -127,6 +139,7 @@ namespace AppStarFitness.View
                 if (evolucao_selecionada2 != null)
                 {
                     string_selecionada2 = evolucao_selecionada2.id;
+                    condicao2 = true;
                 }
             }
             catch (Exception err)
@@ -139,7 +152,15 @@ namespace AppStarFitness.View
         {
             try
             {
-                await Navigation.PushAsync(new CompararEvolucao(string_selecionada1,string_selecionada2));
+                if (condicao == true && condicao2 == true)
+                {
+                    await Navigation.PushAsync(new CompararEvolucao(string_selecionada1, string_selecionada2));
+                    condicao = false;
+                }
+                else
+                {
+                    await DisplayAlert("Erro", "Selecione a data!", "OK");
+                }
             }
             catch (Exception err)
             {
