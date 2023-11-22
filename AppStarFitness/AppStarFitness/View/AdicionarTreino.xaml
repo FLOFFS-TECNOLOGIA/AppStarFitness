@@ -3,24 +3,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppStarFitness.View.AdicionarTreino"
              xmlns:local="clr-namespace:AppStarFitness.CustomeRenderer"
+             xmlns:behaviorPack="clr-namespace:Xamarin.Forms.BehaviorValidationPack;assembly=Xamarin.Forms.BehaviorValidationPack"
              BackgroundColor="White"
-             Title="Adicione os exercícios!">
+             Title="Adicione os Exercícios!">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="MONTE SEU TREINO REFERENTE AO DIA SELECIONADO." TextColor="Black" FontSize="20" HorizontalTextAlignment="Center" />
+            <Label Text="MONTE SEU TREINO REFERENTE AO DIA SELECIONADO." TextColor="Black" FontSize="20" HorizontalTextAlignment="Center" Margin="0, 10, 0, 0" />
 
-            <Frame CornerRadius="15" IsClippedToBounds="True">
+            <Frame CornerRadius="15" IsClippedToBounds="True" Margin="10">
                 <ScrollView>
                     <StackLayout>
                         <Picker x:Name="pck_treino" ItemDisplayBinding="{Binding name}" SelectedIndexChanged="pck_treino_SelectedIndexChanged"/>
 
-                        <Label Text="Nome do exercício: "/>
+                        <Label Text="Nome do exercício: " TextColor="Black" FontSize="18"/>
                         <Label x:Name="lbl_nome_exercicio"/>
 
-                        <Label Text="Exercício: " />
+                        <Label Text="Exercício: " TextColor="Black" FontSize="18" />
                         <Image x:Name="img_gif" IsAnimationPlaying="True"/>
 
-                        <Label Text="Máquina utilizada: "/>
+                        <Label Text="Máquina utilizada: " TextColor="Black" FontSize="18"/>
                         <Image x:Name="img_maquina" />
 
                         <Label Text="Grupo Muscular: " TextColor="Black" FontSize="18"/>
@@ -33,9 +34,14 @@
                         <local:MyCustomeEntry x:Name="txt_reps" TextColor="Black" BackgroundColor="#f5f6fa" ClearButtonVisibility="WhileEditing" />
 
                         <Label Text="Tempo de descanso (exemplo: 1:30, um minuto e meio): " TextColor="Black" FontSize="18"/>
-                        <local:MyCustomeEntry x:Name="txt_descanso" TextColor="Black" BackgroundColor="#f5f6fa" ClearButtonVisibility="WhileEditing" />
+                        <local:MyCustomeEntry x:Name="txt_descanso" TextColor="Black" BackgroundColor="#f5f6fa" ClearButtonVisibility="WhileEditing"
+                                              Keyboard="Numeric">
+                            <Entry.Behaviors>
+                                <behaviorPack:MaskedBehavior Mask="X:XX" />
+                            </Entry.Behaviors>
+                        </local:MyCustomeEntry>
 
-                        <Label Text="Observações" TextColor="Black" FontSize="18"/>
+                            <Label Text="Observações" TextColor="Black" FontSize="18"/>
                         <local:MyCustomeEntry x:Name="txt_obs" TextColor="Black" BackgroundColor="#f5f6fa" ClearButtonVisibility="WhileEditing" />
 
                         <Label x:Name="lbl_aviso" Text="Exercício adicionado à sua ficha" HorizontalTextAlignment="Center" Margin="20"/>
