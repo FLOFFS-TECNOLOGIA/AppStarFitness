@@ -17,24 +17,14 @@ namespace AppStarFitness.View
 	{
         string treino;
         bool criar_ficha;
-		public OutroTreino (string treino_selecionado, bool criar_nova_ficha)
+		public OutroTreino (string treino_selecionado, bool criar_nova_ficha, string nome_ficha)
 		{
 			InitializeComponent ();
 
             treino = treino_selecionado;
             criar_ficha = criar_nova_ficha;
+            lbl_nome.Text = nome_ficha;
 		}
-
-        protected override async void OnAppearing()
-        {
-            try
-            {
-            }
-            catch (Exception ex)
-            {
-                await DisplayAlert(ex.Message, ex.StackTrace, "OK");
-            }
-        }
 
         private async void btn_segunda_Clicked(object sender, EventArgs e)
         {

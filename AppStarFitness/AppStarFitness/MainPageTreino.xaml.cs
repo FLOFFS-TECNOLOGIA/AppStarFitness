@@ -17,7 +17,7 @@ namespace AppStarFitness
     public partial class MainPageTreino : TabbedPage
     {
         ObservableCollection<FichaTreinoList> lista_fichas = new ObservableCollection<FichaTreinoList>();
-
+        string nome_ficha;
         bool picker_item;
         string string_selecionada;
         public MainPageTreino()
@@ -63,7 +63,7 @@ namespace AppStarFitness
 
                 string id_ficha = f.id;
 
-                await Navigation.PushAsync(new OutroTreino(id_ficha, true));
+                await Navigation.PushAsync(new OutroTreino(id_ficha, true, txt_nome_ficha.Text));
             }
             catch(Exception ex) 
             {
@@ -79,11 +79,11 @@ namespace AppStarFitness
 
                 FichaTreinoList treino_selecionado = disparador.SelectedItem as FichaTreinoList;
 
-                picker_item = true;
-
                 if (treino_selecionado != null)
                 {
                     string_selecionada = treino_selecionado.id;
+                    nome_ficha = treino_selecionado.name;
+                    picker_item = true;
                 }
             }
             catch (Exception err)
@@ -98,7 +98,7 @@ namespace AppStarFitness
             {
                 if (picker_item == true)
                 {
-                    await Navigation.PushAsync(new OutroTreino(string_selecionada, false));
+                    await Navigation.PushAsync(new OutroTreino(string_selecionada, false, nome_ficha));
                     picker_item = false;
                 }
                 else

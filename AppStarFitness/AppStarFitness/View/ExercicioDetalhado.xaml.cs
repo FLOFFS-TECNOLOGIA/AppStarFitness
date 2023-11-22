@@ -15,6 +15,7 @@ namespace AppStarFitness.View
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ExercicioDetalhado : ContentPage
 	{
+        double descanso_seg;
         double tempo_de_descanso;
         string id_exercicio;
         bool condicao = true;
@@ -22,12 +23,14 @@ namespace AppStarFitness.View
         public ExercicioDetalhado(string exercicio, string descanso)
 		{
 			InitializeComponent();
+            tempo_de_descanso = 0;
 
             id_exercicio = exercicio;
             string[] array = descanso.Split(':');
-            string descanso_em_seg = array[0] + array[1];
-            tempo_de_descanso = Convert.ToDouble(descanso_em_seg);
-            tempo_de_descanso /= 100 * 60;
+            string tempo_em_seg = array[1].Remove(0, 1) + array[2];
+            descanso_seg = Convert.ToDouble(tempo_em_seg);
+            descanso_seg = (descanso_seg / 100) * 60;
+            tempo_de_descanso = descanso_seg;
 
             lbl_timer_descanso.Text = tempo_de_descanso.ToString();
         }
@@ -60,7 +63,7 @@ namespace AppStarFitness.View
                 if(tempo_de_descanso == 0)
                 {
                     Parar();
-                    tempo_de_descanso = 11;
+                    tempo_de_descanso = descanso_seg;
                 }
 
                 if (condicao == true)

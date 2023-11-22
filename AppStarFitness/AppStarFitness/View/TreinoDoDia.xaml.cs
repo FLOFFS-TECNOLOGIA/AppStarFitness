@@ -52,10 +52,8 @@ namespace AppStarFitness.View
                     Console.WriteLine(" ");
                     Console.WriteLine("=============================================================================");
 
-                    lst_assoc.SeparatorColor = Color.Green;
-                    
+                    await Navigation.PushAsync(new ExercicioDetalhado(id_exercicio, descanso));
                     ((ListView)sender).SelectedItem = null;
-                    lst_assoc.SeparatorColor = Color.Transparent;
                 }
             }
             catch(Exception ex)
@@ -77,26 +75,6 @@ namespace AppStarFitness.View
                 arr_assoc.ForEach(i => lista_assoc.Add(i));
             }
             catch (Exception ex)
-            {
-                await DisplayAlert(ex.Message, ex.StackTrace, "OK");
-            }
-        }
-
-        private async void Button_Clicked(object sender, EventArgs e)
-        {
-            try
-            {
-                Console.WriteLine("=============================================================================");
-                Console.WriteLine(" ");
-                Console.WriteLine("TESTE DOS DADOS - BOTAO");
-                Console.WriteLine(id_exercicio);
-                Console.WriteLine(descanso);
-                Console.WriteLine(" ");
-                Console.WriteLine("=============================================================================");
-
-                await Navigation.PushAsync(new ExercicioDetalhado(id_exercicio, descanso));
-            }
-            catch(Exception ex)
             {
                 await DisplayAlert(ex.Message, ex.StackTrace, "OK");
             }
