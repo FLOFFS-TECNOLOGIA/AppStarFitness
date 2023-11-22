@@ -4,31 +4,35 @@
              x:Class="AppStarFitness.View.OutroTreino">
     <ContentPage.Content>
         <StackLayout>
-            <Label x:Name="lbl_outro_treino" Text="OUTRO TREINO SELECIONADO"/>
+            <Label x:Name="lbl_outro_treino" Text="OUTRO TREINO SELECIONADO" TextColor="Black" FontSize="25"
+                   HorizontalTextAlignment="Center" Margin=" 0, 40, 0 ,40"/>
 
-            <Grid ColumnDefinitions="*, *" RowDefinitions="*, *, *, *, *, *, *">
-                <Label Text="Segunda" Grid.Row="0" Grid.Column="0"/>
-                <Button x:Name="btn_segunda" Text="Costas" Clicked="btn_segunda_Clicked"  Grid.Row="0" Grid.Column="1"/>
+            <Frame BorderColor="#3ca65a" CornerRadius="15" Margin="20, 0, 20, 0">
+                <StackLayout>
+                    <Button x:Name="btn_segunda" Text="Segunda" Clicked="btn_segunda_Clicked"
+                            Style="{StaticResource ButtonLogin}" BackgroundColor="#3e61b1"/>
 
-                <Label Text="Terça" Grid.Row="1" Grid.Column="0"/>
-                <Button x:Name="btn_terca" Text="Peito" Clicked="btn_terca_Clicked" Grid.Row="1" Grid.Column="1"/>
+                    <Button x:Name="btn_terca" Text="Terça" Clicked="btn_terca_Clicked"
+                            Style="{StaticResource ButtonLogin}" BackgroundColor="#3e61b1"/>
 
-                <Label Text="Quarta" Grid.Row="2" Grid.Column="0"/>
-                <Button x:Name="btn_quarta" Text="Braço" Clicked="btn_quarta_Clicked" Grid.Row="2" Grid.Column="1"/>
+                    <Button x:Name="btn_quarta" Text="Quarta" Clicked="btn_quarta_Clicked"
+                            Style="{StaticResource ButtonLogin}" BackgroundColor="#3e61b1"/>
 
-                <Label Text="Quinta" Grid.Row="3" Grid.Column="0"/>
-                <Button x:Name="btn_quinta" Text="Perna" Clicked="btn_quinta_Clicked" Grid.Row="3" Grid.Column="1"/>
+                    <Button x:Name="btn_quinta" Text="Quinta" Clicked="btn_quinta_Clicked"
+                            Style="{StaticResource ButtonLogin}" BackgroundColor="#3e61b1"/>
 
-                <Label Text="Sexta" Grid.Row="4" Grid.Column="0"/>
-                <Button x:Name="btn_sexta" Text="Ombro" Clicked="btn_sexta_Clicked"  Grid.Row="4" Grid.Column="1"/>
+                    <Button x:Name="btn_sexta" Text="Sexta" Clicked="btn_sexta_Clicked"
+                            Style="{StaticResource ButtonLogin}" BackgroundColor="#3e61b1"/>
 
-                <Label Text="Sábado" Grid.Row="5" Grid.Column="0"/>
-                <Button x:Name="btn_sabado" Text="Costas" Clicked="btn_sabado_Clicked" Grid.Row="5" Grid.Column="1"/>
+                    <Button x:Name="btn_sabado" Text="Sábado" Clicked="btn_sabado_Clicked"
+                            Style="{StaticResource ButtonLogin}" BackgroundColor="#3e61b1"/>
 
-                <Label Text="Domingo" Grid.Row="6" Grid.Column="0"/>
-                <Button x:Name="btn_domingo" Text="Descanso" Clicked="btn_domingo_Clicked" Grid.Row="6" Grid.Column="1"/>
-
-            </Grid>
+                    <Button x:Name="btn_domingo" Text="Domingo" Clicked="btn_domingo_Clicked"
+                            Style="{StaticResource ButtonLogin}" BackgroundColor="#3e61b1"/>
+                </StackLayout>
+            </Frame>
+            <Button x:Name="btnVoltar" Text="Voltar" Clicked="btnVoltar_Clicked"
+                    Style="{StaticResource ButtonLogin}" BackgroundColor="#3ca65a" Margin="0, 140, 20, 0" HorizontalOptions="End"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

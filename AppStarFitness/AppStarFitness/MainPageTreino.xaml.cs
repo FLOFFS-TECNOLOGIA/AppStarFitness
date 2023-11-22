@@ -111,5 +111,17 @@ namespace AppStarFitness
                 await DisplayAlert(err.Message, err.StackTrace, "OK");
             }
         }
+
+        private void btnVoltar_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                Application.Current.MainPage = new NavigationPage(new MainPageInformacoes());
+            }
+            catch (Exception err)
+            {
+                DisplayAlert(err.Message, err.StackTrace, "OK");
+            }
+        }
     }
 }
