@@ -116,5 +116,6 @@ namespace AppStarFitness.View
                 await DisplayAlert(ex.Message, ex.StackTrace, "OK");
             }
         }
+
     }
 }
