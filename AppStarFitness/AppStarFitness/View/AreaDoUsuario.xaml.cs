@@ -18,6 +18,7 @@ namespace AppStarFitness.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AreaDoUsuario : ContentPage
     {
+        string id_tipo;
         public  AreaDoUsuario()
         {
             InitializeComponent();
@@ -43,6 +44,8 @@ namespace AppStarFitness.View
                 Pessoa p = u.user;
 
                 lbl_nome.Text = p.name.Split(' ')[0];
+
+                id_tipo = p.gymMember.id_type_enrollment;
                 //btnimg_fotoperfil.Source = p.photo_url;
             }
             catch(Exception err) 
@@ -99,7 +102,7 @@ namespace AppStarFitness.View
         {
             try
             {
-                Navigation.PushAsync(new MainPageInformacoes());
+                Navigation.PushAsync(new MainPageInformacoes(id_tipo));
             }
             catch (Exception err)
             {

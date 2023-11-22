@@ -41,28 +41,28 @@
 
                 <Frame BorderColor="#A9A9A9" Margin="20, 0, 20, 0" Padding="1" Opacity="0.5" />
 
-                <Label x:Name="lbl_dietaNome" Text="BULKING" FontSize="25" TextColor="Black" HorizontalTextAlignment="Center" Margin="10, 30, 10, 10"/>
+                <Label x:Name="lbl_dietaNome" Text="" FontSize="25" TextColor="Black" HorizontalTextAlignment="Center" Margin="10, 30, 10, 10"/>
 
                 <ScrollView>
                     <StackLayout>
                         <!-- Texts inseridos manualmente para testes -->
                         <Label Text="Café da Manhã" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="20"/>
-                        <Label Text="Café" FontSize="20" HorizontalTextAlignment="Center"/>
-                        <Label Text="Pão Integral" FontSize="20" HorizontalTextAlignment="Center"/>
+                        <Label x:Name="lbl_cafe" Text="Café" FontSize="20" HorizontalTextAlignment="Center"/>
+                        <Label x:Name="lbl_pao" Text="Pão Integral" FontSize="20" HorizontalTextAlignment="Center"/>
 
                         <Label Text="Almoço" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="20"/>
-                        <Label Text="Arroz" FontSize="20" HorizontalTextAlignment="Center"/>
-                        <Label Text="Feijão" FontSize="20" HorizontalTextAlignment="Center"/>
-                        <Label Text="Frango" FontSize="20" HorizontalTextAlignment="Center"/>
+                        <Label x:Name="lbl_arroz" Text="Arroz" FontSize="20" HorizontalTextAlignment="Center"/>
+                        <Label x:Name="lbl_feijao" Text="Feijão" FontSize="20" HorizontalTextAlignment="Center"/>
+                        <Label x:Name="lbl_frango" Text="Frango" FontSize="20" HorizontalTextAlignment="Center"/>
 
                         <Label Text="Lanche" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="20"/>
-                        <Label Text="Maçã" FontSize="20" HorizontalTextAlignment="Center"/>
-                        <Label Text="Banana" FontSize="20" HorizontalTextAlignment="Center"/>
+                        <Label x:Name="lbl_maca" Text="Maçã" FontSize="20" HorizontalTextAlignment="Center"/>
+                        <Label x:Name="lbl_banana" Text="Banana" FontSize="20" HorizontalTextAlignment="Center"/>
                         
                         <Label Text="Jantar" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="20"/>
-                        <Label Text="Arroz" FontSize="20" HorizontalTextAlignment="Center"/>
-                        <Label Text="Feijão" FontSize="20" HorizontalTextAlignment="Center"/>
-                        <Label Text="Frango" FontSize="20" HorizontalTextAlignment="Center"/>
+                        <Label x:Name="lbl_arroz2" Text="Arroz" FontSize="20" HorizontalTextAlignment="Center"/>
+                        <Label x:Name="lbl_feijao2" Text="Feijão" FontSize="20" HorizontalTextAlignment="Center"/>
+                        <Label x:Name="lbl_frango2" Text="Frango" FontSize="20" HorizontalTextAlignment="Center"/>
 
                     </StackLayout>
                 </ScrollView>

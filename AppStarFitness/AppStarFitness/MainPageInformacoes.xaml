@@ -231,16 +231,16 @@
 
             <Frame VerticalOptions="Center" BackgroundColor="Transparent">
                 <StackLayout>
-                    <Label HorizontalTextAlignment="Center" FontSize="25" Margin="5">
+                    <Label HorizontalTextAlignment="Center" FontSize="25" Margin="5" FontAttributes="Italic">
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Text="Plano: " TextColor="#4F4F4F" />
-                                <Span x:Name="lbl_plano" Text="" />
+                                <Span x:Name="lbl_plano" Text=""/>
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
 
-                    <Label HorizontalTextAlignment="Center" FontSize="25" Margin="5">
+                    <Label HorizontalTextAlignment="Center" FontSize="25" Margin="5" FontAttributes="Italic">
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Text="Ingressou: " TextColor="#4F4F4F" />
@@ -248,6 +248,10 @@
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
+
+                    <Frame BorderColor="#A9A9A9" Margin="20, 0, 20, 0" Padding="1" Opacity="0.5" />
+
+                    <Label Text="PAGAMENTO" HorizontalTextAlignment="Center" FontSize="25" Margin="5" FontAttributes="Bold" TextColor="Black"/>
 
                     <Label HorizontalTextAlignment="Center" FontSize="25" Margin="5">
                         <Label.FormattedText>
@@ -271,7 +275,7 @@
 
             <Frame BorderColor="#A9A9A9" Margin="20, 0, 20, 0" Padding="1" Opacity="0.5" />
 
-            <Image x:Name="logo_3" Scale="2" Margin="0, 120, 0, 0" Opacity="0.7"/>
+            <Image x:Name="logo_3" Scale="2" Margin="0, 80, 0, 0" Opacity="0.7"/>
         </StackLayout>
     </ContentPage>
     

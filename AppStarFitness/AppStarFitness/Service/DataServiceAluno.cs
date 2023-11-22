@@ -351,5 +351,21 @@ namespace AppStarFitness.DataService
 
             return array_assoc;
         }
+
+        public static async Task<Tipo> TipoById(string id_tipo, string token)
+        {
+            string json = await DataService.GetDataFromService("/type/" + id_tipo, token);
+
+            Console.WriteLine("=============================================================================");
+            Console.WriteLine(" ");
+            Console.WriteLine("PUXAR TIPO PELO ID - JSON");
+            Console.WriteLine(json);
+            Console.WriteLine(" ");
+            Console.WriteLine("=============================================================================");
+
+            Root_Tipo root = JsonConvert.DeserializeObject<Root_Tipo>(json);
+
+            return root.data;
+        }
     }
 }

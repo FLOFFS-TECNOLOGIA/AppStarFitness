@@ -18,7 +18,8 @@ namespace AppStarFitness
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class MainPageInformacoes : TabbedPage
 	{
-		public MainPageInformacoes ()
+        string id_tipo;
+		public MainPageInformacoes (string tipo)
 		{
 			InitializeComponent();
 
@@ -38,6 +39,8 @@ namespace AppStarFitness
 
             if(massa_gorda != null)
                 lbl_massa_gorda.Text = massa_gorda;
+
+            id_tipo = tipo;
         }
 
         protected override async void OnAppearing()
@@ -110,7 +113,6 @@ namespace AppStarFitness
                 // ==================== Cálculo TMB ==========================
                 string sexo = p.gender;
 
-
                 if (sexo == "M")
                 {
                     double tmb = 88.362 + (13.397 * peso) + (4.799 * altura_cm) - (5.677 * idade);
@@ -126,7 +128,13 @@ namespace AppStarFitness
 
                 // invoice_date -> data que o aluno ingressou na academia
                 // due_date -> data do vencimento
-                // payment_date -> data que o aluno pagou a mensalidade (valor pode ser nulo) 
+                // payment_date -> data que o aluno pagou a mensalidade (valor pode ser nulo)
+                // 
+                string token = u.token;
+
+                Tipo t = await DataServiceAluno.TipoById(id_tipo, token);
+
+                lbl_plano.Text = t.name;
 
                 Mensalidade mensalidade = await DataServiceAluno.MensalidadeAluno(u);
 
@@ -135,10 +143,19 @@ namespace AppStarFitness
                 lbl_ingressou.Text = mensalidade.invoice_date.ToString("dd/MM/yyyy", CultureInfo.CurrentCulture);
                 lbl_data_vencimento.Text = mensalidade.due_date.ToString("dd/MM/yyyy", CultureInfo.CurrentCulture);
 
-                if (DateTime.Now >= mensalidade.due_date)
+                Console.WriteLine("=============================================================================");
+                Console.WriteLine(" ");
+                Console.WriteLine("DIFERENCA MENSALIDADE");
+                Console.WriteLine(diferenca_mensalidade);
+                Console.WriteLine(" ");
+                Console.WriteLine("=============================================================================");
+
+                double diferenca_mensal = diferenca_mensalidade.TotalDays; 
+
+                if (diferenca_mensal >= 0)
                 {
-                    lbl_status.Text = "Em Aberto";
-                    lbl_status.TextColor = Color.Green;
+                    lbl_status.Text = "Pendente";
+                    lbl_status.TextColor = Color.Gold;
                 }
                 else
                 {
@@ -147,10 +164,7 @@ namespace AppStarFitness
                 }
 
                 // ======================================= MEDIDAS ATUAIS ==========================================
-                string token = (string)Application.Current.Properties["token"];
                 string id_medida_atual = (string)Application.Current.Properties["id_medida_atual"];
-
-
 
                 if (id_medida_atual != null)
                 {
