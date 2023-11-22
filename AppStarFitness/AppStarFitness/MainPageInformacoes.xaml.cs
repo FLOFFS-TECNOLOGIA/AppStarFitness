@@ -148,7 +148,7 @@ namespace AppStarFitness
 
                 // ======================================= MEDIDAS ATUAIS ==========================================
                 string token = (string)Application.Current.Properties["token"];
-                /*string id_medida_atual = (string)Application.Current.Properties["id_medida_atual"];
+                string id_medida_atual = (string)Application.Current.Properties["id_medida_atual"];
 
 
 
@@ -166,7 +166,7 @@ namespace AppStarFitness
                     lbl_antebraco_direito.Text = m.right_forearm;
                     lbl_quadriceps_esquerdo.Text = m.left_quadriceps;
                     lbl_quadriceps_direito.Text = m.right_quadriceps;
-                }*/
+                }
             }
             catch (Exception ex) 
             {
